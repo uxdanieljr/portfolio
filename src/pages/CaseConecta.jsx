@@ -28,7 +28,7 @@ const CaseConecta = () => {
             <div style={{"width":"48px","height":"48px","borderRadius":"50%","backgroundColor":"var(--accent-blue)","display":"flex","alignItems":"center","justifyContent":"center","color":"white","fontWeight":"bold","fontSize":"1.2rem"}}>DJ</div>
           </div>
           <div className="author-info">
-            <span className="author-name">Daniel Junior</span>
+            <span className="author-name">Daniel Carvalho</span>
             <span className="case-date">Product Designer &bull; <span className="lang-pt">3 min de leitura</span><span className="lang-en">3 min read</span></span>
           </div>
         </div>

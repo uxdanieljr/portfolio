@@ -49,7 +49,7 @@ const Header = () => {
     <header className="site-header">
       <div className="container nav-wrapper">
         <Link to="/#hero" className="logo-link" id="nav-logo" onClick={closeMenu}>
-          {isHome ? 'danieljunior.design' : (lang === 'pt' ? '\u2190 Voltar' : '\u2190 Back')}
+          {isHome ? 'danielcarvalho.design' : (lang === 'pt' ? '\u2190 Voltar' : '\u2190 Back')}
         </Link>
 
         {isHome && (

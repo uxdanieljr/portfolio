@@ -28,7 +28,7 @@ const CaseBradesco = () => {
             <div style={{"width":"48px","height":"48px","borderRadius":"50%","backgroundColor":"var(--accent-orange)","display":"flex","alignItems":"center","justifyContent":"center","color":"white","fontWeight":"bold","fontSize":"1.2rem"}}>DJ</div>
           </div>
           <div className="author-info">
-            <span className="author-name">Daniel Junior</span>
+            <span className="author-name">Daniel Carvalho</span>
             <span className="case-date">Product Designer &bull; <span className="lang-pt">4 min de leitura</span><span className="lang-en">4 min read</span></span>
           </div>
         </div>

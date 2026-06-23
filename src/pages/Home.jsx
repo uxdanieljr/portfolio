@@ -23,10 +23,10 @@ const Home = () => {
             <span className="highlight-blue lang-pt">acelera.</span><span className="highlight-blue lang-en">improves.</span>
           </h1>
           <p className="hero-subtitle lang-pt">
-            Sou Daniel Junior, Product Designer especialista em apps e SaaS. Entrego experiências que funcionam, do problema à tela sem enrolação.
+            Sou Daniel Carvalho, Product Designer especialista em apps e SaaS. Entrego experiências que funcionam, do problema à tela sem enrolação.
           </p>
           <p className="hero-subtitle lang-en">
-            I'm Daniel Junior, a Product Designer specializing in Apps and SaaS. I deliver experiences that work, from the problem to the screen without the fluff.
+            I'm Daniel Carvalho, a Product Designer specializing in Apps and SaaS. I deliver experiences that work, from the problem to the screen without the fluff.
           </p>
           <div className="btn-group">
             <a href="#contato" className="btn btn-primary" id="hero-cta-chat">
