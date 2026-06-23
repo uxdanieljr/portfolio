@@ -23,14 +23,14 @@ const Home = () => {
             <span className="highlight-blue lang-pt">acelera.</span><span className="highlight-blue lang-en">improves.</span>
           </h1>
           <p className="hero-subtitle lang-pt">
-            Sou Daniel Junior, Product Designer especialista em apps e SaaS. Entrego experi├¬ncias que funcionam, do problema ├á tela sem enrola├º├úo.
+            Sou Daniel Junior, Product Designer especialista em apps e SaaS. Entrego experiências que funcionam, do problema à tela sem enrolação.
           </p>
           <p className="hero-subtitle lang-en">
             I'm Daniel Junior, a Product Designer specializing in Apps and SaaS. I deliver experiences that work, from the problem to the screen without the fluff.
           </p>
           <div className="btn-group">
             <a href="#contato" className="btn btn-primary" id="hero-cta-chat">
-              <span className="lang-pt">ÔåÆ Vamos conversar</span><span className="lang-en">ÔåÆ Let's talk</span>
+              <span className="lang-pt">→ Vamos conversar</span><span className="lang-en">→ Let's talk</span>
             </a>
             <a href="#projetos" className="btn" id="hero-cta-projects">
               <span className="lang-pt">Ver projetos</span><span className="lang-en">See projects</span>
@@ -40,7 +40,7 @@ const Home = () => {
 
         <div className="hero-illustration" aria-hidden="true">
           <div className="brutalist-badge">
-            <div className="brutalist-badge-icon">ÔÜí</div>
+            <div className="brutalist-badge-icon">⚡</div>
             <h4>PRODUCT</h4>
             <p>DESIGNER APPS & SAAS</p>
           </div>
@@ -57,13 +57,13 @@ const Home = () => {
         <div className="sobre-grid">
           <div className="sobre-title-block">
             <h2 className="sobre-title lang-pt">
-              Produto bom n├úo ├® s├│ bonito. ├ë claro, r├ípido e funciona de verdade.
+              Produto bom não é só bonito. É claro, rápido e funciona de verdade.
             </h2>
             <h2 className="sobre-title lang-en">
               A good product isn't just pretty. It's clear, fast, and actually works.
             </h2>
             <div className="sobre-highlight-box lang-pt">
-              Foco em valor pr├ítico & UX orientada a IA
+              Foco em valor prático & UX orientada a IA
             </div>
             <div className="sobre-highlight-box lang-en">
               Focus on practical value & AI-driven UX
@@ -72,21 +72,21 @@ const Home = () => {
           
           <div className="sobre-text-block">
             <p className="lang-pt">
-              Tenho mais de 4 anos de experi├¬ncia criando e evoluindo produtos digitais para empresas, startups e ag├¬ncias.
+              Tenho mais de 4 anos de experiência criando e evoluindo produtos digitais para empresas, startups e agências.
             </p>
             <p className="lang-en">
               I have 4+ years of experience creating and evolving digital products for companies, startups, and agencies.
             </p>
 
             <p className="lang-pt">
-              Sou multi-especialista: entendo o produto de ponta a ponta, da pesquisa com usu├írio at├® o Design System. Isso me permite tomar decis├Áes mais consistentes e entregar com mais autonomia.
+              Sou multi-especialista: entendo o produto de ponta a ponta, da pesquisa com usuário até o Design System. Isso me permite tomar decisões mais consistentes e entregar com mais autonomia.
             </p>
             <p className="lang-en">
               I am a multi-specialist: I understand the product from end to end, from user research to the Design System. This allows me to make more consistent decisions and deliver with more autonomy.
             </p>
 
             <p className="lang-pt">
-              Pra mim, IA n├úo ├® curiosidade, ├® ferramenta de trabalho. Ela me ajuda a pesquisar mais r├ípido, sintetizar dados com mais precis├úo e prototipar com menos atrito.
+              Pra mim, IA não é curiosidade, é ferramenta de trabalho. Ela me ajuda a pesquisar mais rápido, sintetizar dados com mais precisão e prototipar com menos atrito.
             </p>
             <p className="lang-en">
               For me, IA is not curiosity, is a work tool. It helps me research faster, synthesize data more accurately, and prototype with less friction.
@@ -95,13 +95,13 @@ const Home = () => {
             <div className="sobre-education-badges">
               <div className="edu-badge" id="edu-mba">
                 <span className="edu-badge-icon" aria-hidden="true"></span>
-                <span className="lang-pt">MBA em Inova├º├úo Orientada a AI e UX</span>
+                <span className="lang-pt">MBA em Inovação Orientada a AI e UX</span>
                 <span className="lang-en">MBA in AI and UX-driven Innovation</span>
               </div>
               <div className="edu-badge" id="edu-unicorneo">
                 <span className="edu-badge-icon" aria-hidden="true" style={{"backgroundColor":"var(--accent-pink)"}}></span>
-                <span className="lang-pt">Certifica├º├úo UX Unic├│rnio</span>
-                <span className="lang-en">UX Unic├│rnio Certification</span>
+                <span className="lang-pt">Certificação UX Unicórnio</span>
+                <span className="lang-en">UX Unicórnio Certification</span>
               </div>
             </div>
           </div>
@@ -129,11 +129,11 @@ const Home = () => {
               </header>
               
               <div className="project-image-wrapper">
-                <img src="assets/banner-bradesco-negociacao.svg" alt="Banner do projeto Bradesco Negocia├º├úo" className="project-image" loading="lazy" />
+                <img src="assets/banner-bradesco-negociacao.svg" alt="Banner do projeto Bradesco Negociação" className="project-image" loading="lazy" />
               </div>
               
               <div className="project-body-summary">
-                <h3 className="lang-pt">Bradesco Seguros - Moderniza├º├úo de sistema cr├¡tico de gest├úo</h3>
+                <h3 className="lang-pt">Bradesco Seguros - Modernização de sistema crítico de gestão</h3>
                 <h3 className="lang-en">Bradesco Seguros - Modernization of a critical management system</h3>
 
                 <p className="project-subtitle lang-pt">De sistema travado a fluxo que funciona: 10h a menos de trabalho manual por semana.</p>
@@ -168,7 +168,7 @@ const Home = () => {
                 <h3 className="lang-pt">Redesign do app Conecta</h3>
                 <h3 className="lang-en">Conecta app Redesign</h3>
 
-                <p className="project-subtitle lang-pt">Redesenhando a jornada do paciente: da confus├úo no primeiro acesso a um acompanhamento nutricional intuitivo.</p>
+                <p className="project-subtitle lang-pt">Redesenhando a jornada do paciente: da confusão no primeiro acesso a um acompanhamento nutricional intuitivo.</p>
                 <p className="project-subtitle lang-en">Redesigning the patient journey: from confusion at first access to intuitive nutritional tracking.</p>
               </div>
               
@@ -200,7 +200,7 @@ const Home = () => {
                 <h3 className="lang-pt">Mobinft: Comprar NFT sem precisar entender NFT</h3>
                 <h3 className="lang-en">Mobinft: Buying NFTs without needing to understand NFTs</h3>
 
-                <p className="project-subtitle lang-pt">Web3 sem manual de instru├º├Áes: onboarding que transformou complexidade em primeira compra.</p>
+                <p className="project-subtitle lang-pt">Web3 sem manual de instruções: onboarding que transformou complexidade em primeira compra.</p>
                 <p className="project-subtitle lang-en">Web3 without a manual: onboarding that turned complexity into the first purchase.</p>
               </div>
               
@@ -215,72 +215,72 @@ const Home = () => {
       </div>
     </section>
 
-    {/*  [04] SERVI├çOS  */}
+    {/*  [04] SERVIÇOS  */}
     <section id="servicos" className="reveal">
       <div className="container">
-        <span className="section-label lang-pt"> O que eu fa├ºo</span>
+        <span className="section-label lang-pt"> O que eu faço</span>
         <span className="section-label lang-en"> What I do</span>
         
         <div className="servicos-header">
-          <h2 className="lang-pt">N├úo sou especialista em uma coisa s├│. Sou especialista no produto inteiro.</h2>
+          <h2 className="lang-pt">Não sou especialista em uma coisa só. Sou especialista no produto inteiro.</h2>
           <h2 className="lang-en">I'm not a specialist in just one thing. I'm a specialist in the entire product.</h2>
         </div>
 
         <div className="servicos-grid">
           {/*  Card 1  */}
           <article className="card service-card" id="srv-ux-research">
-            <div className="service-icon" aria-hidden="true">­ƒö¼</div>
+            <div className="service-icon" aria-hidden="true">🔬</div>
             <div className="service-num">(001)</div>
             <h3>UX Research</h3>
-            <p className="lang-pt">Pesquiso, ou├ºo usu├írios e transformo dados em decis├Áes. Com IA na s├¡ntese, o processo ├® mais r├ípido e a leitura, mais precisa.</p>
+            <p className="lang-pt">Pesquiso, ouço usuários e transformo dados em decisões. Com IA na síntese, o processo é mais rápido e a leitura, mais precisa.</p>
             <p className="lang-en">I research, listen to users, and turn data into decisions. With AI in synthesis, the process is faster and the reading is more accurate.</p>
           </article>
 
           {/*  Card 2  */}
           <article className="card service-card" id="srv-ui-design">
-            <div className="service-icon" aria-hidden="true">­ƒÄ¿</div>
+            <div className="service-icon" aria-hidden="true">🎨</div>
             <div className="service-num">(002)</div>
             <h3>UI Design</h3>
-            <p className="lang-pt">Interfaces claras, com hierarquia visual bem definida e consist├¬ncia em cada tela.</p>
+            <p className="lang-pt">Interfaces claras, com hierarquia visual bem definida e consistência em cada tela.</p>
             <p className="lang-en">Clear interfaces, with well-defined visual hierarchy and consistency on every screen.</p>
           </article>
 
           {/*  Card 3  */}
           <article className="card service-card" id="srv-prototype">
-            <div className="service-icon" aria-hidden="true">ÔÜÖ´©Å</div>
+            <div className="service-icon" aria-hidden="true">⚙️</div>
             <div className="service-num">(003)</div>
             <h3 className="lang-pt">Prototipagem</h3>
             <h3 className="lang-en">Prototyping</h3>
-            <p className="lang-pt">Do rascunho ao prot├│tipo naveg├ível. Valido ideias antes de virar c├│digo, economizando tempo e retrabalho.</p>
+            <p className="lang-pt">Do rascunho ao protótipo navegável. Valido ideias antes de virar código, economizando tempo e retrabalho.</p>
             <p className="lang-en">From draft to navigable prototype. I validate ideas before they become code, saving time and rework.</p>
           </article>
 
           {/*  Card 4  */}
           <article className="card service-card" id="srv-design-system">
-            <div className="service-icon" aria-hidden="true">­ƒº®</div>
+            <div className="service-icon" aria-hidden="true">🧩</div>
             <div className="service-num">(004)</div>
             <h3>Design System</h3>
-            <p className="lang-pt">Estruturo componentes e padr├Áes para o produto escalar sem perder consist├¬ncia.</p>
+            <p className="lang-pt">Estruturo componentes e padrões para o produto escalar sem perder consistência.</p>
             <p className="lang-en">I structure components and patterns so the product scales without losing consistency.</p>
           </article>
 
           {/*  Card 5  */}
           <article className="card service-card" id="srv-product-strategy">
-            <div className="service-icon" aria-hidden="true">­ƒôê</div>
+            <div className="service-icon" aria-hidden="true">📈</div>
             <div className="service-num">(005)</div>
-            <h3 className="lang-pt">Estrat├®gia de Produto</h3>
+            <h3 className="lang-pt">Estratégia de Produto</h3>
             <h3 className="lang-en">Product Strategy</h3>
-            <p className="lang-pt">Identifico gaps, organizo prioridades e ajudo times a tomarem decis├Áes com mais clareza.</p>
+            <p className="lang-pt">Identifico gaps, organizo prioridades e ajudo times a tomarem decisões com mais clareza.</p>
             <p className="lang-en">I identify gaps, organize priorities, and help teams make decisions with more clarity.</p>
           </article>
 
           {/*  Card 6  */}
           <article className="card service-card" id="srv-automation">
-            <div className="service-icon" aria-hidden="true">­ƒñû</div>
+            <div className="service-icon" aria-hidden="true">🤖</div>
             <div className="service-num">(006)</div>
-            <h3 className="lang-pt">Automa├º├úo de Processos</h3>
+            <h3 className="lang-pt">Automação de Processos</h3>
             <h3 className="lang-en">Process Automation</h3>
-            <p className="lang-pt">Reduzo trabalho manual. J├í economizei ~10h semanais por funcion├írio s├│ com processos mais enxutos e automa├º├Áes bem aplicadas.</p>
+            <p className="lang-pt">Reduzo trabalho manual. Já economizei ~10h semanais por funcionário só com processos mais enxutos e automações bem aplicadas.</p>
             <p className="lang-en">I reduce manual work. I've already saved ~10h a week per employee just with leaner processes and well-applied automations.</p>
           </article>
         </div>
@@ -297,7 +297,7 @@ const Home = () => {
           <h2 className="lang-pt">Tem um produto pra evoluir? Vamos conversar.</h2>
           <h2 className="lang-en">Have a product to evolve? Let's talk.</h2>
 
-          <p className="lang-pt">N├úo precisa ter tudo estruturado. Pode me mandar uma mensagem contando o desafio, a gente descobre o pr├│ximo passo juntos.</p>
+          <p className="lang-pt">Não precisa ter tudo estruturado. Pode me mandar uma mensagem contando o desafio, a gente descobre o próximo passo juntos.</p>
           <p className="lang-en">You don't need to have everything structured. You can send me a message telling me the challenge, and we'll figure out the next step together.</p>
         </div>
 
@@ -312,7 +312,7 @@ const Home = () => {
                   <p className="lang-pt">Bora bater um papo</p>
                   <p className="lang-en">Let's have a chat</p>
                 </div>
-                <div className="card-arrow-icon" aria-hidden="true">ÔåÆ</div>
+                <div className="card-arrow-icon" aria-hidden="true">→</div>
               </div>
             </div>
           </a>
@@ -326,7 +326,7 @@ const Home = () => {
                   <p className="lang-pt">Bora se conectar</p>
                   <p className="lang-en">Let's connect</p>
                 </div>
-                <div className="card-arrow-icon" aria-hidden="true">ÔåÆ</div>
+                <div className="card-arrow-icon" aria-hidden="true">→</div>
               </div>
             </div>
           </a>
