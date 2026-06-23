@@ -1335,3 +1335,47 @@ body[data-lang='en'] .lang-pt { display: none !important; }
     display: flex !important;
   }
 }
+/* --- ESTILOS DE SENHA DO CASE BRADESCO --- */
+.password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 400px;
+}
+
+.password-form label {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.password-input {
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+  font-family: var(--font-primary);
+  border: 2px solid var(--text-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  outline: none;
+  transition: var(--transition);
+  border-radius: 4px;
+}
+
+.password-input:focus {
+  border-color: var(--accent-orange);
+  box-shadow: 4px 4px 0 var(--accent-orange);
+}
+
+.password-form .btn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.error-msg {
+  color: #ff3333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
