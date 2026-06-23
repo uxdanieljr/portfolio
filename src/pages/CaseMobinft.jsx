@@ -175,9 +175,9 @@ const CaseMobinft = () => {
                 <p className="project-subtitle lang-en">Redesigning the patient journey: from confusion at first access to intuitive nutritional tracking.</p>
               </div>
               <div className="project-actions">
-                <a href="case-conecta.html" className="btn btn-expand-project" style={{"textDecoration":"none","textAlign":"center"}}>
+                <Link to="/case-conecta" className="btn btn-expand-project" style={{"textDecoration":"none","textAlign":"center"}}>
                   <span className="lang-pt">Ver case completo</span><span className="lang-en">View full case</span>
-                </a>
+                </Link>
               </div>
             </div>
           </article>
