@@ -12,10 +12,7 @@ export const ThemeProvider = ({ children }) => {
     if (savedTheme) {
       setTheme(savedTheme);
     } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (prefersDark) {
-        setTheme('dark');
-      }
+      setTheme('light');
     }
   }, []);
 
