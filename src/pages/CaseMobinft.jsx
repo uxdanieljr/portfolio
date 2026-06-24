@@ -154,6 +154,34 @@ const CaseMobinft = () => {
           <span className="lang-pt">Confira também</span><span className="lang-en">See also</span>
         </span>
         <div className="projects-grid">
+
+          <article className="project-card" id="project-001">
+            <div className="project-main-info">
+              <header className="project-header">
+                <div className="project-header-left">
+                  <span className="project-meta-number">(01)</span>
+                  <span className="project-meta-tag lang-pt">SaaS Desktop</span>
+                  <span className="project-meta-tag lang-en">SaaS Desktop</span>
+                </div>
+                <span className="project-meta-year">2025-2026</span>
+              </header>
+              <div className="project-image-wrapper">
+                <img src="/assets/banner-bradesco-negociacao.svg" alt="Banner do projeto Bradesco Negociação" className="project-image" loading="lazy" />
+              </div>
+              <div className="project-body-summary">
+                <h3 className="lang-pt">Bradesco Seguros - Modernização de sistema crítico de gestão</h3>
+                <h3 className="lang-en">Bradesco Seguros - Modernization of a critical management system</h3>
+                <p className="project-subtitle lang-pt">De sistema travado a fluxo que funciona: 10h a menos de trabalho manual por semana.</p>
+                <p className="project-subtitle lang-en">From a stuck system to a flow that works: 10 fewer hours of manual work per week.</p>
+              </div>
+              <div className="project-actions">
+                <Link to="/case-bradesco-senha" className="btn btn-expand-project" style={{textDecoration:'none', textAlign:'center'}}>
+                  <span className="lang-pt">Ver case completo</span><span className="lang-en">View full case</span>
+                </Link>
+              </div>
+            </div>
+          </article>
+
           <article className="project-card" id="project-002">
             <div className="project-main-info">
               <header className="project-header">
