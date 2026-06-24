@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 /* --- DESIGN SYSTEM TOKENS --- */
 :root {
@@ -1348,16 +1348,16 @@ body[data-lang='en'] .lang-pt { display: none !important; }
   font-family: var(--font-primary);
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--text-primary);
 }
 
 .password-input {
   padding: 1rem 1.2rem;
   font-size: 1.2rem;
   font-family: var(--font-primary);
-  border: 2px solid var(--text-color);
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  border: 2px solid var(--text-primary);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   outline: none;
   transition: var(--transition);
   border-radius: 4px;
@@ -1371,6 +1371,13 @@ body[data-lang='en'] .lang-pt { display: none !important; }
 .password-form .btn {
   width: 100%;
   margin-top: 0.5rem;
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.password-form .btn:hover {
+  background-color: var(--accent-orange);
+  color: #000000;
 }
 
 .error-msg {
