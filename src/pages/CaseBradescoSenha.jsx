@@ -26,8 +26,8 @@ const CaseBradescoSenha = () => {
         <article className="case-study-article">
           <header className="case-header">
             <h1 className="case-title" style={{ marginBottom: '1rem' }}>
-              <span className="lang-pt">Resumo: Bradesco Seguros — Modernização de sistema crítico de gestão</span>
-              <span className="lang-en">Summary: Bradesco Seguros — Modernization of a critical management system</span>
+              <span className="lang-pt">Bradesco Seguros — Modernização de sistema crítico de gestão</span>
+              <span className="lang-en">Bradesco Seguros — Modernization of a critical management system</span>
             </h1>
             <p className="case-subtitle">
               <span className="lang-pt">Da arquitetura rígida ao sistema funcional: redesenho de fluxos críticos que reduziu 20 horas semanais de trabalho manual por funcionário, em apenas 10 meses.</span>
