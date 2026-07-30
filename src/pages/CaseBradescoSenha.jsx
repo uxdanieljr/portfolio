@@ -26,21 +26,37 @@ const CaseBradescoSenha = () => {
         <article className="case-study-article">
           <header className="case-header">
             <h1 className="case-title" style={{ marginBottom: '1rem' }}>
-              <span className="lang-pt">Acesso Restrito: Bradesco Seguros</span>
-              <span className="lang-en">Restricted Access: Bradesco Seguros</span>
+              <span className="lang-pt">Resumo: Bradesco Seguros — Modernização de sistema crítico de gestão</span>
+              <span className="lang-en">Summary: Bradesco Seguros — Modernization of a critical management system</span>
             </h1>
             <p className="case-subtitle">
-              <span className="lang-pt">Este case contém informações sensíveis e é protegido por regras de compliance e confidencialidade da empresa.</span>
-              <span className="lang-en">This case contains sensitive information and is protected by the company's compliance and confidentiality rules.</span>
+              <span className="lang-pt">Da arquitetura rígida ao sistema funcional: redesenho de fluxos críticos que reduziu 20 horas semanais de trabalho manual por funcionário, em apenas 10 meses.</span>
+              <span className="lang-en">From rigid architecture to functional system: redesign of critical flows that reduced manual work by 20 hours per week per employee, in just 10 months.</span>
             </p>
           </header>
 
           <div className="case-content">
-            <p className="lang-pt">Por se tratar de um projeto fechado e envolver dados internos, <strong>os detalhes desta solução não podem ser divulgados publicamente</strong>.</p>
-            <p className="lang-en">Because this is a closed project involving internal data, <strong>the details of this solution cannot be disclosed publicly</strong>.</p>
+            <h2 className="lang-pt">🤔 O Desafio</h2>
+            <h2 className="lang-en">🤔 The Challenge</h2>
+            <p className="lang-pt">O projeto consistia na modernização urgente de um sistema legado crítico para a operação da empresa, impulsionada por novas regulamentações governamentais. O sistema antigo possuía uma arquitetura engessada e fluxos complexos.</p>
+            <p className="lang-en">The project consisted of the urgent modernization of a legacy system critical to the company's operations, driven by new government regulations. The old system had a rigid architecture and complex flows.</p>
+
+            <h2 className="lang-pt">💡 A Abordagem</h2>
+            <h2 className="lang-en">💡 The Approach</h2>
+            <p className="lang-pt">Através de reuniões de discovery com usuários finais, mapeei as jornadas e desenhei novos fluxogramas e protótipos focados em prevenir erros, dar visibilidade ao status dos processos e diminuir drasticamente a curva de aprendizado da ferramenta.</p>
+            <p className="lang-en">Through discovery meetings with end-users, I mapped journeys and designed new flowcharts and prototypes focused on preventing errors, providing visibility to process statuses, and drastically reducing the tool's learning curve.</p>
+
+            <h2 className="lang-pt">📊 O Resultado</h2>
+            <h2 className="lang-en">📊 The Result</h2>
+            <p className="lang-pt">Com processos mais enxutos e fluxos de trabalho automatizados, o projeto reduziu em aproximadamente 20 horas semanais o tempo de entrada manual de dados por funcionário.</p>
+            <p className="lang-en">With leaner processes and automated workflows, the project reduced the time spent on manual data entry by approximately 20 hours per week per employee.</p>
             
-            <p className="lang-pt"><strong>Para acessar o conteúdo completo, é necessário inserir a senha de acesso.</strong> Se você for um recrutador e ainda não possui a senha, sinta-se à vontade para me contatar que enviarei o acesso imediatamente.</p>
-            <p className="lang-en"><strong>To access the full content, you must enter the access password.</strong> If you are a recruiter and do not yet have the password, feel free to contact me and I will send you the access immediately.</p>
+            <hr style={{ margin: '3rem 0', borderColor: 'var(--border-color)', opacity: 0.2 }} />
+
+            <h2 className="lang-pt">🔒 Acesso Restrito</h2>
+            <h2 className="lang-en">🔒 Restricted Access</h2>
+            <p className="lang-pt">Os detalhes aprofundados de discovery, problemas específicos do negócio e as telas finais do projeto são confidenciais. <strong>Para ver o case completo, insira a senha abaixo:</strong> Se você for um recrutador e não possui a senha, sinta-se à vontade para me contatar.</p>
+            <p className="lang-en">In-depth discovery details, specific business problems, and the final project screens are confidential. <strong>To view the full case, enter the password below:</strong> If you are a recruiter and do not have the password, feel free to contact me.</p>
 
             <form className="password-form" id="password-form" onSubmit={handleSubmit}>
               <label htmlFor="case-password">
