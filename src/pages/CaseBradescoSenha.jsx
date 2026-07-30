@@ -55,8 +55,8 @@ const CaseBradescoSenha = () => {
 
             <h2 className="lang-pt">🔒 Acesso Restrito</h2>
             <h2 className="lang-en">🔒 Restricted Access</h2>
-            <p className="lang-pt">Os detalhes aprofundados de discovery, problemas específicos do negócio e as telas finais do projeto são confidenciais. <strong>Para ver o case completo, insira a senha abaixo:</strong> Se você for um recrutador e não possui a senha, sinta-se à vontade para me contatar.</p>
-            <p className="lang-en">In-depth discovery details, specific business problems, and the final project screens are confidential. <strong>To view the full case, enter the password below:</strong> If you are a recruiter and do not have the password, feel free to contact me.</p>
+            <p className="lang-pt">Os detalhes aprofundados de discovery, problemas específicos do negócio e as telas finais do projeto são confidenciais. <strong>Para ver o case completo, insira a senha abaixo:</strong> Se você for um recrutador e não possui a senha, sinta-se à vontade para me contatar pelo <a href="https://www.linkedin.com/in/dccarvalhojr/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>LinkedIn</a>.</p>
+            <p className="lang-en">In-depth discovery details, specific business problems, and the final project screens are confidential. <strong>To view the full case, enter the password below:</strong> If you are a recruiter and do not have the password, feel free to contact me on <a href="https://www.linkedin.com/in/dccarvalhojr/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>LinkedIn</a>.</p>
 
             <form className="password-form" id="password-form" onSubmit={handleSubmit}>
               <label htmlFor="case-password">
