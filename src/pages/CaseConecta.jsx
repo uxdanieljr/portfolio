@@ -1,4 +1,4 @@
-import { useMetadata } from '../hooks/useMetadata';
+import Metadata from '../components/Metadata';
 import React from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLang } from '../context/LangContext';
@@ -6,11 +6,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 import Lang from '../components/Lang';
 
 const CaseConecta = () => {
-  useMetadata({
-    title: lang === 'en' ? 'Conecta App - Daniel Carvalho' : 'App Conecta - Daniel Carvalho',
-    description: lang === 'en' ? 'Conecta app redesign' : 'Redesign do app Conecta',
-    canonicalPath: lang === 'en' ? '/en/cases/conecta' : '/cases/conecta'
-  });
 
   useScrollReveal();
   const { lang } = useLang();

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useLang } from '../context/LangContext';
 import { useLocation } from 'react-router-dom';
 
-export function useMetadata({ title, description, canonicalPath }) {
+export default function Metadata({ title, description, canonicalPath }) {
   const { lang } = useLang();
   const location = useLocation();
 

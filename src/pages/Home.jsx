@@ -1,4 +1,4 @@
-import { useMetadata } from '../hooks/useMetadata';
+import Metadata from '../components/Metadata';
 import React from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLang } from '../context/LangContext';
@@ -6,11 +6,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 import Lang from '../components/Lang';
 
 const Home = () => {
-  useMetadata({
-    title: lang === 'en' ? 'Daniel Carvalho - Product Designer' : 'Daniel Carvalho - Product Designer',
-    description: lang === 'en' ? 'Product Designer specializing in apps and SaaS.' : 'Product Designer especialista em apps e SaaS.',
-    canonicalPath: lang === 'en' ? '/en' : '/'
-  });
 
   useScrollReveal();
   const { lang } = useLang();

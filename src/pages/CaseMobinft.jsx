@@ -1,4 +1,4 @@
-import { useMetadata } from '../hooks/useMetadata';
+import Metadata from '../components/Metadata';
 import React from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLang } from '../context/LangContext';
@@ -6,11 +6,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 import Lang from '../components/Lang';
 
 const CaseMobinft = () => {
-  useMetadata({
-    title: lang === 'en' ? 'MobiNFT - Daniel Carvalho' : 'MobiNFT - Daniel Carvalho',
-    description: lang === 'en' ? 'NFT platform for mobility' : 'Plataforma de NFT para mobilidade',
-    canonicalPath: lang === 'en' ? '/en/cases/mobinft' : '/cases/mobinft'
-  });
 
   useScrollReveal();
   const { lang } = useLang();

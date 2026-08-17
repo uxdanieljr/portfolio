@@ -1,4 +1,4 @@
-import { useMetadata } from '../hooks/useMetadata';
+import Metadata from '../components/Metadata';
 import React, { useState } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLang } from '../context/LangContext';
@@ -7,11 +7,6 @@ import { useNavigate } from 'react-router-dom';
 import Lang from '../components/Lang';
 
 const CaseBradescoSenha = () => {
-  useMetadata({
-    title: lang === 'en' ? 'Bradesco Seguros - Daniel Carvalho' : 'Bradesco Seguros - Daniel Carvalho',
-    description: lang === 'en' ? 'Bradesco Seguros case summary' : 'Resumo do case do Bradesco Seguros',
-    canonicalPath: lang === 'en' ? '/en/cases/bradesco-seguros' : '/cases/bradesco-seguros'
-  });
 
   useScrollReveal();
   const { lang } = useLang();
@@ -30,6 +25,8 @@ const CaseBradescoSenha = () => {
 
   return (
     <>
+      <Metadata title={lang === 'en' ? 'Bradesco Seguros - Daniel Carvalho' : 'Bradesco Seguros - Daniel Carvalho'} description={lang === 'en' ? 'Bradesco Seguros case summary' : 'Resumo do case do Bradesco Seguros'} canonicalPath={lang === 'en' ? '/en/cases/bradesco-seguros' : '/cases/bradesco-seguros'} />
+
       <main className="case-study-main">
         <article className="case-study-article">
           <header className="case-header">
