@@ -56,13 +56,13 @@ const Header = () => {
           <nav aria-label={lang === 'pt' ? 'Navegação Principal' : 'Main Navigation'}>
             <ul className={`nav-menu ${isMenuOpen ? 'open' : ''}`} id="nav-menu">
               <li>
-                <Link to="/#sobre" className={`nav-link ${activeSection === 'sobre' ? 'active' : ''}`} onClick={closeMenu}>
-                  {lang === 'pt' ? 'Sobre' : 'About'}
+                <Link to="/#projetos" className={`nav-link ${activeSection === 'projetos' ? 'active' : ''}`} onClick={closeMenu}>
+                  {lang === 'pt' ? 'Projetos' : 'Projects'}
                 </Link>
               </li>
               <li>
-                <Link to="/#projetos" className={`nav-link ${activeSection === 'projetos' ? 'active' : ''}`} onClick={closeMenu}>
-                  {lang === 'pt' ? 'Projetos' : 'Projects'}
+                <Link to="/#sobre" className={`nav-link ${activeSection === 'sobre' ? 'active' : ''}`} onClick={closeMenu}>
+                  {lang === 'pt' ? 'Sobre' : 'About'}
                 </Link>
               </li>
               <li>
