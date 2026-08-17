@@ -1,15 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useTheme } from '../context/ThemeContext';
 import { useLang } from '../context/LangContext';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
-  const { lang, toggleLang } = useLang();
+  const { lang } = useLang();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLangToggle = () => {
+    const isEn = location.pathname.startsWith('/en');
+    if (isEn) {
+      navigate(location.pathname.replace(/^\/en/, '') || '/', { replace: true });
+    } else {
+      navigate('/en' + (location.pathname === '/' ? '' : location.pathname), { replace: true });
+    }
+  };
 
   const isHome = location.pathname === '/';
 
@@ -67,7 +77,7 @@ const Header = () => {
               </li>
               <li>
                 <Link to="/#servicos" className={`nav-link ${activeSection === 'servicos' ? 'active' : ''}`} onClick={closeMenu}>
-                  {lang === 'pt' ? 'Serviços' : 'Services'}
+                  {lang === 'pt' ? 'Competências' : 'Capabilities'}
                 </Link>
               </li>
               <li>
@@ -76,7 +86,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="mobile-only-toggles" style={{ display: 'none', justifyContent: 'center', gap: '1rem', marginTop: '1rem' }}>
-                <button className="lang-toggle-btn" aria-label="Alternar idioma" onClick={toggleLang}>
+                <button className="lang-toggle-btn" aria-label="Alternar idioma" onClick={handleLangToggle}>
                   {lang === 'pt' ? 'PT' : 'EN'}
                 </button>
                 <button className="theme-toggle-btn" aria-label="Alternar modo escuro e claro" onClick={toggleTheme}>
@@ -93,7 +103,7 @@ const Header = () => {
         )}
 
         <div className="nav-actions">
-          <button className="lang-toggle-btn" aria-label="Alternar idioma" onClick={toggleLang}>
+          <button className="lang-toggle-btn" aria-label="Alternar idioma" onClick={handleLangToggle}>
             {lang === 'pt' ? 'PT' : 'EN'}
           </button>
           

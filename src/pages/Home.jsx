@@ -21,34 +21,34 @@ const Home = () => {
         <div className="hero-text">
           <h1 className="hero-tagline">
             <Lang id="pt">
-<span className="lang-pt">Design que</span>
+<span className="lang-pt">Produtos</span>
 </Lang><Lang id="en">
-<span className="lang-en">Design that</span>
+<span className="lang-en">Complex</span>
 </Lang>
             <Lang id="pt">
-<span className="highlight-orange lang-pt">resolve.</span>
+<span className="highlight-orange lang-pt">complexos.</span>
 </Lang><Lang id="en">
-<span className="highlight-orange lang-en">solves.</span>
+<span className="highlight-orange lang-en">products.</span>
 </Lang>
             <Lang id="pt">
-<span className="lang-pt">IA que</span>
+<span className="lang-pt">Experiências</span>
 </Lang><Lang id="en">
-<span className="lang-en">AI that</span>
+<span className="lang-en">Clear</span>
 </Lang>
             <Lang id="pt">
-<span className="highlight-blue lang-pt">acelera.</span>
+<span className="highlight-blue lang-pt">claras.</span>
 </Lang><Lang id="en">
-<span className="highlight-blue lang-en">improves.</span>
+<span className="highlight-blue lang-en">experiences.</span>
 </Lang>
           </h1>
           <Lang id="pt">
 <p className="hero-subtitle lang-pt">
-            Sou Daniel Carvalho, Product Designer especialista em apps e SaaS. Entrego experiências que funcionam, do problema à tela sem enrolação.
+            Sou Daniel Carvalho, Product Designer com mais de 4 anos de experiência em sistemas corporativos, aplicativos e SaaS. Conecto pesquisa, estratégia e design de interação para tornar fluxos críticos mais claros, eficientes e viáveis de implementar.
           </p>
 </Lang>
           <Lang id="en">
 <p className="hero-subtitle lang-en">
-            I'm Daniel Carvalho, a Product Designer specializing in Apps and SaaS. I deliver experiences that work, from the problem to the screen without the fluff.
+            I’m Daniel Carvalho, a Product Designer with 4+ years of experience across enterprise systems, mobile apps, and SaaS. I connect research, product strategy, and interaction design to clarify critical workflows and create solutions that are efficient and feasible to build.
           </p>
 </Lang>
           <div className="btn-group">
@@ -56,14 +56,14 @@ const Home = () => {
               <Lang id="pt">
 <span className="lang-pt">Ver cases</span>
 </Lang><Lang id="en">
-<span className="lang-en">See cases</span>
+<span className="lang-en">View selected work</span>
 </Lang>
             </a>
             <a href="/Daniel Carvalho - Product Designer 2026.pdf" target="_blank" rel="noopener noreferrer" className="btn" id="hero-cta-cv">
               <Lang id="pt">
 <span className="lang-pt">Ver currículo</span>
 </Lang><Lang id="en">
-<span className="lang-en">View resume</span>
+<span className="lang-en">View résumé</span>
 </Lang>
             </a>
           </div>
@@ -72,8 +72,8 @@ const Home = () => {
         <div className="hero-illustration" aria-hidden="true">
           <div className="brutalist-badge">
             <div className="brutalist-badge-icon">⚡</div>
-            <h4>PRODUCT</h4>
-            <p>DESIGNER APPS & SAAS</p>
+            <h4>PRODUCT DESIGNER</h4>
+            <p>PRODUTOS DIGITAIS COMPLEXOS</p>
           </div>
         </div>
       </div>
@@ -83,12 +83,23 @@ const Home = () => {
     <section id="projetos" className="reveal">
       <div className="container">
         <Lang id="pt">
-<span className="section-label lang-pt">Projetos</span>
+<span className="section-label lang-pt">CASES SELECIONADOS</span>
 </Lang>
         <Lang id="en">
-<span className="section-label lang-en">Projects</span>
+<span className="section-label lang-en">SELECTED WORK</span>
 </Lang>
         
+        
+        <div className="section-header" style={{marginBottom: "2rem"}}>
+          <Lang id="pt">
+            <h2 className="lang-pt" style={{fontSize: "2rem", marginBottom: "0.5rem"}}>Problemas reais, decisões de design e resultados.</h2>
+            <p className="lang-pt" style={{fontSize: "1.125rem", color: "var(--text-color-secondary)"}}>Uma seleção de projetos em sistemas corporativos, saúde digital e Web3.</p>
+          </Lang>
+          <Lang id="en">
+            <h2 className="lang-en" style={{fontSize: "2rem", marginBottom: "0.5rem"}}>Real problems, design decisions, and outcomes.</h2>
+            <p className="lang-en" style={{fontSize: "1.125rem", color: "var(--text-color-secondary)"}}>A selection of projects across enterprise software, digital health, and Web3.</p>
+          </Lang>
+        </div>
         <div className="projects-grid">
           {/*  Case 1  */}
           <article className="project-card" id="project-001">
@@ -97,10 +108,10 @@ const Home = () => {
                 <div className="project-header-left">
                   <span className="project-meta-number">(01)</span>
                   <Lang id="pt">
-<span className="project-meta-tag lang-pt">SaaS Desktop</span>
+<span className="project-meta-tag lang-pt">Sistema corporativo · Desktop</span>
 </Lang>
                   <Lang id="en">
-<span className="project-meta-tag lang-en">SaaS Desktop</span>
+<span className="project-meta-tag lang-en">Enterprise system · Desktop</span>
 </Lang>
                 </div>
                 <span className="project-meta-year">2025-2026</span>
@@ -112,26 +123,26 @@ const Home = () => {
               
               <div className="project-body-summary">
                 <Lang id="pt">
-<h3 className="lang-pt">Bradesco Seguros - Modernização de sistema crítico de gestão</h3>
+<h3 className="lang-pt">Bradesco Seguros — Modernização de um sistema crítico de gestão</h3>
 </Lang>
                 <Lang id="en">
-<h3 className="lang-en">Bradesco Seguros - Modernization of a critical management system</h3>
+<h3 className="lang-en">Bradesco Seguros — Modernizing a critical management system</h3>
 </Lang>
 
                 <Lang id="pt">
-<p className="project-subtitle lang-pt">De sistema travado a fluxo que funciona: 10h a menos de trabalho manual por semana.</p>
+<p className="project-subtitle lang-pt">Redesenho de fluxos e automações em um sistema legado, reduzindo trabalho manual, prevenindo erros e ampliando a visibilidade dos processos.</p>
 </Lang>
                 <Lang id="en">
-<p className="project-subtitle lang-en">From a stuck system to a flow that works: 10 fewer hours of manual work per week.</p>
+<p className="project-subtitle lang-en">Redesigned workflows and automations in a legacy system to reduce manual work, prevent errors, and improve process visibility.</p>
 </Lang>
               </div>
               
               <div className="project-actions">
                 <Link to="/cases/bradesco-seguros" className="btn btn-expand-project" style={{"textDecoration":"none","textAlign":"center"}}>
                   <Lang id="pt">
-<span className="lang-pt">Ver case completo</span>
+<span className="lang-pt">Ver case</span>
 </Lang><Lang id="en">
-<span className="lang-en">See full case</span>
+<span className="lang-en">View case</span>
 </Lang>
                 </Link>
               </div>
@@ -145,10 +156,10 @@ const Home = () => {
                 <div className="project-header-left">
                   <span className="project-meta-number">(02)</span>
                   <Lang id="pt">
-<span className="project-meta-tag lang-pt">App Mobile</span>
+<span className="project-meta-tag lang-pt">Aplicativo mobile · Saúde digital</span>
 </Lang>
                   <Lang id="en">
-<span className="project-meta-tag lang-en">Mobile App</span>
+<span className="project-meta-tag lang-en">Mobile app · Digital health</span>
 </Lang>
                 </div>
                 <span className="project-meta-year">2024-2025</span>
@@ -160,26 +171,26 @@ const Home = () => {
               
               <div className="project-body-summary">
                 <Lang id="pt">
-<h3 className="lang-pt">Redesign do app Conecta</h3>
+<h3 className="lang-pt">Conecta — Redesign da jornada de acompanhamento nutricional</h3>
 </Lang>
                 <Lang id="en">
-<h3 className="lang-en">Conecta app Redesign</h3>
+<h3 className="lang-en">Conecta — Redesigning the nutrition tracking journey</h3>
 </Lang>
 
                 <Lang id="pt">
-<p className="project-subtitle lang-pt">Redesenhando a jornada do paciente: da confusão no primeiro acesso a um acompanhamento nutricional intuitivo.</p>
+<p className="project-subtitle lang-pt">Proposta de redesign do primeiro acesso e da navegação para tornar as tarefas do paciente mais compreensíveis e facilitar o acompanhamento pelo nutricionista.</p>
 </Lang>
                 <Lang id="en">
-<p className="project-subtitle lang-en">Redesigning the patient journey: from confusion at first access to intuitive nutritional tracking.</p>
+<p className="project-subtitle lang-en">A redesign concept for onboarding and navigation, aimed at making patient tasks easier to understand and progress easier for nutritionists to track.</p>
 </Lang>
               </div>
               
               <div className="project-actions">
                 <Link to="/cases/conecta" className="btn btn-expand-project" style={{"textDecoration":"none","textAlign":"center"}}>
                   <Lang id="pt">
-<span className="lang-pt">Ver case completo</span>
+<span className="lang-pt">Ver case</span>
 </Lang><Lang id="en">
-<span className="lang-en">See full case</span>
+<span className="lang-en">View case</span>
 </Lang>
                 </Link>
               </div>
@@ -193,10 +204,10 @@ const Home = () => {
                 <div className="project-header-left">
                   <span className="project-meta-number">(03)</span>
                   <Lang id="pt">
-<span className="project-meta-tag lang-pt">App Mobile</span>
+<span className="project-meta-tag lang-pt">Aplicativo mobile · Saúde digital</span>
 </Lang>
                   <Lang id="en">
-<span className="project-meta-tag lang-en">Mobile App</span>
+<span className="project-meta-tag lang-en">Mobile app · UX project</span>
 </Lang>
                 </div>
                 <span className="project-meta-year">2023</span>
@@ -208,26 +219,26 @@ const Home = () => {
               
               <div className="project-body-summary">
                 <Lang id="pt">
-<h3 className="lang-pt">Mobinft: Comprar NFT sem precisar entender NFT</h3>
+<h3 className="lang-pt">Mobinft — Simplificando a compra de chaves digitais em Web3</h3>
 </Lang>
                 <Lang id="en">
-<h3 className="lang-en">Mobinft: Buying NFTs without needing to understand NFTs</h3>
+<h3 className="lang-en">Mobinft — Simplifying the purchase of digital keys in Web3</h3>
 </Lang>
 
                 <Lang id="pt">
-<p className="project-subtitle lang-pt">Web3 sem manual de instruções: onboarding que transformou complexidade em primeira compra.</p>
+<p className="project-subtitle lang-pt">Pesquisa e prototipação de uma jornada de compra para pessoas sem experiência prévia com NFTs, refinada em duas rodadas de testes de usabilidade.</p>
 </Lang>
                 <Lang id="en">
-<p className="project-subtitle lang-en">Web3 without a manual: onboarding that turned complexity into the first purchase.</p>
+<p className="project-subtitle lang-en">Research and prototyping for a purchasing journey designed for people with no prior NFT experience, refined through two rounds of usability testing.</p>
 </Lang>
               </div>
               
               <div className="project-actions">
                 <Link to="/cases/mobinft" className="btn btn-expand-project" style={{"textDecoration":"none","textAlign":"center"}}>
                   <Lang id="pt">
-<span className="lang-pt">Ver case completo</span>
+<span className="lang-pt">Ver case</span>
 </Lang><Lang id="en">
-<span className="lang-en">See full case</span>
+<span className="lang-en">View case</span>
 </Lang>
                 </Link>
               </div>
@@ -251,59 +262,41 @@ const Home = () => {
           <div className="sobre-title-block">
             <Lang id="pt">
 <h2 className="sobre-title lang-pt">
-              Produto bom não é só bonito. É claro, rápido e funciona de verdade.
+              Design de ponta a ponta, com atenção ao usuário, à operação e ao negócio.
             </h2>
 </Lang>
             <Lang id="en">
 <h2 className="sobre-title lang-en">
-              A good product isn't just pretty. It's clear, fast, and actually works.
+              End-to-end design grounded in user needs, operations, and business context.
             </h2>
 </Lang>
-            <Lang id="pt">
-<div className="sobre-highlight-box lang-pt">
-              Foco em valor prático & UX orientada a IA
-            </div>
-</Lang>
-            <Lang id="en">
-<div className="sobre-highlight-box lang-en">
-              Focus on practical value & AI-driven UX
-            </div>
-</Lang>
+            
           </div>
           
           <div className="sobre-text-block">
             <Lang id="pt">
 <p className="lang-pt">
-              Tenho mais de 4 anos de experiência criando e evoluindo produtos digitais para empresas, startups e agências.
+              Atuo em produtos que exigem compreender regras de negócio, operações e necessidades reais de usuários antes de chegar à interface. Minha experiência inclui modernização de sistemas críticos, redesign de jornadas e estruturação de fluxos, protótipos e design systems.
             </p>
 </Lang>
             <Lang id="en">
 <p className="lang-en">
-              I have 4+ years of experience creating and evolving digital products for companies, startups, and agencies.
+              I work on products that require a clear understanding of business rules, operations, and real user needs before moving into interface design. My experience includes modernizing critical systems, redesigning journeys, and shaping workflows, prototypes, and design systems.
             </p>
 </Lang>
 
             <Lang id="pt">
 <p className="lang-pt">
-              Sou multi-especialista: entendo o produto de ponta a ponta, da pesquisa com usuário até o Design System. Isso me permite tomar decisões mais consistentes e entregar com mais autonomia.
+              Trabalho em colaboração com usuários, Produto e Tecnologia para transformar cenários ambíguos em decisões claras e soluções viáveis. Uso IA como ferramenta de pesquisa, síntese e prototipação, sempre com revisão crítica.
             </p>
 </Lang>
             <Lang id="en">
 <p className="lang-en">
-              I am a multi-specialist: I understand the product from end to end, from user research to the Design System. This allows me to make more consistent decisions and deliver with more autonomy.
+              I collaborate with users, Product, and Engineering to turn ambiguous scenarios into clear decisions and feasible solutions. I use AI as a tool for research, synthesis, and prototyping, always with critical review.
             </p>
 </Lang>
 
-            <Lang id="pt">
-<p className="lang-pt">
-              Pra mim, IA não é curiosidade, é ferramenta de trabalho. Ela me ajuda a pesquisar mais rápido, sintetizar dados com mais precisão e prototipar com menos atrito.
-            </p>
-</Lang>
-            <Lang id="en">
-<p className="lang-en">
-              For me, IA is not curiosity, is a work tool. It helps me research faster, synthesize data more accurately, and prototype with less friction.
-            </p>
-</Lang>
+            
             
             <div className="sobre-education-badges">
               <div className="edu-badge" id="edu-mba">
@@ -334,18 +327,18 @@ const Home = () => {
     <section id="servicos" className="reveal">
       <div className="container">
         <Lang id="pt">
-<span className="section-label lang-pt"> O que eu faço</span>
+<span className="section-label lang-pt">COMO CONTRIBUO</span>
 </Lang>
         <Lang id="en">
-<span className="section-label lang-en"> What I do</span>
+<span className="section-label lang-en">HOW I CONTRIBUTE</span>
 </Lang>
         
         <div className="servicos-header">
           <Lang id="pt">
-<h2 className="lang-pt">Não sou especialista em uma coisa só. Sou especialista no produto inteiro.</h2>
+<h2 className="lang-pt">Da compreensão do problema à evolução da solução.</h2>
 </Lang>
           <Lang id="en">
-<h2 className="lang-en">I'm not a specialist in just one thing. I'm a specialist in the entire product.</h2>
+<h2 className="lang-en">From understanding the problem to evolving the solution.</h2>
 </Lang>
         </div>
 
@@ -354,12 +347,12 @@ const Home = () => {
           <article className="card service-card" id="srv-ux-research">
             <div className="service-icon" aria-hidden="true">🔬</div>
             <div className="service-num">(001)</div>
-            <h3>UX Research</h3>
+            <h3>Pesquisa com usuários</h3>
             <Lang id="pt">
-<p className="lang-pt">Pesquiso, ouço usuários e transformo dados em decisões. Com IA na síntese, o processo é mais rápido e a leitura, mais precisa.</p>
+<p className="lang-pt">Planejo e conduzo pesquisas para compreender comportamentos, necessidades e restrições. Organizo evidências para apoiar decisões de produto.</p>
 </Lang>
             <Lang id="en">
-<p className="lang-en">I research, listen to users, and turn data into decisions. With AI in synthesis, the process is faster and the reading is more accurate.</p>
+<p className="lang-en">I plan and conduct research to understand behaviors, needs, and constraints, then organize evidence to support product decisions.</p>
 </Lang>
           </article>
 
@@ -367,12 +360,12 @@ const Home = () => {
           <article className="card service-card" id="srv-ui-design">
             <div className="service-icon" aria-hidden="true">🎨</div>
             <div className="service-num">(002)</div>
-            <h3>UI Design</h3>
+            <Lang id="pt"><h3>Design de interação e UI</h3></Lang><Lang id="en"><h3>Interaction and UI design</h3></Lang>
             <Lang id="pt">
-<p className="lang-pt">Interfaces claras, com hierarquia visual bem definida e consistência em cada tela.</p>
+<p className="lang-pt">Transformo requisitos e descobertas em interfaces claras, consistentes e adequadas ao contexto de uso.</p>
 </Lang>
             <Lang id="en">
-<p className="lang-en">Clear interfaces, with well-defined visual hierarchy and consistency on every screen.</p>
+<p className="lang-en">I translate requirements and findings into clear, consistent interfaces suited to the context of use.</p>
 </Lang>
           </article>
 
@@ -381,16 +374,16 @@ const Home = () => {
             <div className="service-icon" aria-hidden="true">⚙️</div>
             <div className="service-num">(003)</div>
             <Lang id="pt">
-<h3 className="lang-pt">Prototipagem</h3>
+<h3 className="lang-pt">Prototipação e validação</h3>
 </Lang>
             <Lang id="en">
-<h3 className="lang-en">Prototyping</h3>
+<h3 className="lang-en">Prototyping and validation</h3>
 </Lang>
             <Lang id="pt">
-<p className="lang-pt">Do rascunho ao protótipo navegável. Valido ideias antes de virar código, economizando tempo e retrabalho.</p>
+<p className="lang-pt">Crio protótipos para testar hipóteses, alinhar o time e identificar problemas antes do desenvolvimento.</p>
 </Lang>
             <Lang id="en">
-<p className="lang-en">From draft to navigable prototype. I validate ideas before they become code, saving time and rework.</p>
+<p className="lang-en">I create prototypes to test hypotheses, align teams, and identify problems before development.</p>
 </Lang>
           </article>
 
@@ -398,12 +391,12 @@ const Home = () => {
           <article className="card service-card" id="srv-design-system">
             <div className="service-icon" aria-hidden="true">🧩</div>
             <div className="service-num">(004)</div>
-            <h3>Design System</h3>
+            <Lang id="pt"><h3>Design systems</h3></Lang><Lang id="en"><h3>Design systems</h3></Lang>
             <Lang id="pt">
-<p className="lang-pt">Estruturo componentes e padrões para o produto escalar sem perder consistência.</p>
+<p className="lang-pt">Estruturo componentes, padrões e documentação para apoiar consistência, manutenção e escala.</p>
 </Lang>
             <Lang id="en">
-<p className="lang-en">I structure components and patterns so the product scales without losing consistency.</p>
+<p className="lang-en">I structure components, patterns, and documentation to support consistency, maintenance, and scale.</p>
 </Lang>
           </article>
 
@@ -412,16 +405,16 @@ const Home = () => {
             <div className="service-icon" aria-hidden="true">📈</div>
             <div className="service-num">(005)</div>
             <Lang id="pt">
-<h3 className="lang-pt">Estratégia de Produto</h3>
+<h3 className="lang-pt">Estratégia e fluxos</h3>
 </Lang>
             <Lang id="en">
-<h3 className="lang-en">Product Strategy</h3>
+<h3 className="lang-en">Product strategy and workflows</h3>
 </Lang>
             <Lang id="pt">
-<p className="lang-pt">Identifico gaps, organizo prioridades e ajudo times a tomarem decisões com mais clareza.</p>
+<p className="lang-pt">Mapeio jornadas, regras de negócio e fluxos críticos para reduzir ambiguidades e orientar prioridades.</p>
 </Lang>
             <Lang id="en">
-<p className="lang-en">I identify gaps, organize priorities, and help teams make decisions with more clarity.</p>
+<p className="lang-en">I map journeys, business rules, and critical workflows to reduce ambiguity and guide priorities.</p>
 </Lang>
           </article>
 
@@ -430,16 +423,16 @@ const Home = () => {
             <div className="service-icon" aria-hidden="true">🤖</div>
             <div className="service-num">(006)</div>
             <Lang id="pt">
-<h3 className="lang-pt">Automação de Processos</h3>
+<h3 className="lang-pt">IA aplicada ao processo</h3>
 </Lang>
             <Lang id="en">
-<h3 className="lang-en">Process Automation</h3>
+<h3 className="lang-en">AI-supported workflow</h3>
 </Lang>
             <Lang id="pt">
-<p className="lang-pt">Reduzo trabalho manual. Já economizei ~10h semanais por funcionário só com processos mais enxutos e automações bem aplicadas.</p>
+<p className="lang-pt">Uso IA para acelerar exploração, síntese e prototipação, preservando análise crítica, contexto e validação humana.</p>
 </Lang>
             <Lang id="en">
-<p className="lang-en">I reduce manual work. I've already saved ~10h a week per employee just with leaner processes and well-applied automations.</p>
+<p className="lang-en">I use AI to accelerate exploration, synthesis, and prototyping while preserving critical thinking, context, and human validation.</p>
 </Lang>
           </article>
         </div>
@@ -458,37 +451,37 @@ const Home = () => {
 </Lang>
           
           <Lang id="pt">
-<h2 className="lang-pt">Tem um produto pra evoluir? Vamos conversar.</h2>
+<h2 className="lang-pt">Quer conversar sobre meu trabalho?</h2>
 </Lang>
           <Lang id="en">
-<h2 className="lang-en">Have a product to evolve? Let's talk.</h2>
+<h2 className="lang-en">Interested in discussing my work?</h2>
 </Lang>
 
           <Lang id="pt">
-<p className="lang-pt">Não precisa ter tudo estruturado. Pode me mandar uma mensagem contando o desafio, a gente descobre o próximo passo juntos.</p>
+<p className="lang-pt">Se meu perfil fizer sentido para uma oportunidade ou para o seu time, entre em contato pelo LinkedIn ou por e-mail.</p>
 </Lang>
           <Lang id="en">
-<p className="lang-en">You don't need to have everything structured. You can send me a message telling me the challenge, and we'll figure out the next step together.</p>
+<p className="lang-en">If my experience could be a good fit for an opportunity or your team, feel free to reach out on LinkedIn or by email.</p>
 </Lang>
         </div>
 
         <div className="contato-cards">
           {/*  WhatsApp Card  */}
-          <a href="https://wa.me/5512988298554" target="_blank" rel="noopener noreferrer" className="contato-link-card whatsapp-card" id="contact-whatsapp">
+          <a href="mailto:uxdanieljr@gmail.com" target="_blank" rel="noopener noreferrer" className="contato-link-card email-card" id="contact-email">
             <div className="card">
               <div className="card-content-flex">
                 <div className="card-title-sub">
                   <Lang id="pt">
-<h3 className="lang-pt">Falar no WhatsApp</h3>
+<h3 className="lang-pt">Enviar e-mail</h3>
 </Lang>
                   <Lang id="en">
-<h3 className="lang-en">Talk on WhatsApp</h3>
+<h3 className="lang-en">Send an email</h3>
 </Lang>
                   <Lang id="pt">
-<p className="lang-pt">Bora bater um papo</p>
+<p className="lang-pt">uxdanieljr@gmail.com</p>
 </Lang>
                   <Lang id="en">
-<p className="lang-en">Let's have a chat</p>
+<p className="lang-en">uxdanieljr@gmail.com</p>
 </Lang>
                 </div>
                 <div className="card-arrow-icon" aria-hidden="true">→</div>
@@ -503,10 +496,10 @@ const Home = () => {
                 <div className="card-title-sub">
                   <h3>LinkedIn</h3>
                   <Lang id="pt">
-<p className="lang-pt">Bora se conectar</p>
+<p className="lang-pt">Ver perfil no LinkedIn</p>
 </Lang>
                   <Lang id="en">
-<p className="lang-en">Let's connect</p>
+<p className="lang-en">View LinkedIn profile</p>
 </Lang>
                 </div>
                 <div className="card-arrow-icon" aria-hidden="true">→</div>

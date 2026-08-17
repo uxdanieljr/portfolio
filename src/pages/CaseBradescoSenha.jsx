@@ -25,223 +25,91 @@ const CaseBradescoSenha = () => {
 
   return (
     <>
-      <Metadata title={lang === 'en' ? 'Bradesco Seguros - Daniel Carvalho' : 'Bradesco Seguros - Daniel Carvalho'} description={lang === 'en' ? 'Bradesco Seguros case summary' : 'Resumo do case do Bradesco Seguros'} canonicalPath={lang === 'en' ? '/en/cases/bradesco-seguros' : '/cases/bradesco-seguros'} />
+      <Metadata title={lang === 'en' ? 'Bradesco Seguros — Critical management system | Daniel Carvalho' : 'Bradesco Seguros — Sistema crítico de gestão | Daniel Carvalho'} description={lang === 'en' ? 'A case study on modernizing a critical legacy system through workflow redesign, automation, and reduced manual work.' : 'Case sobre a modernização de um sistema legado crítico, com redesign de fluxos, automações e redução de trabalho manual.'} canonicalPath={lang === 'en' ? '/en/cases/bradesco-seguros' : '/cases/bradesco-seguros'} />
 
       <main className="case-study-main">
         <article className="case-study-article">
           <header className="case-header">
             <h1 className="case-title" style={{ marginBottom: '1rem' }}>
               <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<span className="lang-pt">Bradesco Seguros — Modernização de sistema crítico de gestão</span>
-</Lang>
-</Lang>
-</Lang>
+<span className="lang-pt">Bradesco Seguros — Modernização de um sistema crítico de gestão</span>
 </Lang>
               <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<span className="lang-en">Bradesco Seguros — Modernization of a critical management system</span>
-</Lang>
-</Lang>
-</Lang>
+<span className="lang-en">Bradesco Seguros — Modernizing a critical management system</span>
 </Lang>
             </h1>
             <p className="case-subtitle">
               <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<span className="lang-pt">Da arquitetura rígida ao sistema funcional: redesenho de fluxos críticos que reduziu 20 horas semanais de trabalho manual por funcionário, em apenas 10 meses.</span>
-</Lang>
-</Lang>
-</Lang>
+<span className="lang-pt">Redesign de fluxos críticos e automações em um sistema legado essencial para a operação. A modernização reduziu aproximadamente 10 horas semanais de trabalho manual por funcionário, prevenindo erros e ampliando a visibilidade dos processos.</span>
 </Lang>
               <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<span className="lang-en">From rigid architecture to functional system: redesign of critical flows that reduced manual work by 20 hours per week per employee, in just 10 months.</span>
-</Lang>
-</Lang>
-</Lang>
+<span className="lang-en">Redesign of critical workflows and automations in a legacy system essential to operations. The modernization reduced manual work by approximately 10 hours per week per employee, preventing errors and improving process visibility.</span>
 </Lang>
             </p>
           </header>
 
           <div className="case-content">
             <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
 <h2 className="lang-pt">🤔 O Desafio</h2>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
             <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
 <h2 className="lang-en">🤔 The Challenge</h2>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
             <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<p className="lang-pt">O projeto consistia na modernização urgente de um sistema legado crítico para a operação da empresa, impulsionada por novas regulamentações governamentais. O sistema antigo possuía uma arquitetura engessada e fluxos complexos.</p>
-</Lang>
-</Lang>
-</Lang>
+<p className="lang-pt">Novas exigências regulatórias tornaram urgente a modernização de um sistema legado essencial para a operação. A arquitetura rígida e os fluxos complexos aumentavam o esforço manual, dificultavam o acompanhamento dos processos e elevavam o risco de erros.</p>
 </Lang>
             <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<p className="lang-en">The project consisted of the urgent modernization of a legacy system critical to the company's operations, driven by new government regulations. The old system had a rigid architecture and complex flows.</p>
-</Lang>
-</Lang>
-</Lang>
+<p className="lang-en">New regulatory requirements made it urgent to modernize a legacy system essential to operations. The rigid architecture and complex workflows increased manual effort, hindered process tracking, and elevated the risk of errors.</p>
 </Lang>
 
             <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
 <h2 className="lang-pt">💡 A Abordagem</h2>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
             <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
 <h2 className="lang-en">💡 The Approach</h2>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
             <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<p className="lang-pt">Através de reuniões de discovery com usuários finais, mapeei as jornadas e desenhei novos fluxogramas e protótipos focados em prevenir erros, dar visibilidade ao status dos processos e diminuir drasticamente a curva de aprendizado da ferramenta.</p>
-</Lang>
-</Lang>
-</Lang>
+<p className="lang-pt">Conduzi sessões de discovery com usuários finais para compreender rotinas, regras de negócio e pontos de fricção. A partir dessas evidências, mapeei jornadas e redesenhei fluxos e protótipos para prevenir erros, tornar o status dos processos mais visível e reduzir a curva de aprendizado.</p>
 </Lang>
             <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<p className="lang-en">Through discovery meetings with end-users, I mapped journeys and designed new flowcharts and prototypes focused on preventing errors, providing visibility to process statuses, and drastically reducing the tool's learning curve.</p>
-</Lang>
-</Lang>
-</Lang>
+<p className="lang-en">I conducted discovery sessions with end-users to understand routines, business rules, and friction points. Based on this evidence, I mapped journeys and redesigned workflows and prototypes to prevent errors, make process statuses more visible, and reduce the learning curve.</p>
 </Lang>
 
             <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
 <h2 className="lang-pt">📊 O Resultado</h2>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
             <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
 <h2 className="lang-en">📊 The Result</h2>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
             <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<p className="lang-pt">Com processos mais enxutos e fluxos de trabalho automatizados, o projeto reduziu em aproximadamente 20 horas semanais o tempo de entrada manual de dados por funcionário.</p>
-</Lang>
-</Lang>
-</Lang>
+<p className="lang-pt">Os novos fluxos e as automações reduziram em aproximadamente 10 horas semanais o tempo dedicado à entrada manual de dados por funcionário, tornando a operação mais clara para os usuários.</p>
 </Lang>
             <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<p className="lang-en">With leaner processes and automated workflows, the project reduced the time spent on manual data entry by approximately 20 hours per week per employee.</p>
-</Lang>
-</Lang>
-</Lang>
+<p className="lang-en">The new workflows and automations reduced the time spent on manual data entry by approximately 10 hours per week per employee, making operations clearer for users.</p>
 </Lang>
             
             <hr style={{ margin: '3rem 0', borderColor: 'var(--border-color)', opacity: 0.2 }} />
 
             <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
 <h2 className="lang-pt">🔒 Acesso Restrito</h2>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
             <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
 <h2 className="lang-en">🔒 Restricted Access</h2>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
             <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<p className="lang-pt">Os detalhes aprofundados de discovery, problemas específicos do negócio e as telas finais do projeto são confidenciais. <strong>Para ver o case completo, insira a senha abaixo:</strong> Se você for um recrutador e não possui a senha, sinta-se à vontade para me contatar pelo <a href="https://www.linkedin.com/in/dccarvalhojr/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>LinkedIn</a>.</p>
-</Lang>
-</Lang>
-</Lang>
+<p className="lang-pt">Este projeto contém informações confidenciais de negócio e telas protegidas por acordo de confidencialidade. A visão pública apresenta o contexto, a abordagem e os resultados que podem ser divulgados. Recrutadores podem solicitar acesso ao conteúdo completo pelo <a href="https://www.linkedin.com/in/dccarvalhojr/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>LinkedIn</a>.</p>
 </Lang>
             <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<p className="lang-en">In-depth discovery details, specific business problems, and the final project screens are confidential. <strong>To view the full case, enter the password below:</strong> If you are a recruiter and do not have the password, feel free to contact me on <a href="https://www.linkedin.com/in/dccarvalhojr/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>LinkedIn</a>.</p>
-</Lang>
-</Lang>
-</Lang>
+<p className="lang-en">This project contains confidential business information and screens protected by a non-disclosure agreement. The public view presents the context, approach, and outcomes that can be shared. Recruiters can request full access via <a href="https://www.linkedin.com/in/dccarvalhojr/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>LinkedIn</a>.</p>
 </Lang>
 
             <form className="password-form" id="password-form" onSubmit={handleSubmit}>
               <label htmlFor="case-password">
                 <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
 <span className="lang-pt">Senha de acesso:</span>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
                 <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
 <span className="lang-en">Access password:</span>
-</Lang>
-</Lang>
-</Lang>
 </Lang>
               </label>
               <input 
@@ -258,44 +126,20 @@ const CaseBradescoSenha = () => {
               />
               <button type="submit" className="btn">
                 <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
 <span className="lang-pt">Acessar case</span>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
                 <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
 <span className="lang-en">Access case</span>
-</Lang>
-</Lang>
-</Lang>
 </Lang>
               </button>
               
               {error && (
                 <>
                   <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
 <span className="error-msg lang-pt" style={{ display: 'block' }}>Senha incorreta. Por favor, tente novamente ou me mande uma mensagem para solicitar o acesso.</span>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
                   <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
 <span className="error-msg lang-en" style={{ display: 'block' }}>Incorrect password. Please try again or send me a message to request access.</span>
-</Lang>
-</Lang>
-</Lang>
 </Lang>
                 </>
               )}
@@ -307,41 +151,17 @@ const CaseBradescoSenha = () => {
           <div className="container">
             <div className="case-content" style={{ marginBottom: '3rem' }}>
                 <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
 <h2 className="lang-pt">Não tem a senha? Tudo bem!</h2>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
                 <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
 <h2 className="lang-en">Don't have the password? That's fine!</h2>
-</Lang>
-</Lang>
-</Lang>
 </Lang>
                 
                 <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
 <p className="lang-pt">Enquanto você não recebe a liberação, que tal conferir meus outros projetos que já estão disponíveis de forma aberta?</p>
 </Lang>
-</Lang>
-</Lang>
-</Lang>
                 <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
 <p className="lang-en">While you wait for access, how about checking out my other projects that are already openly available?</p>
-</Lang>
-</Lang>
-</Lang>
 </Lang>
             </div>
             
@@ -353,22 +173,10 @@ const CaseBradescoSenha = () => {
                     <div className="project-header-left">
                       <span className="project-meta-number">(02)</span>
                       <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<span className="project-meta-tag lang-pt">App Mobile</span>
-</Lang>
-</Lang>
-</Lang>
+<span className="project-meta-tag lang-pt">Aplicativo mobile · Saúde digital</span>
 </Lang>
                       <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<span className="project-meta-tag lang-en">Mobile App</span>
-</Lang>
-</Lang>
-</Lang>
+<span className="project-meta-tag lang-en">Mobile app · Digital health</span>
 </Lang>
                     </div>
                     <span className="project-meta-year">2024-2025</span>
@@ -378,61 +186,25 @@ const CaseBradescoSenha = () => {
                   </div>
                   <div className="project-body-summary">
                     <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<h3 className="lang-pt">Redesign do app Conecta</h3>
-</Lang>
-</Lang>
-</Lang>
+<h3 className="lang-pt">Conecta — Redesign da jornada de acompanhamento nutricional</h3>
 </Lang>
                     <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<h3 className="lang-en">Conecta app Redesign</h3>
-</Lang>
-</Lang>
-</Lang>
+<h3 className="lang-en">Conecta — Redesigning the nutrition tracking journey</h3>
 </Lang>
                     
                     <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<p className="project-subtitle lang-pt">Redesenhando a jornada do paciente: da confusão no primeiro acesso a um acompanhamento nutricional intuitivo.</p>
-</Lang>
-</Lang>
-</Lang>
+<p className="project-subtitle lang-pt">Proposta de redesign do primeiro acesso e da navegação para tornar as tarefas do paciente mais compreensíveis e facilitar o acompanhamento pelo nutricionista.</p>
 </Lang>
                     <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<p className="project-subtitle lang-en">Redesigning the patient journey: from confusion at first access to intuitive nutritional tracking.</p>
-</Lang>
-</Lang>
-</Lang>
+<p className="project-subtitle lang-en">A redesign concept for onboarding and navigation, aimed at making patient tasks easier to understand and progress easier for nutritionists to track.</p>
 </Lang>
                   </div>
                   <div className="project-actions">
                     <Link to="/case-conecta" className="btn btn-expand-project" style={{ textDecoration: 'none', textAlign: 'center' }}>
                       <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<span className="lang-pt">Ver case completo</span>
-</Lang>
-</Lang>
-</Lang>
+<span className="lang-pt">Ver case</span>
 </Lang><Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<span className="lang-en">View full case</span>
-</Lang>
-</Lang>
-</Lang>
+<span className="lang-en">View case</span>
 </Lang>
                     </Link>
                   </div>
@@ -446,22 +218,10 @@ const CaseBradescoSenha = () => {
                     <div className="project-header-left">
                       <span className="project-meta-number">(03)</span>
                       <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<span className="project-meta-tag lang-pt">App Mobile</span>
-</Lang>
-</Lang>
-</Lang>
+<span className="project-meta-tag lang-pt">Aplicativo mobile · Projeto de UX</span>
 </Lang>
                       <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<span className="project-meta-tag lang-en">Mobile App</span>
-</Lang>
-</Lang>
-</Lang>
+<span className="project-meta-tag lang-en">Mobile app · UX project</span>
 </Lang>
                     </div>
                     <span className="project-meta-year">2023</span>
@@ -471,61 +231,25 @@ const CaseBradescoSenha = () => {
                   </div>
                   <div className="project-body-summary">
                     <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<h3 className="lang-pt">Mobinft: Comprar NFT sem precisar entender NFT</h3>
-</Lang>
-</Lang>
-</Lang>
+<h3 className="lang-pt">Mobinft — Simplificando a compra de chaves digitais em Web3</h3>
 </Lang>
                     <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<h3 className="lang-en">Mobinft: Buying NFTs without needing to understand NFTs</h3>
-</Lang>
-</Lang>
-</Lang>
+<h3 className="lang-en">Mobinft — Simplifying the purchase of digital keys in Web3</h3>
 </Lang>
                     
                     <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<p className="project-subtitle lang-pt">Web3 sem manual de instruções: onboarding que transformou complexidade em primeira compra.</p>
-</Lang>
-</Lang>
-</Lang>
+<p className="project-subtitle lang-pt">Pesquisa e prototipação de uma jornada de compra para pessoas sem experiência prévia com NFTs, refinada em duas rodadas de testes de usabilidade.</p>
 </Lang>
                     <Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<p className="project-subtitle lang-en">Web3 without a manual: onboarding that turned complexity into the first purchase.</p>
-</Lang>
-</Lang>
-</Lang>
+<p className="project-subtitle lang-en">Research and prototyping for a purchasing journey designed for people with no prior NFT experience, refined through two rounds of usability testing.</p>
 </Lang>
                   </div>
                   <div className="project-actions">
                     <Link to="/case-mobinft" className="btn btn-expand-project" style={{ textDecoration: 'none', textAlign: 'center' }}>
                       <Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<Lang id="pt">
-<span className="lang-pt">Ver case completo</span>
-</Lang>
-</Lang>
-</Lang>
+<span className="lang-pt">Ver case</span>
 </Lang><Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<Lang id="en">
-<span className="lang-en">View full case</span>
-</Lang>
-</Lang>
-</Lang>
+<span className="lang-en">View case</span>
 </Lang>
                     </Link>
                   </div>
