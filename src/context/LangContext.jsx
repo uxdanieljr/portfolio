@@ -24,12 +24,16 @@ export const LangProvider = ({ children }) => {
     localStorage.setItem('portfolio-lang', lang);
   }, [lang]);
 
-  const toggleLang = () => {
-    setLang(prev => (prev === 'pt' ? 'en' : 'pt'));
+  const toggleLang = (specificLang) => {
+    if (typeof specificLang === 'string') {
+      setLang(specificLang);
+    } else {
+      setLang(prev => (prev === 'pt' ? 'en' : 'pt'));
+    }
   };
 
   return (
-    <LangContext.Provider value={{ lang, toggleLang }}>
+    <LangContext.Provider value={{ lang, setLang, toggleLang }}>
       {children}
     </LangContext.Provider>
   );
