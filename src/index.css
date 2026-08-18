@@ -723,3 +723,21 @@ body {
   overflow-x: hidden;
   overflow-wrap: break-word;
 }
+
+.project-card, .project-image-wrapper, .project-info, .case-hero-image {
+  min-width: 0;
+  max-width: 100%;
+}
+.case-hero h1, .case-summary, .project-card h3, .project-card p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (max-width: 767px) {
+  .project-card {
+    padding: 24px;
+  }
+  #project-001 {
+    gap: 24px;
+  }
+}
