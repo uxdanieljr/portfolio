@@ -4,6 +4,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLang } from '../context/LangContext';
 import { motion } from 'framer-motion';
 import { useMotionTokens } from '../utils/motion';
+import { DotPattern } from '../components/DotPattern';
 import { HashLink as Link } from 'react-router-hash-link';
 import Lang from '../components/Lang';
 
@@ -23,6 +24,7 @@ const Home = () => {
       <main>
         {/*  [01] HERO  */}
         <motion.section id="hero" className="reveal" variants={tokens.staggerContainer} initial="hidden" animate="visible">
+          <DotPattern className="dot-pattern-hero" />
           <div className="container hero-content">
             <div className="hero-text">
 
