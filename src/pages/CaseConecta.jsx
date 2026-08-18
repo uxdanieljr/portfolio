@@ -80,7 +80,7 @@ const CaseConecta = () => {
               <Lang id="en"><p className="lang-en">I analyzed references from health and nutrition products, reorganized the information architecture, and built wireframes to review the navigation flow. Then, I developed the high-fidelity interface and visual patterns needed to maintain consistency across screens.</p></Lang>
 
               <figure style={{ margin: "32px 0" }}>
-                <img src="/assets/case-conecta/img-conecta-prints-v1.png" alt="Telas de alta fidelidade do aplicativo Conecta" loading="lazy" style={{ width: "100%", border: "1px solid var(--color-border-subtle)" }} />
+                <img src="/assets/case-conecta/img-conecta-prints-atual.png" alt="Telas de alta fidelidade do aplicativo Conecta" loading="lazy" style={{ width: "100%", border: "1px solid var(--color-border-subtle)" }} />
                 <figcaption style={{ fontSize: "0.875rem", color: "var(--color-text-secondary)", marginTop: "8px" }}>
                   <Lang id="pt"><span className="lang-pt">Telas de alta fidelidade desenvolvidas</span></Lang>
                   <Lang id="en"><span className="lang-en">High-fidelity screens developed</span></Lang>
