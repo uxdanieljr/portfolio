@@ -687,3 +687,32 @@ footer.site-footer {
   mask-image: radial-gradient(300px circle at center, white, transparent);
   -webkit-mask-image: radial-gradient(300px circle at center, white, transparent);
 }
+
+@media (max-width: 767px) {
+  .case-hero {
+    padding: 32px 0 24px 0;
+  }
+  .case-hero h1 {
+    font-size: 2.25rem;
+  }
+  .case-summary {
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+  }
+  .case-facts {
+    gap: 16px;
+    flex-direction: column;
+  }
+  .case-hero-image {
+    aspect-ratio: 16/9;
+    margin-bottom: 32px;
+  }
+  .case-body {
+    gap: 32px;
+    padding-bottom: 48px;
+  }
+  .case-resultados {
+    padding: 32px 16px;
+    margin: 32px 0;
+  }
+}

@@ -75,7 +75,7 @@ const CaseConecta = () => {
               
               <Lang id="pt"><h2 className="lang-pt">A abordagem</h2></Lang>
               <Lang id="en"><h2 className="lang-en">Approach</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">Analisei padrões recurntes em outros produtos de saúde e nutrição. Depois, reorganizei a arquitetura da informação e usei wireframes para revisar a navegação. Na interface de alta fidelidade, apliquei o novo fluxo e defini padrões visuais para manter consistência entre as telas.</p></Lang>
+              <Lang id="pt"><p className="lang-pt">Analisei padrões recorrentes em outros produtos de saúde e nutrição. Depois, reorganizei a arquitetura da informação e usei wireframes para revisar a navegação. Na interface de alta fidelidade, apliquei o novo fluxo e defini padrões visuais para manter consistência entre as telas.</p></Lang>
               <Lang id="en"><p className="lang-en">I reviewed recurring patterns in other health and nutrition products. I then reorganized the information architecture and used wireframes to review the navigation. In the high-fidelity interface, I applied the new flow and defined visual patterns to keep the screens consistent.</p></Lang>
 
               <figure style={{ margin: "32px 0" }}>
@@ -115,10 +115,10 @@ const CaseConecta = () => {
                 <Lang id="pt"><h2 className="lang-pt">Resultados e impacto</h2></Lang>
                 <Lang id="en"><h2 className="lang-en">Results and impact</h2></Lang>
                 <Lang id="pt">
-                  <p className="lang-pt" style={{ fontSize: "1.125rem" }}>A proposta explica o primeiro acesso passo a passo e reorganiza as tarefas e informações de progresso. Após medição interna, os usuários passaram em média <strong>50% a mais de tempo usando o app</strong>. Isso possibilitou que os nutricionistas acompanhassem o progresso de forma mais eficiente, o que resultou em maior adesão ao tratamento e melhores resultados para os pacientes.</p>
+                  <p className="lang-pt" style={{ fontSize: "1.125rem" }}>A proposta orienta o primeiro acesso passo a passo e reorganiza a exibição de tarefas. Após medição interna, o tempo de uso do aplicativo aumentou em média <strong>50%</strong>. Esse engajamento facilitou o acompanhamento clínico pelos nutricionistas, resultando em maior adesão ao tratamento.</p>
                 </Lang>
                 <Lang id="en">
-                  <p className="lang-en" style={{ fontSize: "1.125rem" }}>The concept explains the first steps and reorganizes tasks and progress information. After internal measurement, users spent an average of <strong>50% more time using the app</strong>. This enabled nutritionists to track patient progress more efficiently, resulting in higher treatment adherence and better outcomes for patients.</p>
+                  <p className="lang-en" style={{ fontSize: "1.125rem" }}>The concept guides the onboarding step-by-step and reorganizes the task view. After internal measurement, app usage time increased by an average of <strong>50%</strong>. This engagement made it easier for nutritionists to track clinical progress, resulting in higher treatment adherence.</p>
                 </Lang>
               </div>
             </div>

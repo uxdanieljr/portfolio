@@ -82,8 +82,8 @@ const CaseBradesco = () => {
 
               <Lang id="pt"><h2 className="lang-pt">A solução</h2></Lang>
               <Lang id="en"><h2 className="lang-en">Solution</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">Os protótipos e wireframes foram sendo construídos de forma dinâmica juntamente ao discovery, ideação, testes de usabilidade e validação. Dessa forma foi possível agilizar o processo de aprendizagem e clarificar os fluxos dos usuários, possibilitando que os Devs tivessem melhor dimensão da complexidade do que seria desenvolvido e dando mais assertividade aos prazos.</p></Lang>
-              <Lang id="en"><p className="lang-en">Prototypes and wireframes were built dynamically alongside discovery, ideation, usability testing, and validation. In this way, it was possible to streamline the learning process and clarify user flows, allowing Devs to have a better dimension of the complexity of what would be developed and giving more assertiveness to deadlines.</p></Lang>
+              <Lang id="pt"><p className="lang-pt">Desenvolvi os protótipos e wireframes em paralelo às etapas de pesquisa e testes. Essa abordagem iterativa acelerou o aprendizado e deixou os fluxos mais claros. Como resultado, a equipe de engenharia pôde avaliar a complexidade técnica com mais precisão, o que trouxe previsibilidade aos prazos de entrega.</p></Lang>
+              <Lang id="en"><p className="lang-en">I developed the prototypes and wireframes alongside research and testing. This iterative approach accelerated learning and clarified user flows. As a result, the engineering team could better estimate technical complexity, bringing predictability to delivery deadlines.</p></Lang>
 
               <figure style={{ margin: "32px 0" }}>
                 <img src="/assets/case-bradesco-negociacao/img_fluxos_brds.png" alt="Fluxos prototipados do sistema Bradesco Seguros" loading="lazy" style={{ width: "100%", border: "1px solid var(--color-border-subtle)" }} />
@@ -93,8 +93,8 @@ const CaseBradesco = () => {
                 </figcaption>
               </figure>
 
-              <Lang id="pt"><p className="lang-pt">Os protótipos foram estruturados em fluxos que representavam as interações dos cliques, com post-its detalhando regras de negócio e especificações técnicas. No total, foram desenvolvidos mais de 20 fluxos para 5 funcionalidades diferentes do software.</p></Lang>
-              <Lang id="en"><p className="lang-en">The prototypes were structured in flows that represented click interactions, with post-its detailing business rules and technical specifications. In total, more than 20 flows were developed for 5 different software functionalities.</p></Lang>
+              <Lang id="pt"><p className="lang-pt">Estruturei os protótipos em fluxos clicáveis e adicionei anotações detalhando regras de negócio e especificações técnicas para os desenvolvedores. No total, entreguei mais de 20 fluxos cobrindo 5 funcionalidades diferentes do sistema.</p></Lang>
+              <Lang id="en"><p className="lang-en">I structured the prototypes into clickable flows and added notes detailing business rules and technical specifications for the developers. In total, I delivered over 20 flows covering 5 different system functionalities.</p></Lang>
             </div>
 
             <aside className="case-rail">
