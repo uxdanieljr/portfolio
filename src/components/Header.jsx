@@ -86,7 +86,7 @@ const Header = () => {
               </li>
               <li>
                 <Link to="/#servicos" className={`nav-link ${activeSection === 'servicos' ? 'active' : ''}`} onClick={closeMenu}>
-                  {lang === 'pt' ? 'Competências' : 'Capabilities'}
+                  {lang === 'pt' ? 'Serviços' : 'Services'}
                 </Link>
               </li>
               <li>

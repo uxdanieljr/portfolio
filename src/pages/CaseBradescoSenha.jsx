@@ -62,27 +62,27 @@ const CaseBradescoSenha = () => {
             <div className="case-content">
               <Lang id="pt"><h2 className="lang-pt">O Desafio</h2></Lang>
               <Lang id="en"><h2 className="lang-en">The Challenge</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">Novas exigências regulatórias tornaram urgente a modernização de um sistema legado essencial para a operação. A arquitetura rígida e os fluxos complexos aumentavam o esforço manual, dificultavam o acompanhamento dos processos e elevavam o risco de erros.</p></Lang>
-              <Lang id="en"><p className="lang-en">New regulatory requirements made it urgent to modernize a legacy system essential to operations. The rigid architecture and complex workflows increased manual effort, hindered process tracking, and elevated the risk of errors.</p></Lang>
+              <Lang id="pt"><p className="lang-pt">Mudanças regulatórias exigiram a revisão de um sistema legado central para a operação. Sua estrutura rígida tornava os fluxos difíceis de acompanhar e mantinha parte do trabalho manual, o que aumentava o risco de erro.</p></Lang>
+              <Lang id="en"><p className="lang-en">Regulatory changes required the team to review a legacy system central to the operation. Its rigid structure made workflows difficult to follow and left some steps manual, increasing the risk of errors.</p></Lang>
 
               <Lang id="pt"><h2 className="lang-pt">A Abordagem</h2></Lang>
               <Lang id="en"><h2 className="lang-en">The Approach</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">Conduzi sessões de discovery com usuários finais para compreender rotinas, regras de negócio e pontos de fricção. A partir dessas evidências, mapeei jornadas e redesenhei fluxos e protótipos para prevenir erros, tornar o status dos processos mais visível e reduzir a curva de aprendizado.</p></Lang>
-              <Lang id="en"><p className="lang-en">I conducted discovery sessions with end-users to understand routines, business rules, and friction points. Based on this evidence, I mapped journeys and redesigned workflows and prototypes to prevent errors, make process statuses more visible, and reduce the learning curve.</p></Lang>
+              <Lang id="pt"><p className="lang-pt">Conversei com usuários finais sobre a rotina, as regras de negócio e os pontos em que o processo travava. Com esse material, mapeei a jornada e redesenhei os fluxos e protótipos. As principais decisões buscaram prevenir erros e mostrar o andamento de cada processo na própria interface.</p></Lang>
+              <Lang id="en"><p className="lang-en">I spoke with end users about their routines, business rules, and the points where the process stalled. I used those findings to map the journey and redesign the workflows and prototypes. The main decisions focused on preventing errors and showing the status of each process in the interface.</p></Lang>
 
               <Lang id="pt"><h2 className="lang-pt">O Resultado</h2></Lang>
               <Lang id="en"><h2 className="lang-en">The Result</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">Os novos fluxos e as automações reduziram em aproximadamente 10 horas semanais o tempo dedicado à entrada manual de dados por funcionário, tornando a operação mais clara para os usuários.</p></Lang>
-              <Lang id="en"><p className="lang-en">The new workflows and automations reduced the time spent on manual data entry by approximately 10 hours per week per employee, making operations clearer for users.</p></Lang>
+              <Lang id="pt"><p className="lang-pt">A solução incorpora automações em etapas antes manuais e mostra o status de cada processo na interface. Com processos mais enxutos, o projeto reduziu em aproximadamente 10 horas semanais o tempo de trabalho manual por funcionário.</p></Lang>
+              <Lang id="en"><p className="lang-en">The solution adds automation to steps that were previously manual and shows the status of each process in the interface. With leaner processes, the project reduced manual work by approximately 10 hours per week per employee.</p></Lang>
               
               <div className="acesso-protegido">
                 <Lang id="pt">
                   <h2 className="lang-pt" style={{ fontSize: "1.5rem", marginBottom: "16px" }}>🔒 Acesso Restrito</h2>
-                  <p className="lang-pt">Este projeto contém informações confidenciais de negócio e telas protegidas por acordo de confidencialidade. A visão pública apresenta o contexto, a abordagem e os resultados que podem ser divulgados. Recrutadores podem solicitar acesso ao conteúdo completo pelo <a href="https://www.linkedin.com/in/dccarvalhojr/" target="_blank" rel="noopener noreferrer" className="text-link">LinkedIn</a>.</p>
+                  <p className="lang-pt">Parte deste projeto está protegida por um acordo de confidencialidade. A versão pública mostra apenas o contexto, o processo e os resultados que posso divulgar. Posso compartilhar mais informações em uma conversa, dentro dos limites desse acordo. Entre em contato pelo <a href="https://www.linkedin.com/in/dccarvalhojr/" target="_blank" rel="noopener noreferrer" className="text-link">LinkedIn</a>.</p>
                 </Lang>
                 <Lang id="en">
                   <h2 className="lang-en" style={{ fontSize: "1.5rem", marginBottom: "16px" }}>🔒 Restricted Access</h2>
-                  <p className="lang-en">This project contains confidential business information and screens protected by a non-disclosure agreement. The public view presents the context, approach, and outcomes that can be shared. Recruiters can request full access via <a href="https://www.linkedin.com/in/dccarvalhojr/" target="_blank" rel="noopener noreferrer" className="text-link">LinkedIn</a>.</p>
+                  <p className="lang-en">Part of this project is protected by a confidentiality agreement. The public version only shows the context, process, and outcomes I can disclose. I can share more information in a conversation, within the limits of that agreement. Reach me out via <a href="https://www.linkedin.com/in/dccarvalhojr/" target="_blank" rel="noopener noreferrer" className="text-link">LinkedIn</a>.</p>
                 </Lang>
 
                 <form className="acesso-form" onSubmit={handleSubmit}>

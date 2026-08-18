@@ -51,12 +51,12 @@ const Home = () => {
               </h1>
               <Lang id="pt">
                 <p className="hero-subtitle lang-pt">
-                  Sou Daniel Carvalho, Product Designer com mais de 4 anos de experiência em sistemas corporativos, aplicativos e SaaS. Conecto pesquisa, estratégia e design de interação para tornar fluxos críticos mais claros, eficientes e viáveis de implementar.
+                  Sou Daniel Carvalho, Product Designer há mais de 4 anos. Trabalho com sistemas corporativos, aplicativos e SaaS. Antes de desenhar a interface, procuro entender as regras de negócio, a operação e as necessidades de quem usa o produto.
                 </p>
               </Lang>
               <Lang id="en">
                 <p className="hero-subtitle lang-en">
-                  I’m Daniel Carvalho, a Product Designer with 4+ years of experience across enterprise systems, mobile apps, and SaaS. I connect research, product strategy, and interaction design to clarify critical workflows and create solutions that are efficient and feasible to build.
+                  I’m Daniel Carvalho, a Product Designer with 4+ years of experience in enterprise systems, mobile apps, and SaaS. Before designing an interface, I work to understand the business rules, day-to-day operations, and the people who use the product.
                 </p>
               </Lang>
               <div className="hero-actions">
@@ -84,12 +84,12 @@ const Home = () => {
               <Lang id="pt">
                 <span className="eyebrow lang-pt">Cases Selecionados</span>
                 <h2 className="lang-pt">Problemas reais, decisões de design e resultados.</h2>
-                <p className="lang-pt">Uma seleção de projetos em sistemas corporativos, saúde digital e Web3.</p>
+                <p className="lang-pt">Projetos em sistemas corporativos, saúde digital e Web3.</p>
               </Lang>
               <Lang id="en">
                 <span className="eyebrow lang-en">Selected Work</span>
                 <h2 className="lang-en">Real problems, design decisions, and outcomes.</h2>
-                <p className="lang-en">A selection of projects across enterprise software, digital health, and Web3.</p>
+                <p className="lang-en">Projects in enterprise software, digital health, and Web3.</p>
               </Lang>
             </div>
 
@@ -102,12 +102,12 @@ const Home = () => {
                     <Lang id="en"><span className="lang-en">01 / Enterprise system · Desktop</span></Lang>
                   </div>
                   <Lang id="pt">
-                    <h3 className="lang-pt">Bradesco Seguros — Modernização de um sistema crítico de gestão</h3>
-                    <p className="lang-pt">Redesenho de fluxos e automações em um sistema legado, reduzindo trabalho manual, prevenindo erros e ampliando a visibilidade dos processos.</p>
+                    <h3 className="lang-pt">Bradesco Seguros: modernização de um sistema de gestão</h3>
+                    <p className="lang-pt">Redesenhei fluxos de um sistema legado usado em uma operação sujeita a requisitos regulatórios. O objetivo era reduzir tarefas manuais, prevenir erros e facilitar o acompanhamento dos processos. Na prática, a solução reduziu cerca de 10 horas semanais de trabalho manual por funcionário.</p>
                   </Lang>
                   <Lang id="en">
-                    <h3 className="lang-en">Bradesco Seguros — Modernizing a critical management system</h3>
-                    <p className="lang-en">Redesigned workflows and automations in a legacy system to reduce manual work, prevent errors, and improve process visibility.</p>
+                    <h3 className="lang-en">Bradesco Seguros: modernizing a management system</h3>
+                    <p className="lang-en">I redesigned workflows in a legacy system used in an operation subject to regulatory requirements. The goal was to reduce manual tasks, prevent errors, and make processes easier to track. In practice, the solution reduced manual work by about 10 hours per week per employee.</p>
                   </Lang>
                   <span className="text-link">
                     <Lang id="pt"><span className="lang-pt">Ler case completo &rarr;</span></Lang>
@@ -129,12 +129,12 @@ const Home = () => {
                   <Lang id="en"><span className="lang-en">02 / Mobile app · Digital health</span></Lang>
                 </div>
                 <Lang id="pt">
-                  <h3 className="lang-pt">Conecta — Redesign da jornada de acompanhamento nutricional</h3>
-                  <p className="lang-pt">Proposta de redesign do primeiro acesso e da navegação para tornar as tarefas do paciente mais compreensíveis e facilitar o acompanhamento pelo nutricionista.</p>
+                  <h3 className="lang-pt">Conecta: redesign da jornada de acompanhamento nutricional</h3>
+                  <p className="lang-pt">Revisei o primeiro acesso e a navegação de um aplicativo de acompanhamento nutricional. A proposta reorganiza tarefas e informações de progresso para pacientes e nutricionistas.</p>
                 </Lang>
                 <Lang id="en">
-                  <h3 className="lang-en">Conecta — Redesigning the nutrition tracking journey</h3>
-                  <p className="lang-en">A redesign concept for onboarding and navigation, aimed at making patient tasks easier to understand and progress easier for nutritionists to track.</p>
+                  <h3 className="lang-en">Conecta: redesigning the nutrition care journey</h3>
+                  <p className="lang-en">I reviewed the onboarding and navigation of a nutrition care app. The concept reorganizes tasks and progress information for patients and nutritionists.</p>
                 </Lang>
                 <span className="text-link">
                   <Lang id="pt"><span className="lang-pt">Ler case completo &rarr;</span></Lang>
@@ -152,12 +152,12 @@ const Home = () => {
                   <Lang id="en"><span className="lang-en">03 / Mobile app · UX project</span></Lang>
                 </div>
                 <Lang id="pt">
-                  <h3 className="lang-pt">Mobinft — Simplificando a compra de chaves digitais em Web3</h3>
-                  <p className="lang-pt">Pesquisa e prototipação de uma jornada de compra para pessoas sem experiência prévia com NFTs, refinada em duas rodadas de testes de usabilidade.</p>
+                  <h3 className="lang-pt">Mobinft: compra de chaves digitais em Web3</h3>
+                  <p className="lang-pt">Pesquisei e prototipei uma jornada de compra para pessoas sem experiência prévia com NFTs. Duas rodadas de testes de usabilidade orientaram os ajustes no fluxo.</p>
                 </Lang>
                 <Lang id="en">
-                  <h3 className="lang-en">Mobinft — Simplifying the purchase of digital keys in Web3</h3>
-                  <p className="lang-en">Research and prototyping for a purchasing journey designed for people with no prior NFT experience, refined through two rounds of usability testing.</p>
+                  <h3 className="lang-en">Mobinft: purchasing digital keys in Web3</h3>
+                  <p className="lang-en">I researched and prototyped a purchasing journey for people with no prior NFT experience. Two rounds of usability testing informed the changes to the flow.</p>
                 </Lang>
                 <span className="text-link">
                   <Lang id="pt"><span className="lang-pt">Ler case completo &rarr;</span></Lang>
@@ -173,15 +173,15 @@ const Home = () => {
           <div className="container sobre-grid">
             <div className="sobre-title-block">
               <Lang id="pt">
-                <span className="eyebrow lang-pt">Sobre</span>
+                <span className="eyebrow lang-pt">SOBRE</span>
                 <h2 className="lang-pt">
-                  Design de ponta a ponta, com atenção ao usuário, à operação e ao negócio.
+                  Como abordo produtos complexos
                 </h2>
               </Lang>
               <Lang id="en">
-                <span className="eyebrow lang-en">About</span>
+                <span className="eyebrow lang-en">ABOUT</span>
                 <h2 className="lang-en">
-                  End-to-end design grounded in user needs, operations, and business context.
+                  How I approach complex products
                 </h2>
               </Lang>
             </div>
@@ -189,18 +189,18 @@ const Home = () => {
             <div className="sobre-text-block">
               <Lang id="pt">
                 <p className="lang-pt">
-                  Atuo em produtos que exigem compreender regras de negócio, operações e necessidades reais de usuários antes de chegar à interface. Minha experiência inclui modernização de sistemas críticos, redesign de jornadas e estruturação de fluxos, protótipos e design systems.
+                  Já trabalhei na modernização de um sistema legado sujeito a requisitos regulatórios e no redesign de jornadas mobile. Em cada projeto, procuro entender as regras que organizam o trabalho antes de desenhar o fluxo.
                 </p>
                 <p className="lang-pt">
-                  Trabalho em colaboração com usuários, Produto e Tecnologia para transformar cenários ambíguos em decisões claras e soluções viáveis. Uso IA como ferramenta de pesquisa, síntese e prototipação, sempre com revisão crítica.
+                  Trabalho com usuários e equipes de Produto e Tecnologia. As conversas e os materiais do projeto orientam os primeiros fluxos; os protótipos ajudam o time a comparar alternativas antes do desenvolvimento.
                 </p>
               </Lang>
               <Lang id="en">
                 <p className="lang-en">
-                  I work on products that require a clear understanding of business rules, operations, and real user needs before moving into interface design. My experience includes modernizing critical systems, redesigning journeys, and shaping workflows, prototypes, and design systems.
+                  I have worked on a legacy system subject to regulatory requirements and on mobile workflow redesigns. In each project, I try to understand the rules that shape the work before designing the flow.
                 </p>
                 <p className="lang-en">
-                  I collaborate with users, Product, and Engineering to turn ambiguous scenarios into clear decisions and feasible solutions. I use AI as a tool for research, synthesis, and prototyping, always with critical review.
+                  I work with users, product managers, and engineers. Conversations and project materials inform my first workflow concepts, while prototypes help the team compare options before development.
                 </p>
               </Lang>
 
@@ -234,19 +234,19 @@ const Home = () => {
         <section id="servicos" className="reveal servicos-section">
           <div className="container">
             <Lang id="pt">
-              <span className="eyebrow lang-pt">Como contribuo</span>
-              <h2 className="lang-pt" style={{marginBottom: '64px'}}>Da compreensão do problema à evolução da solução.</h2>
+              <span className="eyebrow lang-pt">COMO CONTRIBUO</span>
+              <h2 className="lang-pt" style={{marginBottom: '64px'}}>Áreas em que atuo</h2>
             </Lang>
             <Lang id="en">
-              <span className="eyebrow lang-en">How I contribute</span>
-              <h2 className="lang-en" style={{marginBottom: '64px'}}>From understanding the problem to evolving the solution.</h2>
+              <span className="eyebrow lang-en">HOW I CONTRIBUTE</span>
+              <h2 className="lang-en" style={{marginBottom: '64px'}}>Areas I work in</h2>
             </Lang>
 
             <div className="servicos-grid">
               <div className="service-item">
                 <Lang id="pt">
                   <h3 className="lang-pt">Pesquisa com usuários</h3>
-                  <p className="lang-pt">Planejo e conduzo pesquisas para compreender comportamentos, necessidades e restrições. Organizo evidências para apoiar decisões de produto.</p>
+                  <p className="lang-pt">Planejo pesquisas, converso com usuários e organizo os achados que orientam as decisões do produto.</p>
                 </Lang>
                 <Lang id="en">
                   <h3 className="lang-en">User research</h3>
@@ -316,12 +316,12 @@ const Home = () => {
         <section id="contato" className="reveal contato-section">
           <div className="container contato-wrapper">
             <Lang id="pt">
-              <span className="eyebrow lang-pt">Contato</span>
+              <span className="eyebrow lang-pt">CONTATO</span>
               <h2 className="lang-pt">Quer conversar sobre meu trabalho?</h2>
               <p className="lang-pt">Se meu perfil fizer sentido para uma oportunidade ou para o seu time, entre em contato pelo LinkedIn ou por e-mail.</p>
             </Lang>
             <Lang id="en">
-              <span className="eyebrow lang-en">Contact</span>
+              <span className="eyebrow lang-en">CONTACT</span>
               <h2 className="lang-en">Interested in discussing my work?</h2>
               <p className="lang-en">If my experience could be a good fit for an opportunity or your team, feel free to reach out on LinkedIn or by email.</p>
             </Lang>
