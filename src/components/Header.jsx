@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useLang } from '../context/LangContext';
+import { motion } from 'framer-motion';
+import { useMotionTokens, EASING, DURATION } from '../utils/motion';
 
 const Header = () => {
   const { lang } = useLang();
+  const { prefersReducedMotion } = useMotionTokens();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const location = useLocation();
@@ -65,7 +68,12 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="site-header">
+    <motion.header 
+      className="site-header"
+      initial={{ opacity: prefersReducedMotion ? 1 : 0, y: prefersReducedMotion ? 0 : -6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: DURATION.fast, ease: EASING }}
+    >
       <div className="container nav-wrapper">
         <Link to="/#hero" className="logo-link" id="nav-logo" onClick={closeMenu}>
           {isHome ? 'danielcarvalho.design' : (lang === 'pt' ? '← Voltar' : '← Back')}
@@ -122,7 +130,7 @@ const Header = () => {
           )}
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

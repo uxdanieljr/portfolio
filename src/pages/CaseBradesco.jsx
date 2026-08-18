@@ -2,6 +2,8 @@ import Metadata from '../components/Metadata';
 import React from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLang } from '../context/LangContext';
+import { motion } from 'framer-motion';
+import { useMotionTokens } from '../utils/motion';
 import { HashLink as Link } from 'react-router-hash-link';
 import Lang from '../components/Lang';
 
@@ -128,7 +130,7 @@ const CaseBradesco = () => {
           </div>
         </article>
 
-        <section className="case-next">
+        <motion.section className="case-next" variants={tokens.fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}>
           <div className="container">
             <Lang id="pt"><h3 className="lang-pt">Próximo projeto</h3></Lang>
             <Lang id="en"><h3 className="lang-en">Next project</h3></Lang>
@@ -147,7 +149,7 @@ const CaseBradesco = () => {
               </Link>
             </div>
           </div>
-        </section>
+        </motion.section>
       </main>
     </>
   );

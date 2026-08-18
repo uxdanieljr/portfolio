@@ -2,6 +2,8 @@ import Metadata from '../components/Metadata';
 import React, { useState } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLang } from '../context/LangContext';
+import { motion } from 'framer-motion';
+import { useMotionTokens } from '../utils/motion';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useNavigate } from 'react-router-dom';
 import Lang from '../components/Lang';

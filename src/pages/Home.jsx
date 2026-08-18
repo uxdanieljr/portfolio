@@ -2,10 +2,13 @@ import Metadata from '../components/Metadata';
 import React from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useLang } from '../context/LangContext';
+import { motion } from 'framer-motion';
+import { useMotionTokens } from '../utils/motion';
 import { HashLink as Link } from 'react-router-hash-link';
 import Lang from '../components/Lang';
 
 const Home = () => {
+  const tokens = useMotionTokens();
   useScrollReveal();
   const { lang } = useLang();
 
@@ -19,11 +22,11 @@ const Home = () => {
 
       <main>
         {/*  [01] HERO  */}
-        <section id="hero" className="reveal">
+        <motion.section id="hero" className="reveal" variants={tokens.staggerContainer} initial="hidden" animate="visible">
           <div className="container hero-content">
             <div className="hero-text">
 
-              <h1 className="hero-tagline">
+              <motion.h1 className="hero-tagline" variants={tokens.staggerItem}>
                 <Lang id="pt">
                   <span className="lang-pt">Produtos </span>
                 </Lang>
@@ -48,18 +51,18 @@ const Home = () => {
                 <Lang id="en">
                   <span className="highlight-wine lang-en">experiences.</span>
                 </Lang>
-              </h1>
+              </motion.h1>
               <Lang id="pt">
-                <p className="hero-subtitle lang-pt">
+                <motion.p className="hero-subtitle lang-pt" variants={tokens.staggerItem}>
                   Sou Daniel Carvalho, Product Designer com mais de 4 anos de experiência em sistemas corporativos, aplicativos e SaaS.
-                </p>
+                </motion.p>
               </Lang>
               <Lang id="en">
-                <p className="hero-subtitle lang-en">
+                <motion.p className="hero-subtitle lang-en" variants={tokens.staggerItem}>
                   I’m Daniel Carvalho, a Product Designer with 4+ years of experience in enterprise systems, mobile apps, and SaaS. Before designing an interface, I work to understand the business rules, day-to-day operations, and the people who use the product.
-                </p>
+                </motion.p>
               </Lang>
-              <div className="hero-actions">
+              <motion.div className="hero-actions" variants={tokens.staggerItem}>
                 <a href="#projetos" className="btn btn-primary" id="hero-cta-projects">
                   <Lang id="pt"><span className="lang-pt">Ver cases</span></Lang>
                   <Lang id="en"><span className="lang-en">View selected work</span></Lang>
@@ -68,14 +71,14 @@ const Home = () => {
                   <Lang id="pt"><span className="lang-pt">Ver currículo</span></Lang>
                   <Lang id="en"><span className="lang-en">View résumé</span></Lang>
                 </a>
-              </div>
+              </motion.div>
             </div>
 
-            <div className="hero-image-wrapper">
+            <motion.div className="hero-image-wrapper" variants={tokens.staggerItem}>
               <img src="/assets/foto_site_portfolio.png" alt="Daniel Carvalho" className="hero-image" loading="lazy" />
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
         {/*  [02] PROJETOS  */}
         <section id="projetos" className="reveal">
@@ -169,7 +172,7 @@ const Home = () => {
         </section>
 
         {/*  [03] SOBRE  */}
-        <section id="sobre" className="reveal sobre-section">
+        <motion.section id="sobre" className="reveal sobre-section" variants={tokens.fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}>
           <div className="container sobre-grid">
             <div className="sobre-title-block">
               <Lang id="pt">
@@ -228,10 +231,10 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/*  [04] COMPETÊNCIAS  */}
-        <section id="servicos" className="reveal servicos-section">
+        <motion.section id="servicos" className="reveal servicos-section" variants={tokens.fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}>
           <div className="container">
             <Lang id="pt">
               <span className="eyebrow lang-pt">COMO CONTRIBUO</span>
@@ -310,10 +313,10 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/*  [05] CONTATO  */}
-        <section id="contato" className="reveal contato-section">
+        <motion.section id="contato" className="reveal contato-section" variants={tokens.fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}>
           <div className="container contato-wrapper">
             <Lang id="pt">
               <span className="eyebrow lang-pt">CONTATO</span>
@@ -336,7 +339,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-        </section>
+        </motion.section>
       </main>
     </>
   );
