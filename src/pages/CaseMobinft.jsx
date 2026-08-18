@@ -24,12 +24,12 @@ const CaseMobinft = () => {
             <Lang id="pt">
               <span className="eyebrow lang-pt">03 / Aplicativo mobile · UX project</span>
               <h1 className="lang-pt">Mobinft — Simplificando a compra de chaves digitais em Web3</h1>
-              <p className="case-summary lang-pt">Pesquisa e prototipação de uma jornada de compra para pessoas sem experiência prévia com NFTs, refinada em duas rodadas de testes de usabilidade.</p>
+              <p className="case-summary lang-pt">Pesquisei e prototipei uma jornada de compra para pessoas sem experiência prévia com NFTs. Duas rodadas de testes de usabilidade orientaram as mudanças no fluxo.</p>
             </Lang>
             <Lang id="en">
               <span className="eyebrow lang-en">03 / Mobile app · UX project</span>
               <h1 className="lang-en">Mobinft — Simplifying the purchase of digital keys in Web3</h1>
-              <p className="case-summary lang-en">Research and prototyping for a purchasing journey designed for people with no prior NFT experience, refined through two rounds of usability testing.</p>
+              <p className="case-summary lang-en">I researched and prototyped a purchasing journey for people with no prior NFT experience. Two rounds of usability testing informed the changes to the flow.</p>
             </Lang>
 
             <div className="case-facts">
@@ -58,23 +58,23 @@ const CaseMobinft = () => {
             <div className="case-content">
               <Lang id="pt"><h2 className="lang-pt">Contexto e problema</h2></Lang>
               <Lang id="en"><h2 className="lang-en">Context and problem</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">A Mobinft propunha o uso de uma chave digital baseada em NFT para dar acesso a viagens em veículos autônomos a partir de aeroportos. Para pessoas sem experiência com Web3, adquirir essa chave exigia compreender conceitos e etapas técnicas que criavam uma barreira de entrada.</p></Lang>
-              <Lang id="en"><p className="lang-en">Mobinft proposed using an NFT-based digital key to provide access to autonomous vehicle rides from airports. For people with no Web3 experience, acquiring this key required understanding technical concepts and steps that created a barrier to entry.</p></Lang>
+              <Lang id="pt"><p className="lang-pt">A Mobinft usava uma chave digital baseada em NFT para dar acesso a viagens em veículos autônomos a partir de aeroportos. Para comprá-la, uma pessoa sem experiência com Web3 precisava lidar com conceitos desconhecidos e etapas técnicas que tornavam a compra mais difícil.</p></Lang>
+              <Lang id="en"><p className="lang-en">Mobinft used an NFT-based digital key to provide access to autonomous vehicle rides from airports. People with no Web3 experience had to understand unfamiliar concepts and complete technical steps before buying the key.</p></Lang>
 
               <Lang id="pt"><h2 className="lang-pt">Objetivo do projeto</h2></Lang>
               <Lang id="en"><h2 className="lang-en">Project objective</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">Reduzir a barreira de compreensão e tornar a jornada de aquisição da chave digital mais clara para novos usuários. (Aumentar a base de clientes em 20% era um objetivo de negócio relacionado à iniciativa).</p></Lang>
-              <Lang id="en"><p className="lang-en">Reduce the barrier to understanding and make the digital key acquisition journey clearer for new users. (Increasing the customer base by 20% was a business objective related to the initiative).</p></Lang>
+              <Lang id="pt"><p className="lang-pt">Ajudar novos usuários a entender as etapas da compra e adquirir a chave digital com menos dúvidas. Como objetivo de negócio definido pela empresa, a meta era aumentar a base de clientes em 20%.</p></Lang>
+              <Lang id="en"><p className="lang-en">Help new users understand each step and complete the purchase with clear guidance. As a business objective, the goal was to grow the customer base by 20%.</p></Lang>
 
               <Lang id="pt"><h2 className="lang-pt">Pesquisa e decisão</h2></Lang>
               <Lang id="en"><h2 className="lang-en">Research and decision</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">A pesquisa indicou dificuldade para compreender conceitos, etapas e termos do processo de compra. Com base nessas evidências, priorizamos um onboarding contextual e orientações distribuídas ao longo do fluxo, em vez de depender de um tutorial isolado.</p></Lang>
-              <Lang id="en"><p className="lang-en">Research indicated difficulty understanding concepts, steps, and terms of the purchasing process. Based on this evidence, we prioritized contextual onboarding and guidance distributed throughout the flow, rather than relying on a standalone tutorial.</p></Lang>
+              <Lang id="pt"><p className="lang-pt">Na pesquisa, as pessoas tiveram dificuldade para entender os conceitos e termos usados na compra. Por isso, o primeiro wireframe incluía um onboarding que apresentava esses conceitos antes da compra.</p></Lang>
+              <Lang id="en"><p className="lang-en">During research, people struggled to understand the concepts and terms used in the purchase. The first wireframe therefore included onboarding that introduced those concepts before the purchase.</p></Lang>
 
               <Lang id="pt"><h2 className="lang-pt">Prototipação e testes</h2></Lang>
               <Lang id="en"><h2 className="lang-en">Prototyping and testing</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">A primeira versão do wireframe foi testada com seis participantes sem experiência prévia com NFTs. Os problemas identificados no tutorial orientaram mudanças na ordem e na forma de apresentar os conceitos. Uma segunda rodada, com cinco participantes, avaliou a versão de alta fidelidade.</p></Lang>
-              <Lang id="en"><p className="lang-en">The first wireframe version was tested with six participants with no prior NFT experience. The problems identified in the tutorial guided changes in the order and way concepts were presented. A second round, with five participants, evaluated the high-fidelity version.</p></Lang>
+              <Lang id="pt"><p className="lang-pt">Testei o primeiro wireframe com seis participantes sem experiência prévia com NFTs. As dúvidas sobre o tutorial do onboarding orientaram mudanças na ordem e na apresentação dos conceitos. Parte das orientações também passou a aparecer durante a compra. Depois, uma segunda rodada com cinco participantes avaliou a interface de alta fidelidade.</p></Lang>
+              <Lang id="en"><p className="lang-en">I tested the first wireframe with six participants who had no previous NFT experience. Their questions about the onboarding tutorial informed changes to the order and presentation of the concepts. Some guidance also moved into the purchase flow. A second round with five participants then evaluated the high-fidelity interface.</p></Lang>
 
               <figure style={{ margin: "32px 0" }}>
                 <img src="/assets/case-mobinft/img-hifi-mobinft.png" alt="Telas de alta fidelidade do aplicativo Mobinft" loading="lazy" style={{ width: "100%", border: "1px solid var(--color-border-subtle)" }} />

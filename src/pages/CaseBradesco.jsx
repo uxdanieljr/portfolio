@@ -56,59 +56,29 @@ const CaseBradesco = () => {
 
           <div className="container case-body">
             <div className="case-content">
-              <Lang id="pt"><h2 className="lang-pt">O problema</h2></Lang>
-              <Lang id="en"><h2 className="lang-en">The problem</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">O governo brasileiro anunciou que o CNPJ passaria a ser alfanumérico, e não mais apenas numérico. Essa mudança impactou diretamente o sistema vigente, construído em Cobol, uma tecnologia arcaica cuja adaptação exigiria um custo muito alto.</p></Lang>
-              <Lang id="en"><p className="lang-en">The Brazilian government announced that the CNPJ (National Registry of Legal Entities) would become alphanumeric, rather than just numeric. This change directly impacted the current system, built in Cobol, an archaic technology whose adaptation would require a very high cost.</p></Lang>
-              <Lang id="pt"><p className="lang-pt">Paralelamente, já estava em desenvolvimento um novo sistema para a Gestão de Prestadores de Saúde (GPRS). Nesse sistema também foram identificadas inúmeras inconsistências, tanto na estrutura do banco de dados quanto no fluxo e na navegação do sistema antigo.</p></Lang>
-              <Lang id="en"><p className="lang-en">At the same time, a new system for the Management of Healthcare Providers (GPRS) was already under development. In this system, numerous inconsistencies were also identified, both in the database structure and in the flow and navigation of the old system.</p></Lang>
+              <Lang id="pt"><h2 className="lang-pt">O desafio</h2></Lang>
+              <Lang id="en"><h2 className="lang-en">The challenge</h2></Lang>
+              <Lang id="pt"><p className="lang-pt">Mudanças regulatórias exigiram a revisão de um sistema legado central para a operação. Sua estrutura rígida tornava os fluxos difíceis de acompanhar e mantinha parte do trabalho manual, o que aumentava o risco de erro.</p></Lang>
+              <Lang id="en"><p className="lang-en">Regulatory changes required the team to review a legacy system central to the operation. Its rigid structure made workflows difficult to follow and left some steps manual, increasing the risk of errors.</p></Lang>
 
-              <Lang id="pt"><h2 className="lang-pt">O cenário atual</h2></Lang>
-              <Lang id="en"><h2 className="lang-en">The current scenario</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">Entrei no projeto um mês após seu início, já com o time de desenvolvedores e QAs em atividade. Junto ao PO, conduzi o entendimento global de ambos os sistemas e priorizei as demandas mais urgentes do GPRS, para manter o time de desenvolvimento em ritmo de trabalho.</p></Lang>
-              <Lang id="en"><p className="lang-en">I joined the project one month after it started, with the team of developers and QAs already active. Together with the PO, I conducted a global understanding of both systems and prioritized the most urgent demands of the GPRS to keep the development team working at a steady pace.</p></Lang>
-              <Lang id="pt"><p className="lang-pt">O cenário era o seguinte: um sistema arcaico em funcionamento, responsável por 46% do faturamento da empresa; um sistema em criação com diversas inconsistências, construído em uma plataforma no-code/low-code, o que tornava a arquitetura mais rígida; e um prazo desafiador de apenas 10 meses. Como equipe, seguimos a metodologia Scrum para acelerar o aprendizado e tornar as decisões mais eficientes.</p></Lang>
-              <Lang id="en"><p className="lang-en">The scenario was as follows: an archaic running system, responsible for 46% of the company's revenue; a new system being created with several inconsistencies, built on a no-code/low-code platform, which made the architecture more rigid; and a challenging deadline of only 10 months. As a team, we followed the Scrum methodology to accelerate learning and make decisions more efficient.</p></Lang>
-
-              <Lang id="pt"><h2 className="lang-pt">Objetivo de negócio</h2></Lang>
-              <Lang id="en"><h2 className="lang-en">Business objective</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">O objetivo de negócio era direto: o sistema precisava estar pronto até o fim do prazo, sob risco de impactar a operação da empresa. Além disso, era necessário entregar uma interface moderna e de fácil usabilidade.</p></Lang>
-              <Lang id="en"><p className="lang-en">The business objective was straightforward: the system needed to be ready by the deadline, under the risk of impacting the company's operation. Furthermore, it was necessary to deliver a modern and easy-to-use interface.</p></Lang>
-              <Lang id="pt"><p className="lang-pt">Meu objetivo foi construir interfaces funcionais e com boa usabilidade para o usuário final, mesmo com a rigidez da arquitetura e o prazo curto.</p></Lang>
-              <Lang id="en"><p className="lang-en">My objective was to build functional interfaces with good usability for the end-user, despite the rigidity of the architecture and the short deadline.</p></Lang>
-
-              <Lang id="pt"><h2 className="lang-pt">Entendendo as necessidades dos usuários</h2></Lang>
-              <Lang id="en"><h2 className="lang-en">Understanding user needs</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">Conduzi diversas reuniões com os usuários finais, o que permitiu identificar 4 personas distintas. Para cada uma, foi criado um fluxograma adaptado à etapa da jornada em que o sistema se inseria.</p></Lang>
-              <Lang id="en"><p className="lang-en">I conducted several meetings with the end-users, which allowed me to identify 4 distinct personas. For each one, a flowchart adapted to the stage of the journey in which the system was inserted was created.</p></Lang>
-              
               <div className="evidencia-decisao">
                 <Lang id="pt">
                   <h4>Restrição de Compliance</h4>
-                  <p>Nenhum dos artefatos originais pode ser compartilhado abertamente devido a políticas de segurança da informação da companhia.</p>
+                  <p>Parte deste projeto está protegida por um acordo de confidencialidade. A versão pública mostra apenas o contexto, o processo e os resultados que posso divulgar. Posso compartilhar mais informações em uma conversa, dentro dos limites desse acordo.</p>
                 </Lang>
                 <Lang id="en">
                   <h4>Compliance Restriction</h4>
-                  <p>None of the original artifacts can be openly shared due to the company's information security policies.</p>
+                  <p>Part of this project is protected by a confidentiality agreement. The public version only shows the context, process, and outcomes I can disclose. I can share more information in a conversation, within the limits of that agreement.</p>
                 </Lang>
               </div>
 
-              <Lang id="pt"><p className="lang-pt">As principais dores identificadas foram:</p></Lang>
-              <Lang id="en"><p className="lang-en">The main pain points identified were:</p></Lang>
-              <ul style={{ marginBottom: "32px", paddingLeft: "20px" }}>
-                <li><Lang id="pt"><span className="lang-pt"><strong>Rigidez da arquitetura:</strong> os usuários eram forçados a recomeçar um fluxo inteiro caso precisassem voltar a uma etapa anterior.</span></Lang><Lang id="en"><span className="lang-en"><strong>Rigid architecture:</strong> users were forced to restart an entire flow if they needed to go back to a previous step.</span></Lang></li>
-                <li><Lang id="pt"><span className="lang-pt"><strong>Falta de visibilidade:</strong> os usuários não sabiam em que etapa estavam, para onde estavam indo, nem conseguiam revisar o que já haviam preenchido.</span></Lang><Lang id="en"><span className="lang-en"><strong>Lack of visibility:</strong> users did not know what step they were on, where they were going, nor could they review what they had already filled out.</span></Lang></li>
-                <li><Lang id="pt"><span className="lang-pt"><strong>Curva de aprendizado longa:</strong> a complexidade do sistema exigia treinamento formal para novos usuários.</span></Lang><Lang id="en"><span className="lang-en"><strong>Long learning curve:</strong> the complexity of the system required formal training for new users.</span></Lang></li>
-                <li><Lang id="pt"><span className="lang-pt"><strong>Ausência de prevenção de erros:</strong> não havia mecanismos de confirmação para ações críticas, como deletar um procedimento ou cancelar um caso.</span></Lang><Lang id="en"><span className="lang-en"><strong>Lack of error prevention:</strong> there were no confirmation mechanisms for critical actions, such as deleting a procedure or canceling a case.</span></Lang></li>
-              </ul>
+              <Lang id="pt"><h2 className="lang-pt">A abordagem</h2></Lang>
+              <Lang id="en"><h2 className="lang-en">Approach</h2></Lang>
+              <Lang id="pt"><p className="lang-pt">Conversei com usuários finais sobre a rotina, as regras de negócio e os pontos em que o processo travava. Com esse material, mapeei a jornada e redesenhei os fluxos e protótipos. As principais decisões buscaram prevenir erros e mostrar o andamento de cada processo na própria interface.</p></Lang>
+              <Lang id="en"><p className="lang-en">I spoke with end users about their routines, business rules, and the points where the process stalled. I used those findings to map the journey and redesign the workflows and prototypes. The main decisions focused on preventing errors and showing the status of each process in the interface.</p></Lang>
 
-              <Lang id="pt"><h2 className="lang-pt">Ideação e priorização</h2></Lang>
-              <Lang id="en"><h2 className="lang-en">Ideation and prioritization</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">Após 2 meses de projeto, decidimos mudar a estratégia: focar primeiro no fim da operação, contemplando o carregamento e a manutenção dos dados já cadastrados no sistema, e deixar a etapa de negociação para uma segunda fase.</p></Lang>
-              <Lang id="en"><p className="lang-en">After 2 months of the project, we decided to change the strategy: focus first on the end of the operation, contemplating the loading and maintenance of the data already registered in the system, and leave the negotiation stage for a second phase.</p></Lang>
-
-              <Lang id="pt"><h2 className="lang-pt">UI Design e Prototipação</h2></Lang>
-              <Lang id="en"><h2 className="lang-en">UI Design and Prototyping</h2></Lang>
+              <Lang id="pt"><h2 className="lang-pt">A solução</h2></Lang>
+              <Lang id="en"><h2 className="lang-en">Solution</h2></Lang>
               <Lang id="pt"><p className="lang-pt">Os protótipos e wireframes foram sendo construídos de forma dinâmica juntamente ao discovery, ideação, testes de usabilidade e validação. Dessa forma foi possível agilizar o processo de aprendizagem e clarificar os fluxos dos usuários, possibilitando que os Devs tivessem melhor dimensão da complexidade do que seria desenvolvido e dando mais assertividade aos prazos.</p></Lang>
               <Lang id="en"><p className="lang-en">Prototypes and wireframes were built dynamically alongside discovery, ideation, usability testing, and validation. In this way, it was possible to streamline the learning process and clarify user flows, allowing Devs to have a better dimension of the complexity of what would be developed and giving more assertiveness to deadlines.</p></Lang>
 
@@ -151,16 +121,8 @@ const CaseBradesco = () => {
               <div style={{ maxWidth: "800px", margin: "0 auto" }}>
                 <Lang id="pt"><h2 className="lang-pt">Resultados</h2></Lang>
                 <Lang id="en"><h2 className="lang-en">Results</h2></Lang>
-                <ul>
-                  <li>
-                    <Lang id="pt"><span className="lang-pt"><strong>Menos trabalho manual:</strong> os novos fluxos e automações reduziram em aproximadamente 10 horas semanais o tempo dedicado à entrada manual de dados por funcionário.</span></Lang>
-                    <Lang id="en"><span className="lang-en"><strong>Less manual work:</strong> the new workflows and automations reduced the time spent on manual data entry by approximately 10 hours per week per employee.</span></Lang>
-                  </li>
-                  <li>
-                    <Lang id="pt"><span className="lang-pt"><strong>Operação mais clara:</strong> melhoria da visibilidade do processo e prevenção de erros nas ações críticas do sistema.</span></Lang>
-                    <Lang id="en"><span className="lang-en"><strong>Clearer operations:</strong> improved process visibility and prevented errors on critical system actions.</span></Lang>
-                  </li>
-                </ul>
+                <Lang id="pt"><p className="lang-pt">A solução incorpora automações em etapas antes manuais e mostra o status de cada processo na interface. Com processos mais enxutos, o projeto reduziu em aproximadamente 10 horas semanais o tempo de trabalho manual por funcionário.</p></Lang>
+                <Lang id="en"><p className="lang-en">The solution adds automation to steps that were previously manual and shows the status of each process in the interface. With leaner processes, the project reduced manual work by approximately 10 hours per week per employee.</p></Lang>
               </div>
             </div>
           </div>

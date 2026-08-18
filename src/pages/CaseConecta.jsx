@@ -11,11 +11,7 @@ const CaseConecta = () => {
 
   return (
     <>
-      <Metadata 
-        title={lang === 'en' ? 'Conecta — Nutrition tracking redesign | Daniel Carvalho' : 'Conecta — Redesign da jornada nutricional | Daniel Carvalho'} 
-        description={lang === 'en' ? 'A redesign concept for onboarding and navigation in a nutrition tracking app.' : 'Proposta de redesign do onboarding e da navegação de um aplicativo de acompanhamento nutricional.'} 
-        canonicalPath={lang === 'en' ? '/en/cases/conecta' : '/cases/conecta'} 
-      />
+      <Metadata title={lang === 'en' ? 'Conecta: nutrition care redesign | Daniel Carvalho' : 'Conecta: redesign da jornada de acompanhamento nutricional | Daniel Carvalho'} description={lang === 'en' ? 'A redesign concept for onboarding and navigation in a nutrition care app.' : 'Proposta de redesign do onboarding e da navegação de um aplicativo de acompanhamento nutricional.'} canonicalPath={lang === 'en' ? '/en/cases/conecta' : '/cases/conecta'} />
 
       <main className="case-study-main">
         <article className="case-study-article">
@@ -24,12 +20,12 @@ const CaseConecta = () => {
             <Lang id="pt">
               <span className="eyebrow lang-pt">02 / Aplicativo mobile · Saúde digital</span>
               <h1 className="lang-pt">Conecta — Redesign da jornada de acompanhamento nutricional</h1>
-              <p className="case-summary lang-pt">Uma proposta de redesign para tornar o primeiro acesso mais claro, ajudar pacientes a compreender suas tarefas e facilitar o acompanhamento do progresso por nutricionistas.</p>
+              <p className="case-summary lang-pt">Revisei o onboarding e a navegação de um aplicativo de acompanhamento nutricional. A proposta procura explicar melhor as tarefas do paciente e organizar as informações de progresso usadas pelo nutricionista.</p>
             </Lang>
             <Lang id="en">
               <span className="eyebrow lang-en">02 / Mobile app · Digital health</span>
               <h1 className="lang-en">Conecta — Redesigning the nutrition tracking journey</h1>
-              <p className="case-summary lang-en">A redesign concept to make onboarding clearer, help patients understand their tasks, and make it easier for nutritionists to track progress.</p>
+              <p className="case-summary lang-en">I reviewed the onboarding and navigation of a nutrition care app. The concept aims to explain patient tasks more clearly and organize the progress information used by nutritionists.</p>
             </Lang>
 
             <div className="case-facts">
@@ -58,13 +54,13 @@ const CaseConecta = () => {
             <div className="case-content">
               <Lang id="pt"><h2 className="lang-pt">Contexto</h2></Lang>
               <Lang id="en"><h2 className="lang-en">Context</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">Aplicativos de acompanhamento nutricional ampliam o contato entre consultas, mas dependem de orientação clara para que pacientes compreendam tarefas, registros e próximos passos. No Conecta, o primeiro acesso não explicava adequadamente essas possibilidades.</p></Lang>
-              <Lang id="en"><p className="lang-en">Nutrition tracking apps extend contact between consultations but rely on clear guidance so patients understand tasks, logs, and next steps. In Conecta, the initial access did not adequately explain these possibilities.</p></Lang>
+              <Lang id="pt"><p className="lang-pt">Entre as consultas, o aplicativo reúne tarefas, registros e informações sobre o progresso. No Conecta, o primeiro acesso não explicava bem o que o paciente poderia fazer nem por onde começar.</p></Lang>
+              <Lang id="en"><p className="lang-en">Between appointments, the app brings together tasks, records, and progress information. Conecta’s onboarding did not clearly explain what patients could do or where they should begin.</p></Lang>
 
               <Lang id="pt"><h2 className="lang-pt">O problema</h2></Lang>
               <Lang id="en"><h2 className="lang-en">The problem</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">A análise inicial indicou uma falha de comunicação no onboarding e na arquitetura de informação. Sem compreender o que fazer no aplicativo, pacientes poderiam deixar de executar tarefas propostas pelo nutricionista e abandonar o acompanhamento digital.</p></Lang>
-              <Lang id="en"><p className="lang-en">The initial analysis indicated a communication gap in onboarding and information architecture. Without understanding what to do in the app, patients could fail to execute tasks proposed by the nutritionist and abandon digital tracking.</p></Lang>
+              <Lang id="pt"><p className="lang-pt">A análise do onboarding e da arquitetura da informação mostrou que os pacientes podiam começar a usar o aplicativo sem entender suas tarefas nem o próximo passo.</p></Lang>
+              <Lang id="en"><p className="lang-en">The onboarding and information architecture review showed that patients could start using the app without understanding their tasks or the next step.</p></Lang>
 
               <figure style={{ margin: "32px 0" }}>
                 <img src="/assets/case-conecta/img-timeline-conecta.png" alt="Timeline do fluxo atual do Conecta" loading="lazy" style={{ width: "100%", border: "1px solid var(--color-border-subtle)" }} />
@@ -74,10 +70,10 @@ const CaseConecta = () => {
                 </figcaption>
               </figure>
               
-              <Lang id="pt"><h2 className="lang-pt">Abordagem e Design</h2></Lang>
-              <Lang id="en"><h2 className="lang-en">Approach and Design</h2></Lang>
-              <Lang id="pt"><p className="lang-pt">Analisei referências de produtos de saúde e nutrição, reorganizei a arquitetura de informação e construí wireframes para revisar o fluxo de navegação. Depois, desenvolvi a interface de alta fidelidade e os padrões visuais necessários para manter consistência entre as telas.</p></Lang>
-              <Lang id="en"><p className="lang-en">I analyzed references from health and nutrition products, reorganized the information architecture, and built wireframes to review the navigation flow. Then, I developed the high-fidelity interface and visual patterns needed to maintain consistency across screens.</p></Lang>
+              <Lang id="pt"><h2 className="lang-pt">A abordagem</h2></Lang>
+              <Lang id="en"><h2 className="lang-en">Approach</h2></Lang>
+              <Lang id="pt"><p className="lang-pt">Analisei padrões recurntes em outros produtos de saúde e nutrição. Depois, reorganizei a arquitetura da informação e usei wireframes para revisar a navegação. Na interface de alta fidelidade, apliquei o novo fluxo e defini padrões visuais para manter consistência entre as telas.</p></Lang>
+              <Lang id="en"><p className="lang-en">I reviewed recurring patterns in other health and nutrition products. I then reorganized the information architecture and used wireframes to review the navigation. In the high-fidelity interface, I applied the new flow and defined visual patterns to keep the screens consistent.</p></Lang>
 
               <figure style={{ margin: "32px 0" }}>
                 <img src="/assets/case-conecta/img-conecta-prints-atual.png" alt="Telas de alta fidelidade do aplicativo Conecta" loading="lazy" style={{ width: "100%", border: "1px solid var(--color-border-subtle)" }} />
@@ -116,12 +112,10 @@ const CaseConecta = () => {
                 <Lang id="pt"><h2 className="lang-pt">Resultados e impacto</h2></Lang>
                 <Lang id="en"><h2 className="lang-en">Results and impact</h2></Lang>
                 <Lang id="pt">
-                  <p className="lang-pt" style={{ fontSize: "1.125rem" }}>A proposta resultou em uma jornada de primeiro acesso mais orientada e em uma organização mais clara das tarefas e do progresso.</p>
-                  <p className="lang-pt" style={{ fontSize: "1.125rem", marginTop: "16px" }}>Após medição interna, os usuários começaram a passar em média <strong>50% a mais de tempo usando o app</strong>. Isso possibilitou que os nutricionistas acompanhassem o progresso dos pacientes de forma mais eficiente, resultando em uma maior adesão ao tratamento e melhores resultados clínicos.</p>
+                  <p className="lang-pt" style={{ fontSize: "1.125rem" }}>A proposta explica o primeiro acesso passo a passo e reorganiza as tarefas e informações de progresso. Após medição interna, os usuários passaram em média <strong>50% a mais de tempo usando o app</strong>. Isso possibilitou que os nutricionistas acompanhassem o progresso de forma mais eficiente, o que resultou em maior adesão ao tratamento e melhores resultados para os pacientes.</p>
                 </Lang>
                 <Lang id="en">
-                  <p className="lang-en" style={{ fontSize: "1.125rem" }}>The proposal resulted in a more guided first-access journey and a clearer organization of tasks and progress.</p>
-                  <p className="lang-en" style={{ fontSize: "1.125rem", marginTop: "16px" }}>After internal measurement, users began spending an average of <strong>50% more time using the app</strong>. This allowed nutritionists to track patients' progress more efficiently, resulting in greater treatment adherence and better clinical outcomes.</p>
+                  <p className="lang-en" style={{ fontSize: "1.125rem" }}>The concept explains the first steps and reorganizes tasks and progress information. After internal measurement, users spent an average of <strong>50% more time using the app</strong>. This enabled nutritionists to track patient progress more efficiently, resulting in higher treatment adherence and better outcomes for patients.</p>
                 </Lang>
               </div>
             </div>
