@@ -22,12 +22,7 @@ const Home = () => {
         <section id="hero" className="reveal">
           <div className="container hero-content">
             <div className="hero-text">
-              <Lang id="pt">
-                <span className="eyebrow lang-pt">Portfólio de Product Design</span>
-              </Lang>
-              <Lang id="en">
-                <span className="eyebrow lang-en">Product Design Portfolio</span>
-              </Lang>
+
               <h1 className="hero-tagline">
                 <Lang id="pt">
                   <span className="lang-pt">Produtos </span>
