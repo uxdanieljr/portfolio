@@ -769,3 +769,14 @@ html, body {
   overflow-wrap: break-word;
   word-break: break-word;
 }
+
+@media (max-width: 767px) {
+  .acesso-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .acesso-form button {
+    width: 100%;
+  }
+}
