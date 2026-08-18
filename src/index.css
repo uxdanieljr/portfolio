@@ -756,3 +756,16 @@ body {
 html, body {
   overflow-x: hidden;
 }
+
+@media (max-width: 1023px) {
+  .case-body {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+.case-content, .acesso-protegido, .case-rail, .case-body > div, .case-body > aside {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
