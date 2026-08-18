@@ -77,7 +77,7 @@ const Home = () => {
             </div>
 
             <div className="hero-image-wrapper">
-              <img src="assets/DanielCarvalho.jpg" alt="Daniel Carvalho" className="hero-image" loading="lazy" />
+              <img src="/assets/foto_site_portfolio.png" alt="Daniel Carvalho" className="hero-image" loading="lazy" />
             </div>
           </div>
         </section>
@@ -120,14 +120,14 @@ const Home = () => {
                   </span>
                 </div>
                 <div className="project-image-wrapper">
-                  <img src="assets/banner-bradesco-negociacao.svg" alt="Bradesco Seguros" className="project-card-image" loading="lazy" />
+                  <img src="/assets/banner-bradesco-negociacao.svg" alt="Bradesco Seguros" className="project-card-image" loading="lazy" />
                 </div>
               </Link>
 
               {/*  Case 2 (Conecta - Half width)  */}
               <Link to="/cases/conecta" className="project-card" id="project-002">
                 <div className="project-image-wrapper">
-                  <img src="assets/Thumbnail-conecta.svg" alt="Conecta" className="project-card-image" loading="lazy" />
+                  <img src="/assets/Thumbnail-conecta.svg" alt="Conecta" className="project-card-image" loading="lazy" />
                 </div>
                 <div className="project-meta" style={{marginTop: '24px'}}>
                   <Lang id="pt"><span className="lang-pt">02 / Aplicativo mobile · Saúde digital</span></Lang>
@@ -150,7 +150,7 @@ const Home = () => {
               {/*  Case 3 (Mobinft - Half width)  */}
               <Link to="/cases/mobinft" className="project-card" id="project-003">
                 <div className="project-image-wrapper">
-                  <img src="assets/banner-mobinft.png" alt="Mobinft" className="project-card-image" loading="lazy" />
+                  <img src="/assets/banner-mobinft.png" alt="Mobinft" className="project-card-image" loading="lazy" />
                 </div>
                 <div className="project-meta" style={{marginTop: '24px'}}>
                   <Lang id="pt"><span className="lang-pt">03 / Aplicativo mobile · UX project</span></Lang>

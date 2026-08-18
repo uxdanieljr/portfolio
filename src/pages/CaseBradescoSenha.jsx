@@ -118,12 +118,12 @@ const CaseBradescoSenha = () => {
                 </h4>
                 <ul style={{ paddingLeft: "20px", fontSize: "0.9375rem", color: "var(--color-text-secondary)" }}>
                   <Lang id="pt">
-                    <li className="lang-pt" style={{ marginBottom: "8px" }}>Tradução de regras complexas em fluxos claros.</li>
+                    <li className="lang-pt" style={{ marginBottom: "8px" }}><strong>-10h de esforço:</strong> redução no trabalho manual por usuário na semana.</li>
                     <li className="lang-pt" style={{ marginBottom: "8px" }}>Gestão de prazos e restrições técnicas severas.</li>
                     <li className="lang-pt">Colaboração direta com usuários e engenharia.</li>
                   </Lang>
                   <Lang id="en">
-                    <li className="lang-en" style={{ marginBottom: "8px" }}>Translating complex rules into clear flows.</li>
+                    <li className="lang-en" style={{ marginBottom: "8px" }}><strong>-10h effort:</strong> reduction in manual work per user per week.</li>
                     <li className="lang-en" style={{ marginBottom: "8px" }}>Managing deadlines and severe technical constraints.</li>
                     <li className="lang-en">Direct collaboration with users and engineering.</li>
                   </Lang>

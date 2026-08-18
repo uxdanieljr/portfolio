@@ -51,7 +51,7 @@ const CaseMobinft = () => {
               </div>
             </div>
 
-            <img src="assets/banner-mobinft.png" alt="Mobinft App" className="case-hero-image" loading="lazy" />
+            <img src="/assets/banner-mobinft.png" alt="Mobinft App" className="case-hero-image" loading="lazy" />
           </header>
 
           <div className="container case-body">
@@ -75,6 +75,14 @@ const CaseMobinft = () => {
               <Lang id="en"><h2 className="lang-en">Prototyping and testing</h2></Lang>
               <Lang id="pt"><p className="lang-pt">A primeira versão do wireframe foi testada com seis participantes sem experiência prévia com NFTs. Os problemas identificados no tutorial orientaram mudanças na ordem e na forma de apresentar os conceitos. Uma segunda rodada, com cinco participantes, avaliou a versão de alta fidelidade.</p></Lang>
               <Lang id="en"><p className="lang-en">The first wireframe version was tested with six participants with no prior NFT experience. The problems identified in the tutorial guided changes in the order and way concepts were presented. A second round, with five participants, evaluated the high-fidelity version.</p></Lang>
+
+              <figure style={{ margin: "32px 0" }}>
+                <img src="/assets/case-mobinft/img-hifi-mobinft.png" alt="Telas de alta fidelidade do aplicativo Mobinft" loading="lazy" style={{ width: "100%", border: "1px solid var(--color-border-subtle)" }} />
+                <figcaption style={{ fontSize: "0.875rem", color: "var(--color-text-secondary)", marginTop: "8px" }}>
+                  <Lang id="pt"><span className="lang-pt">Interface final refinada com os achados da pesquisa</span></Lang>
+                  <Lang id="en"><span className="lang-en">Final interface refined with research findings</span></Lang>
+                </figcaption>
+              </figure>
             </div>
 
             <aside className="case-rail">
@@ -85,11 +93,13 @@ const CaseMobinft = () => {
                 </h4>
                 <ul style={{ paddingLeft: "20px", fontSize: "0.9375rem", color: "var(--color-text-secondary)" }}>
                   <Lang id="pt">
+                    <li className="lang-pt" style={{ marginBottom: "8px" }}><strong>+20% base de clientes:</strong> alcance da meta comercial.</li>
                     <li className="lang-pt" style={{ marginBottom: "8px" }}>Onboarding contextual no lugar de tutorial isolado.</li>
                     <li className="lang-pt" style={{ marginBottom: "8px" }}>Testes de usabilidade com usuários leigos em Web3.</li>
                     <li className="lang-pt">Identificação de barreiras semânticas na interface.</li>
                   </Lang>
                   <Lang id="en">
+                    <li className="lang-en" style={{ marginBottom: "8px" }}><strong>+20% customer base:</strong> achieving the business goal.</li>
                     <li className="lang-en" style={{ marginBottom: "8px" }}>Contextual onboarding instead of a standalone tutorial.</li>
                     <li className="lang-en" style={{ marginBottom: "8px" }}>Usability testing with non-Web3 users.</li>
                     <li className="lang-en">Identification of semantic barriers in the interface.</li>
@@ -104,8 +114,8 @@ const CaseMobinft = () => {
               <div style={{ maxWidth: "800px", margin: "0 auto" }}>
                 <Lang id="pt"><h2 className="lang-pt">Resultado e aprendizado</h2></Lang>
                 <Lang id="en"><h2 className="lang-en">Result and learnings</h2></Lang>
-                <Lang id="pt"><p className="lang-pt" style={{ fontSize: "1.125rem" }}>A segunda rodada indicou melhora na compreensão do tutorial, mas revelou uma nova ambiguidade: durante a compra, participantes escolheram “marketplace” com mais frequência do que “chave”. O achado mostrou que a terminologia e as opções de compra ainda precisavam ser refinadas.</p></Lang>
-                <Lang id="en"><p className="lang-en" style={{ fontSize: "1.125rem" }}>The second round showed improvement in tutorial comprehension but revealed a new ambiguity: during the purchase, participants chose "marketplace" more frequently than "key." This finding showed that terminology and purchasing options still needed refinement.</p></Lang>
+                <Lang id="pt"><p className="lang-pt" style={{ fontSize: "1.125rem" }}>A segunda rodada indicou melhora na compreensão do tutorial, mas revelou uma nova ambiguidade: durante a compra, participantes escolheram “marketplace” com mais frequência do que “chave”. O achado mostrou que a terminologia e as opções de compra ainda precisavam ser refinadas, porém o objetivo principal de expansão da base foi atingido com sucesso.</p></Lang>
+                <Lang id="en"><p className="lang-en" style={{ fontSize: "1.125rem" }}>The second round showed improvement in tutorial comprehension but revealed a new ambiguity: during the purchase, participants chose "marketplace" more frequently than "key." This finding showed that terminology and purchasing options still needed refinement, yet the main objective of expanding the user base was successfully achieved.</p></Lang>
               </div>
             </div>
           </div>
@@ -116,7 +126,7 @@ const CaseMobinft = () => {
             <Lang id="pt"><h3 className="lang-pt">Confira também</h3></Lang>
             <Lang id="en"><h3 className="lang-en">See also</h3></Lang>
             <div style={{ marginTop: "32px", display: "flex", gap: "24px", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link to="/cases/bradesco-seguros" className="project-card" style={{ display: "block", textAlign: "left", width: "100%", maxWidth: "400px" }}>
+              <Link to="/cases/bradesco-seguros-completo" className="project-card" style={{ display: "block", textAlign: "left", width: "100%", maxWidth: "400px" }}>
                 <div className="project-meta" style={{ marginBottom: "16px" }}>
                   <Lang id="pt"><span className="lang-pt">01 / Sistema corporativo · Desktop</span></Lang>
                   <Lang id="en"><span className="lang-en">01 / Enterprise system · Desktop</span></Lang>

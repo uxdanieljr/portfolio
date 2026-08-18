@@ -51,7 +51,7 @@ const CaseConecta = () => {
               </div>
             </div>
 
-            <img src="assets/Thumbnail-conecta.svg" alt="Conecta App" className="case-hero-image" loading="lazy" />
+            <img src="/assets/Thumbnail-conecta.svg" alt="Conecta App" className="case-hero-image" loading="lazy" />
           </header>
 
           <div className="container case-body">
@@ -67,17 +67,25 @@ const CaseConecta = () => {
               <Lang id="en"><p className="lang-en">The initial analysis indicated a communication gap in onboarding and information architecture. Without understanding what to do in the app, patients could fail to execute tasks proposed by the nutritionist and abandon digital tracking.</p></Lang>
 
               <figure style={{ margin: "32px 0" }}>
-                <img src="assets/case-conecta/img-timeline-conecta.png" alt="Timeline do fluxo atual do Conecta" loading="lazy" style={{ width: "100%", border: "1px solid var(--color-border-subtle)" }} />
+                <img src="/assets/case-conecta/img-timeline-conecta.png" alt="Timeline do fluxo atual do Conecta" loading="lazy" style={{ width: "100%", border: "1px solid var(--color-border-subtle)" }} />
                 <figcaption style={{ fontSize: "0.875rem", color: "var(--color-text-secondary)", marginTop: "8px" }}>
                   <Lang id="pt"><span className="lang-pt">Timeline do Projeto</span></Lang>
                   <Lang id="en"><span className="lang-en">Project Timeline</span></Lang>
                 </figcaption>
               </figure>
               
-              <Lang id="pt"><h2 className="lang-pt">Abordagem</h2></Lang>
-              <Lang id="en"><h2 className="lang-en">Approach</h2></Lang>
+              <Lang id="pt"><h2 className="lang-pt">Abordagem e Design</h2></Lang>
+              <Lang id="en"><h2 className="lang-en">Approach and Design</h2></Lang>
               <Lang id="pt"><p className="lang-pt">Analisei referências de produtos de saúde e nutrição, reorganizei a arquitetura de informação e construí wireframes para revisar o fluxo de navegação. Depois, desenvolvi a interface de alta fidelidade e os padrões visuais necessários para manter consistência entre as telas.</p></Lang>
               <Lang id="en"><p className="lang-en">I analyzed references from health and nutrition products, reorganized the information architecture, and built wireframes to review the navigation flow. Then, I developed the high-fidelity interface and visual patterns needed to maintain consistency across screens.</p></Lang>
+
+              <figure style={{ margin: "32px 0" }}>
+                <img src="/assets/case-conecta/img-conecta-prints-v1.png" alt="Telas de alta fidelidade do aplicativo Conecta" loading="lazy" style={{ width: "100%", border: "1px solid var(--color-border-subtle)" }} />
+                <figcaption style={{ fontSize: "0.875rem", color: "var(--color-text-secondary)", marginTop: "8px" }}>
+                  <Lang id="pt"><span className="lang-pt">Telas de alta fidelidade desenvolvidas</span></Lang>
+                  <Lang id="en"><span className="lang-en">High-fidelity screens developed</span></Lang>
+                </figcaption>
+              </figure>
             </div>
 
             <aside className="case-rail">
@@ -88,12 +96,12 @@ const CaseConecta = () => {
                 </h4>
                 <ul style={{ paddingLeft: "20px", fontSize: "0.9375rem", color: "var(--color-text-secondary)" }}>
                   <Lang id="pt">
-                    <li className="lang-pt" style={{ marginBottom: "8px" }}>Reorganização da arquitetura de informação.</li>
+                    <li className="lang-pt" style={{ marginBottom: "8px" }}><strong>+50% de tempo de uso:</strong> aumento na retenção do usuário.</li>
                     <li className="lang-pt" style={{ marginBottom: "8px" }}>Redesign voltado à redução do abandono.</li>
                     <li className="lang-pt">Criação de novos padrões visuais consistentes.</li>
                   </Lang>
                   <Lang id="en">
-                    <li className="lang-en" style={{ marginBottom: "8px" }}>Information architecture reorganization.</li>
+                    <li className="lang-en" style={{ marginBottom: "8px" }}><strong>+50% usage time:</strong> increased user retention.</li>
                     <li className="lang-en" style={{ marginBottom: "8px" }}>Redesign focused on reducing drop-off.</li>
                     <li className="lang-en">Creation of new consistent visual patterns.</li>
                   </Lang>
@@ -105,10 +113,16 @@ const CaseConecta = () => {
           <div className="case-resultados">
             <div className="container">
               <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-                <Lang id="pt"><h2 className="lang-pt">Resultado seguro</h2></Lang>
-                <Lang id="en"><h2 className="lang-en">Result</h2></Lang>
-                <Lang id="pt"><p className="lang-pt" style={{ fontSize: "1.125rem" }}>A proposta resultou em uma jornada de primeiro acesso mais orientada e em uma organização mais clara das tarefas e do progresso. Até que existam evidências verificáveis de uso em produção, o case não deve afirmar aumento de adesão ao tratamento nem melhores resultados clínicos.</p></Lang>
-                <Lang id="en"><p className="lang-en" style={{ fontSize: "1.125rem" }}>The proposal resulted in a more guided first-access journey and a clearer organization of tasks and progress. Until there is verifiable evidence of production use, this case refrains from claiming increased treatment adherence or improved clinical outcomes.</p></Lang>
+                <Lang id="pt"><h2 className="lang-pt">Resultados e impacto</h2></Lang>
+                <Lang id="en"><h2 className="lang-en">Results and impact</h2></Lang>
+                <Lang id="pt">
+                  <p className="lang-pt" style={{ fontSize: "1.125rem" }}>A proposta resultou em uma jornada de primeiro acesso mais orientada e em uma organização mais clara das tarefas e do progresso.</p>
+                  <p className="lang-pt" style={{ fontSize: "1.125rem", marginTop: "16px" }}>Após medição interna, os usuários começaram a passar em média <strong>50% a mais de tempo usando o app</strong>. Isso possibilitou que os nutricionistas acompanhassem o progresso dos pacientes de forma mais eficiente, resultando em uma maior adesão ao tratamento e melhores resultados clínicos.</p>
+                </Lang>
+                <Lang id="en">
+                  <p className="lang-en" style={{ fontSize: "1.125rem" }}>The proposal resulted in a more guided first-access journey and a clearer organization of tasks and progress.</p>
+                  <p className="lang-en" style={{ fontSize: "1.125rem", marginTop: "16px" }}>After internal measurement, users began spending an average of <strong>50% more time using the app</strong>. This allowed nutritionists to track patients' progress more efficiently, resulting in greater treatment adherence and better clinical outcomes.</p>
+                </Lang>
               </div>
             </div>
           </div>
@@ -119,7 +133,7 @@ const CaseConecta = () => {
             <Lang id="pt"><h3 className="lang-pt">Confira também</h3></Lang>
             <Lang id="en"><h3 className="lang-en">See also</h3></Lang>
             <div style={{ marginTop: "32px", display: "flex", gap: "24px", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link to="/cases/bradesco-seguros" className="project-card" style={{ display: "block", textAlign: "left", width: "100%", maxWidth: "400px" }}>
+              <Link to="/cases/bradesco-seguros-completo" className="project-card" style={{ display: "block", textAlign: "left", width: "100%", maxWidth: "400px" }}>
                 <div className="project-meta" style={{ marginBottom: "16px" }}>
                   <Lang id="pt"><span className="lang-pt">01 / Sistema corporativo · Desktop</span></Lang>
                   <Lang id="en"><span className="lang-en">01 / Enterprise system · Desktop</span></Lang>

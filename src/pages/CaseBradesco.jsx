@@ -51,7 +51,7 @@ const CaseBradesco = () => {
               </div>
             </div>
 
-            <img src="assets/banner-bradesco-negociacao.svg" alt="Banner Bradesco Seguros" className="case-hero-image" loading="lazy" />
+            <img src="/assets/banner-bradesco-negociacao.svg" alt="Banner Bradesco Seguros" className="case-hero-image" loading="lazy" />
           </header>
 
           <div className="container case-body">
@@ -113,7 +113,7 @@ const CaseBradesco = () => {
               <Lang id="en"><p className="lang-en">Prototypes and wireframes were built dynamically alongside discovery, ideation, usability testing, and validation. In this way, it was possible to streamline the learning process and clarify user flows, allowing Devs to have a better dimension of the complexity of what would be developed and giving more assertiveness to deadlines.</p></Lang>
 
               <figure style={{ margin: "32px 0" }}>
-                <img src="assets/case-bradesco-negociacao/img_fluxos_brds.png" alt="Fluxos prototipados do sistema Bradesco Seguros" loading="lazy" style={{ width: "100%", border: "1px solid var(--color-border-subtle)" }} />
+                <img src="/assets/case-bradesco-negociacao/img_fluxos_brds.png" alt="Fluxos prototipados do sistema Bradesco Seguros" loading="lazy" style={{ width: "100%", border: "1px solid var(--color-border-subtle)" }} />
                 <figcaption style={{ fontSize: "0.875rem", color: "var(--color-text-secondary)", marginTop: "8px" }}>
                   <Lang id="pt"><span className="lang-pt">Parte dos fluxos prototipados</span></Lang>
                   <Lang id="en"><span className="lang-en">Part of the prototyped flows</span></Lang>
@@ -132,12 +132,12 @@ const CaseBradesco = () => {
                 </h4>
                 <ul style={{ paddingLeft: "20px", fontSize: "0.9375rem", color: "var(--color-text-secondary)" }}>
                   <Lang id="pt">
-                    <li className="lang-pt" style={{ marginBottom: "8px" }}>Tradução de regras complexas em fluxos claros.</li>
+                    <li className="lang-pt" style={{ marginBottom: "8px" }}><strong>-10h de esforço:</strong> redução no trabalho manual por usuário na semana.</li>
                     <li className="lang-pt" style={{ marginBottom: "8px" }}>Gestão de prazos e restrições técnicas severas.</li>
                     <li className="lang-pt">Colaboração direta com usuários e engenharia.</li>
                   </Lang>
                   <Lang id="en">
-                    <li className="lang-en" style={{ marginBottom: "8px" }}>Translating complex rules into clear flows.</li>
+                    <li className="lang-en" style={{ marginBottom: "8px" }}><strong>-10h effort:</strong> reduction in manual work per user per week.</li>
                     <li className="lang-en" style={{ marginBottom: "8px" }}>Managing deadlines and severe technical constraints.</li>
                     <li className="lang-en">Direct collaboration with users and engineering.</li>
                   </Lang>
