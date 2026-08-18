@@ -10,6 +10,7 @@ import Lang from '../components/Lang';
 const CaseBradesco = () => {
   useScrollReveal();
   const { lang } = useLang();
+  const tokens = useMotionTokens();
 
   return (
     <>

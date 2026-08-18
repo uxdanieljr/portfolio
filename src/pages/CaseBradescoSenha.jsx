@@ -11,6 +11,7 @@ import Lang from '../components/Lang';
 const CaseBradescoSenha = () => {
   useScrollReveal();
   const { lang } = useLang();
+  const tokens = useMotionTokens();
   const navigate = useNavigate();
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
