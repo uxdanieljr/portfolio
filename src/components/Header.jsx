@@ -81,6 +81,11 @@ const Header = () => {
                 </Link>
               </li>
               <li>
+                <a href="/Daniel Carvalho - Product Designer 2026.pdf" target="_blank" rel="noopener noreferrer" className="nav-link" onClick={closeMenu}>
+                  {lang === 'pt' ? 'Currículo' : 'Résumé'}
+                </a>
+              </li>
+              <li>
                 <Link to="/#contato" className={`nav-link ${activeSection === 'contato' ? 'active' : ''}`} onClick={closeMenu}>
                   {lang === 'pt' ? 'Contato' : 'Contact'}
                 </Link>

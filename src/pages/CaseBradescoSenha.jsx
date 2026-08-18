@@ -25,7 +25,12 @@ const CaseBradescoSenha = () => {
 
   return (
     <>
-      <Metadata title={lang === 'en' ? 'Bradesco Seguros — Critical management system | Daniel Carvalho' : 'Bradesco Seguros — Sistema crítico de gestão | Daniel Carvalho'} description={lang === 'en' ? 'A case study on modernizing a critical legacy system through workflow redesign, automation, and reduced manual work.' : 'Case sobre a modernização de um sistema legado crítico, com redesign de fluxos, automações e redução de trabalho manual.'} canonicalPath={lang === 'en' ? '/en/cases/bradesco-seguros' : '/cases/bradesco-seguros'} />
+      <Metadata 
+        title={lang === 'en' ? 'Bradesco Seguros — Critical management system | Daniel Carvalho' : 'Bradesco Seguros — Sistema crítico de gestão | Daniel Carvalho'} 
+        description={lang === 'en' ? 'A case study on modernizing a critical legacy system through workflow redesign, automation, and reduced manual work.' : 'Case sobre a modernização de um sistema legado crítico, com redesign de fluxos, automações e redução de trabalho manual.'} 
+        canonicalPath={lang === 'en' ? '/en/cases/bradesco-seguros' : '/cases/bradesco-seguros'} 
+      />
+      
 
       <main className="case-study-main">
         <article className="case-study-article">

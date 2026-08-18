@@ -12,6 +12,11 @@ const Home = () => {
 
   return (
     <>
+      <Metadata 
+        title={lang === 'en' ? 'Daniel Carvalho — Product Designer | Complex digital products' : 'Daniel Carvalho — Product Designer | Produtos digitais complexos'} 
+        description={lang === 'en' ? 'Daniel Carvalho’s portfolio: a Product Designer with 4+ years of experience in complex digital products and enterprise systems.' : 'Portfólio de Daniel Carvalho, Product Designer com mais de 4 anos de experiência em produtos digitais complexos e sistemas corporativos.'} 
+        canonicalPath={lang === 'en' ? '/en' : '/'} 
+      />
 
 
   <main>
@@ -204,7 +209,7 @@ const Home = () => {
                 <div className="project-header-left">
                   <span className="project-meta-number">(03)</span>
                   <Lang id="pt">
-<span className="project-meta-tag lang-pt">Aplicativo mobile · Saúde digital</span>
+<span className="project-meta-tag lang-pt">Aplicativo mobile · Projeto de UX</span>
 </Lang>
                   <Lang id="en">
 <span className="project-meta-tag lang-en">Mobile app · UX project</span>

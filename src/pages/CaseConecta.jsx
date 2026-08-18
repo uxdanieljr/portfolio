@@ -12,6 +12,11 @@ const CaseConecta = () => {
 
   return (
     <>
+      <Metadata 
+        title={lang === 'en' ? 'Conecta — Nutrition tracking redesign | Daniel Carvalho' : 'Conecta — Redesign da jornada nutricional | Daniel Carvalho'} 
+        description={lang === 'en' ? 'A redesign concept for onboarding and navigation in a nutrition tracking app.' : 'Proposta de redesign do onboarding e da navegação de um aplicativo de acompanhamento nutricional.'} 
+        canonicalPath={lang === 'en' ? '/en/cases/conecta' : '/cases/conecta'} 
+      />
 
 
   <main className="case-study-main">
@@ -175,10 +180,10 @@ const CaseConecta = () => {
                 <div className="project-header-left">
                   <span className="project-meta-number">(03)</span>
                   <Lang id="pt">
-<span className="project-meta-tag lang-pt">Aplicativo mobile · Saúde digital</span>
+<span className="project-meta-tag lang-pt">Aplicativo mobile · Projeto de UX</span>
 </Lang>
                   <Lang id="en">
-<span className="project-meta-tag lang-en">Mobile app · Digital health</span>
+<span className="project-meta-tag lang-en">Mobile app · UX project</span>
 </Lang>
                 </div>
                 <span className="project-meta-year">2023</span>

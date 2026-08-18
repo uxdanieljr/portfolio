@@ -12,6 +12,11 @@ const CaseMobinft = () => {
 
   return (
     <>
+      <Metadata 
+        title={lang === 'en' ? 'Mobinft — NFT purchasing journey | Daniel Carvalho' : 'Mobinft — Jornada de compra de NFTs | Daniel Carvalho'} 
+        description={lang === 'en' ? 'Research, prototyping, and usability testing to simplify the purchase of an NFT-based digital key.' : 'Pesquisa, prototipação e testes de usabilidade para simplificar a compra de uma chave digital baseada em NFT.'} 
+        canonicalPath={lang === 'en' ? '/en/cases/mobinft' : '/cases/mobinft'} 
+      />
 
 
   <main className="case-study-main">
