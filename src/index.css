@@ -346,7 +346,11 @@ header.site-header {
 
 /* --- CASES --- */
 .projetos-header h2 {
+  margin-bottom: 8px;
+}
+.projetos-header p {
   margin-bottom: 48px;
+  color: var(--color-text-secondary);
 }
 .projects-grid {
   display: grid;

@@ -40,10 +40,10 @@ const Home = () => {
                   <span className="lang-pt">Experiências </span>
                 </Lang>
                 <Lang id="en">
-                  <span className="lang-en">Clear </span>
+                  <span className="lang-en">Simple </span>
                 </Lang>
                 <Lang id="pt">
-                  <span className="highlight-wine lang-pt">claras.</span>
+                  <span className="highlight-wine lang-pt">simples.</span>
                 </Lang>
                 <Lang id="en">
                   <span className="highlight-wine lang-en">experiences.</span>
@@ -51,7 +51,7 @@ const Home = () => {
               </h1>
               <Lang id="pt">
                 <p className="hero-subtitle lang-pt">
-                  Sou Daniel Carvalho, Product Designer há mais de 4 anos. Trabalho com sistemas corporativos, aplicativos e SaaS. Antes de desenhar a interface, procuro entender as regras de negócio, a operação e as necessidades de quem usa o produto.
+                  Sou Daniel Carvalho, Product Designer com mais de 4 anos de experiência em sistemas corporativos, aplicativos e SaaS.
                 </p>
               </Lang>
               <Lang id="en">
@@ -208,17 +208,17 @@ const Home = () => {
                 <Lang id="pt">
                   <p className="lang-pt" style={{fontWeight: 600, color: 'var(--color-text-primary)'}}>
                     MBA em Inovação Orientada a AI e UX<br/>
-                    <span style={{fontWeight: 400, color: 'var(--color-text-secondary)', fontSize: '1rem'}}>FIAP</span>
+                    <span style={{fontWeight: 400, color: 'var(--color-text-secondary)', fontSize: '1rem'}}>UNIFAST</span>
                   </p>
                   <p className="lang-pt" style={{fontWeight: 600, color: 'var(--color-text-primary)'}}>
-                    Certificação UX Unicórnio<br/>
+                    Especialização em UX, UI e Product Design<br/>
                     <span style={{fontWeight: 400, color: 'var(--color-text-secondary)', fontSize: '1rem'}}>UX Unicórnio</span>
                   </p>
                 </Lang>
                 <Lang id="en">
                   <p className="lang-en" style={{fontWeight: 600, color: 'var(--color-text-primary)'}}>
                     MBA in AI and UX-driven Innovation<br/>
-                    <span style={{fontWeight: 400, color: 'var(--color-text-secondary)', fontSize: '1rem'}}>FIAP</span>
+                    <span style={{fontWeight: 400, color: 'var(--color-text-secondary)', fontSize: '1rem'}}>UNIFAST</span>
                   </p>
                   <p className="lang-en" style={{fontWeight: 600, color: 'var(--color-text-primary)'}}>
                     UX Unicórnio Certification<br/>
