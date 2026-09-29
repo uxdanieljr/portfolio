@@ -153,7 +153,7 @@ button:disabled { cursor: not-allowed; color: var(--muted); }
 .about .secondary-line { color: var(--accent); font-weight: 700; text-transform: lowercase; }
 .about-copy { padding-top: 40px; }
 .about-copy > p, .about-copy > .lead { font-size: clamp(16px, 1.15vw, 18px); line-height: 1.65; letter-spacing: 0; color: var(--muted); margin-bottom: 24px; }
-.about-bottom { margin-top: 32px; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px; }
+.about-bottom { margin-top: 32px; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
 .companies { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; font-weight: 500; margin-top: 16px; }
 .companies li { border: 1px solid var(--line); padding: 8px 16px; }
 .about-bottom .button { min-height: 33px; padding: 8px 16px; font-size: 12px; }
