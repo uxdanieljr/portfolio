@@ -70,7 +70,7 @@
             "category": "Aplicativo mobile · UX project",
             "title": "Mobinft: compra de chaves digitais em Web3",
             "description": "Pesquisei e prototipei uma jornada de compra para pessoas sem experiência prévia com NFTs. Duas rodadas de testes de usabilidade orientaram os ajustes no fluxo.",
-            "image": "/assets/banner-mobinft.png",
+            "image": "/assets/banner-mobinft.svg",
             "alt": "Mobinft",
             "cta": "Ler case completo →"
           }
@@ -206,7 +206,7 @@
             "category": "Mobile app · UX project",
             "title": "Mobinft: purchasing digital keys in Web3",
             "description": "I researched and prototyped a purchasing journey for people with no prior NFT experience. Two rounds of usability testing informed the changes to the flow.",
-            "image": "/assets/banner-mobinft.png",
+            "image": "/assets/banner-mobinft.svg",
             "alt": "Mobinft",
             "cta": "Read full case →"
           }

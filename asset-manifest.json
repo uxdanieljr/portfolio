@@ -21,11 +21,11 @@
     "sha256": "1A91528939BFFE008D12F6538D2FD24145D9A782E0D48475D679DF0D49FBE889"
   },
   {
-    "path": "/assets/banner-mobinft.png",
-    "source": "https://danielcarvalhodesign.com/assets/banner-mobinft.png",
+    "path": "/assets/banner-mobinft.svg",
+    "source": "Local replacement provided by the user",
     "status": 200,
-    "bytes": 566478,
-    "sha256": "24FD8B8CEC3C41FE2F0FF649790A98B9B7538DBD1E64BEAAD11FEF81497A8092"
+    "bytes": 608561,
+    "sha256": "E7AC7B8D44327CDB032C8FCBF936FD53F776EFAADA98182133FB4490A18D68EC"
   },
   {
     "path": "/assets/case-conecta/img-timeline-conecta.png",

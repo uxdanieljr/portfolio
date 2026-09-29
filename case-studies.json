@@ -305,11 +305,11 @@
         ],
         "media": [
           {
-            "src": "/assets/banner-mobinft.png",
+            "src": "/assets/banner-mobinft.svg",
             "alt": "Capa do projeto Mobinft",
             "caption": "Mobinft: uma chave digital para acessar viagens.",
-            "width": 1200,
-            "height": 553,
+            "width": 612,
+            "height": 344,
             "span": 6
           }
         ]
@@ -701,11 +701,11 @@
         ],
         "media": [
           {
-            "src": "/assets/banner-mobinft.png",
+            "src": "/assets/banner-mobinft.svg",
             "alt": "Mobinft project cover",
             "caption": "Mobinft: a digital key for accessing rides.",
-            "width": 1200,
-            "height": 553,
+            "width": 612,
+            "height": 344,
             "span": 6
           }
         ]
