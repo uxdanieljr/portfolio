@@ -1,16 +1,23 @@
-# React + Vite
+# Daniel Carvalho — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Site de portfólio estático em português e inglês, gerado com Node.js. A home apresenta os projetos Bradesco Seguros, Conecta e Mobinft; cada case tem rota própria e navegação para os outros projetos.
 
-Currently, two official plugins are available:
+## Desenvolvimento
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm run dev
+```
 
-## React Compiler
+O servidor local inicia em `http://127.0.0.1:5173` e gera as páginas antes de servi-las.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Build e validação
 
-## Expanding the Oxlint configuration
+```bash
+npm run build
+npm run check
+npm test
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+O build cria a pasta `dist` com as rotas públicas em PT/EN, assets, sitemap, regras de redirecionamento e páginas 404. Publique o conteúdo de `dist` em um host estático que aceite `_redirects`.
+
+Rotas principais: `/`, `/en`, `/cases/bradesco-seguros`, `/cases/conecta`, `/cases/mobinft` e suas versões em `/en`. O case Bradesco publicado respeita os limites de confidencialidade.

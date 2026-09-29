@@ -1,0 +1,58 @@
+[
+  {
+    "path": "/assets/foto_site_portfolio.png",
+    "source": "https://danielcarvalhodesign.com/assets/foto_site_portfolio.png",
+    "status": 200,
+    "bytes": 5514331,
+    "sha256": "9D837F79455CCB2A83814522A69BC144217DA1E8270D79ADB44267C43ACBBBF8"
+  },
+  {
+    "path": "/assets/banner-bradesco-negociacao.svg",
+    "source": "Local replacement provided by the user",
+    "status": 200,
+    "bytes": 732401,
+    "sha256": "3B324786CE287DAA314A14D21885EFC75045F01BDE87E9676D1C950A4A3B8D5C"
+  },
+  {
+    "path": "/assets/Thumbnail-conecta.svg",
+    "source": "https://danielcarvalhodesign.com/assets/Thumbnail-conecta.svg",
+    "status": 200,
+    "bytes": 3601914,
+    "sha256": "1A91528939BFFE008D12F6538D2FD24145D9A782E0D48475D679DF0D49FBE889"
+  },
+  {
+    "path": "/assets/banner-mobinft.png",
+    "source": "https://danielcarvalhodesign.com/assets/banner-mobinft.png",
+    "status": 200,
+    "bytes": 566478,
+    "sha256": "24FD8B8CEC3C41FE2F0FF649790A98B9B7538DBD1E64BEAAD11FEF81497A8092"
+  },
+  {
+    "path": "/assets/case-conecta/img-timeline-conecta.png",
+    "source": "https://danielcarvalhodesign.com/assets/case-conecta/img-timeline-conecta.png",
+    "status": 200,
+    "bytes": 55515,
+    "sha256": "78696D58999410BF07B11FBDF4CAFC552DC3D321347F23DC513DDB61DB995D90"
+  },
+  {
+    "path": "/assets/case-conecta/img-conecta-prints-atual.png",
+    "source": "https://danielcarvalhodesign.com/assets/case-conecta/img-conecta-prints-atual.png",
+    "status": 200,
+    "bytes": 1547251,
+    "sha256": "92F42AD80B127D14F2D3263D9CFCB997909FF9FC9E7745259358B5000CC49ED1"
+  },
+  {
+    "path": "/assets/case-mobinft/img-hifi-mobinft.png",
+    "source": "https://danielcarvalhodesign.com/assets/case-mobinft/img-hifi-mobinft.png",
+    "status": 200,
+    "bytes": 114640,
+    "sha256": "B9C0D0281B648B30DD331074959F6CDB9FE25E0A08FCB93F616C4F23A81BE074"
+  },
+  {
+    "path": "/Daniel Carvalho - Product Designer 2026.pdf",
+    "source": "https://danielcarvalhodesign.com/Daniel Carvalho - Product Designer 2026.pdf",
+    "status": 200,
+    "bytes": 126800,
+    "sha256": "CA17F8FA8B4764F897B10BC8DDF46E90E44860202D6C3E0748522A1D91056573"
+  }
+]

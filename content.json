@@ -1,0 +1,278 @@
+{
+  "source": "https://danielcarvalhodesign.com/",
+  "captured": "2026-09-27",
+  "locales": {
+    "pt": {
+      "ui": {
+        "skip": "Pular para o conteúdo",
+        "projects": "Projetos",
+        "about": "Sobre",
+        "services": "Serviços",
+        "resume": "Currículo",
+        "contact": "Contato",
+        "themeDark": "Modo escuro",
+        "themeLight": "Modo claro",
+        "scroll": "Role para explorar",
+        "drag": "Arraste ou use as setas para explorar",
+        "previous": "Projeto anterior",
+        "next": "Próximo projeto",
+        "back": "← Voltar",
+        "home": "Início",
+        "top": "Voltar ao topo ↑",
+        "education": "Formação",
+        "channels": "Contato",
+        "nav": "Navegação principal",
+        "footerNav": "Navegação do rodapé",
+        "language": "Idioma",
+        "portrait": "Retrato de Daniel Carvalho",
+        "download": "Baixar currículo",
+        "notFound": "Página não encontrada",
+        "notFoundBody": "Esta página não está disponível. Volte ao início para explorar os projetos."
+      },
+      "header": {
+        "name": "danielcarvalho.design"
+      },
+      "hero": {
+        "eyebrow": "Daniel Carvalho / Product Designer",
+        "title": [
+          "Produtos complexos.",
+          "Experiências simples."
+        ],
+        "description": "Sou Daniel Carvalho, Product Designer com mais de 4 anos de experiência em sistemas corporativos, aplicativos e SaaS.",
+        "cta": "Ver cases",
+        "resume": "Baixar currículo"
+      },
+      "projects": {
+        "eyebrow": "Cases Selecionados",
+        "title": "Problemas reais, decisões de design e resultados.",
+        "intro": "Projetos em sistemas corporativos, saúde digital e Web3.",
+        "items": [
+          {
+            "slug": "bradesco-seguros",
+            "category": "Sistema corporativo · Desktop",
+            "title": "Bradesco Seguros: modernização de um sistema de gestão",
+            "description": "Redesenhei fluxos de um sistema legado usado em uma operação sujeita a requisitos regulatórios. O objetivo era reduzir tarefas manuais, prevenir erros e facilitar o acompanhamento dos processos. Na prática, a solução reduziu cerca de 10 horas semanais de trabalho manual por funcionário.",
+            "image": "/assets/banner-bradesco-negociacao.svg",
+            "alt": "Bradesco Seguros",
+            "cta": "Ler case completo →"
+          },
+          {
+            "slug": "conecta",
+            "category": "Aplicativo mobile · Saúde digital",
+            "title": "Conecta: redesign da jornada de acompanhamento nutricional",
+            "description": "Revisei o primeiro acesso e a navegação de um aplicativo de acompanhamento nutricional. A proposta reorganiza tarefas e informações de progresso para pacientes e nutricionistas.",
+            "image": "/assets/Thumbnail-conecta.svg",
+            "alt": "Conecta",
+            "cta": "Ler case completo →"
+          },
+          {
+            "slug": "mobinft",
+            "category": "Aplicativo mobile · UX project",
+            "title": "Mobinft: compra de chaves digitais em Web3",
+            "description": "Pesquisei e prototipei uma jornada de compra para pessoas sem experiência prévia com NFTs. Duas rodadas de testes de usabilidade orientaram os ajustes no fluxo.",
+            "image": "/assets/banner-mobinft.png",
+            "alt": "Mobinft",
+            "cta": "Ler case completo →"
+          }
+        ]
+      },
+      "about": {
+        "eyebrow": "SOBRE",
+        "title": "Como abordo produtos complexos",
+        "paragraphs": [
+          "Já trabalhei na modernização de um sistema legado sujeito a requisitos regulatórios e no redesign de jornadas mobile. Em cada projeto, procuro entender as regras que organizam o trabalho antes de desenhar o fluxo.",
+          "Trabalho com usuários e equipes de Produto e Tecnologia. As conversas e os materiais do projeto orientam os primeiros fluxos; os protótipos ajudam o time a comparar alternativas antes do desenvolvimento."
+        ],
+        "education": [
+          {
+            "title": "MBA em Inovação Orientada a AI e UX",
+            "school": "UNIFAST"
+          },
+          {
+            "title": "Especialização em UX, UI e Product Design",
+            "school": "UX Unicórnio"
+          }
+        ]
+      },
+      "capabilities": {
+        "eyebrow": "COMO CONTRIBUO",
+        "title": "Áreas em que atuo",
+        "items": [
+          {
+            "title": "Pesquisa com usuários",
+            "description": "Planejo pesquisas, converso com usuários e organizo os achados que orientam as decisões do produto."
+          },
+          {
+            "title": "Design de interação e UI",
+            "description": "Transformo requisitos e descobertas em interfaces claras, consistentes e adequadas ao contexto de uso."
+          },
+          {
+            "title": "Prototipação e validação",
+            "description": "Crio protótipos para testar hipóteses, alinhar o time e identificar problemas antes do desenvolvimento."
+          },
+          {
+            "title": "Design systems",
+            "description": "Estruturo componentes, padrões e documentação para apoiar consistência, manutenção e escala."
+          },
+          {
+            "title": "Estratégia e fluxos",
+            "description": "Mapeio jornadas, regras de negócio e fluxos críticos para reduzir ambiguidades e orientar prioridades."
+          },
+          {
+            "title": "IA aplicada ao processo",
+            "description": "Uso IA para acelerar exploração, síntese e prototipação, preservando análise crítica, contexto e validação humana."
+          }
+        ]
+      },
+      "contact": {
+        "eyebrow": "CONTATO",
+        "title": "Quer conversar sobre meu trabalho?",
+        "description": "Se meu perfil fizer sentido para uma oportunidade ou para o seu time, entre em contato pelo LinkedIn ou por e-mail.",
+        "emailCta": "Enviar e-mail"
+      },
+      "footer": {
+        "name": "Daniel Carvalho"
+      },
+      "seo": {
+        "title": "Daniel Carvalho — Product Designer | Produtos digitais complexos",
+        "description": "Daniel Carvalho, Product Designer. Produtos complexos, experiências simples. Cases em sistemas corporativos, saúde digital e Web3."
+      }
+    },
+    "en": {
+      "ui": {
+        "skip": "Skip to content",
+        "projects": "Projects",
+        "about": "About",
+        "services": "Services",
+        "resume": "Résumé",
+        "contact": "Contact",
+        "themeDark": "Dark mode",
+        "themeLight": "Light mode",
+        "scroll": "Scroll to explore",
+        "drag": "Drag or use the arrows to explore",
+        "previous": "Previous project",
+        "next": "Next project",
+        "back": "← Back",
+        "home": "Home",
+        "top": "Back to top ↑",
+        "education": "Education",
+        "channels": "Contact",
+        "nav": "Main navigation",
+        "footerNav": "Footer navigation",
+        "language": "Language",
+        "portrait": "Portrait of Daniel Carvalho",
+        "download": "Download résumé",
+        "notFound": "Page not found",
+        "notFoundBody": "This page is not available. Return home to explore the projects."
+      },
+      "header": {
+        "name": "danielcarvalho.design"
+      },
+      "hero": {
+        "eyebrow": "Daniel Carvalho / Product Designer",
+        "title": [
+          "Complex products.",
+          "Simple experiences."
+        ],
+        "description": "I’m Daniel Carvalho, a Product Designer with 4+ years of experience in enterprise systems, mobile apps, and SaaS. Before designing an interface, I work to understand the business rules, day-to-day operations, and the people who use the product.",
+        "cta": "View selected work",
+        "resume": "Download résumé"
+      },
+      "projects": {
+        "eyebrow": "Selected Work",
+        "title": "Real problems, design decisions, and outcomes.",
+        "intro": "Projects in enterprise software, digital health, and Web3.",
+        "items": [
+          {
+            "slug": "bradesco-seguros",
+            "category": "Enterprise system · Desktop",
+            "title": "Bradesco Seguros: modernizing a management system",
+            "description": "I redesigned workflows in a legacy system used in an operation subject to regulatory requirements. The goal was to reduce manual tasks, prevent errors, and make processes easier to track. In practice, the solution reduced manual work by about 10 hours per week per employee.",
+            "image": "/assets/banner-bradesco-negociacao.svg",
+            "alt": "Bradesco Seguros",
+            "cta": "Read full case →"
+          },
+          {
+            "slug": "conecta",
+            "category": "Mobile app · Digital health",
+            "title": "Conecta: redesigning the nutrition care journey",
+            "description": "I reviewed the onboarding and navigation of a nutrition care app. The concept reorganizes tasks and progress information for patients and nutritionists.",
+            "image": "/assets/Thumbnail-conecta.svg",
+            "alt": "Conecta",
+            "cta": "Read full case →"
+          },
+          {
+            "slug": "mobinft",
+            "category": "Mobile app · UX project",
+            "title": "Mobinft: purchasing digital keys in Web3",
+            "description": "I researched and prototyped a purchasing journey for people with no prior NFT experience. Two rounds of usability testing informed the changes to the flow.",
+            "image": "/assets/banner-mobinft.png",
+            "alt": "Mobinft",
+            "cta": "Read full case →"
+          }
+        ]
+      },
+      "about": {
+        "eyebrow": "ABOUT",
+        "title": "How I approach complex products",
+        "paragraphs": [
+          "I have worked on a legacy system subject to regulatory requirements and on mobile workflow redesigns. In each project, I try to understand the rules that shape the work before designing the flow.",
+          "I work with users, product managers, and engineers. Conversations and project materials inform my first workflow concepts, while prototypes help the team compare options before development."
+        ],
+        "education": [
+          {
+            "title": "MBA in AI and UX-driven Innovation",
+            "school": "UNIFAST"
+          },
+          {
+            "title": "UX Unicórnio Certification",
+            "school": "UX Unicórnio"
+          }
+        ]
+      },
+      "capabilities": {
+        "eyebrow": "HOW I CONTRIBUTE",
+        "title": "Areas I work in",
+        "items": [
+          {
+            "title": "User research",
+            "description": "I plan and conduct research to understand behaviors, needs, and constraints, then organize evidence to support product decisions."
+          },
+          {
+            "title": "Interaction and UI design",
+            "description": "I translate requirements and findings into clear, consistent interfaces suited to the context of use."
+          },
+          {
+            "title": "Prototyping and validation",
+            "description": "I create prototypes to test hypotheses, align teams, and identify problems before development."
+          },
+          {
+            "title": "Design systems",
+            "description": "I structure components, patterns, and documentation to support consistency, maintenance, and scale."
+          },
+          {
+            "title": "Product strategy and workflows",
+            "description": "I map journeys, business rules, and critical workflows to reduce ambiguity and guide priorities."
+          },
+          {
+            "title": "AI-supported workflow",
+            "description": "I use AI to accelerate exploration, synthesis, and prototyping while preserving critical thinking, context, and human validation."
+          }
+        ]
+      },
+      "contact": {
+        "eyebrow": "CONTACT",
+        "title": "Interested in discussing my work?",
+        "description": "If my experience could be a good fit for an opportunity or your team, feel free to reach out on LinkedIn or by email.",
+        "emailCta": "Send email"
+      },
+      "footer": {
+        "name": "Daniel Carvalho"
+      },
+      "seo": {
+        "title": "Daniel Carvalho — Product Designer | Complex digital products",
+        "description": "Daniel Carvalho, Product Designer. Complex products, simple experiences. Selected work in enterprise software, digital health, and Web3."
+      }
+    }
+  }
+}
