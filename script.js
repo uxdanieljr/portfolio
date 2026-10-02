@@ -118,7 +118,7 @@ if (!reducedMotion.matches && 'IntersectionObserver' in window) {
 const footer = document.querySelector('body > footer');
 if (footer && 'ResizeObserver' in window) {
   const measureFooter = () => {
-    const shouldReveal = !reducedMotion.matches && !smallOrTouch.matches && footer.offsetHeight < window.innerHeight - 80;
+    const shouldReveal = !reducedMotion.matches && !smallOrTouch.matches && footer.offsetHeight <= window.innerHeight - 24;
     document.body.toggleAttribute('data-footer-reveal', shouldReveal);
     document.body.style.setProperty('--footer-height', `${footer.offsetHeight}px`);
   };
