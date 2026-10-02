@@ -102,7 +102,9 @@ test('footer reveal compacts on short desktop viewports and keeps a natural-flow
   assert.match(css,/@media \(max-width: 900px\) \{[\s\S]*?body\[data-footer-reveal\] > footer \{ position: relative/);
   assert.match(css,/@media \(prefers-reduced-motion: reduce\)/);
   assert.match(script,/footer\.offsetHeight <= window\.innerHeight - 24/);
-  assert.match(script,/\(max-width: 900px\), \(pointer: coarse\)/);
+  assert.match(script,/matchMedia\('\(min-width: 901px\)'\)/);
+  assert.match(script,/desktopFooterViewport\.addEventListener\('change', measureFooter\)/);
+  assert.doesNotMatch(script,/smallOrTouch\.matches/);
 });
 
 test('home resume downloads use the matching Portuguese or English PDF',async()=>{

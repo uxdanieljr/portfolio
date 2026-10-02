@@ -1,7 +1,7 @@
 const themeButton = document.querySelector('.theme-switch');
 const stack = document.querySelector('.project-stack');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-const smallOrTouch = window.matchMedia('(max-width: 900px), (pointer: coarse)');
+const desktopFooterViewport = window.matchMedia('(min-width: 901px)');
 const navigationType = performance.getEntriesByType('navigation')[0]?.type || 'navigate';
 
 function syncThemeButton() {
@@ -118,14 +118,14 @@ if (!reducedMotion.matches && 'IntersectionObserver' in window) {
 const footer = document.querySelector('body > footer');
 if (footer && 'ResizeObserver' in window) {
   const measureFooter = () => {
-    const shouldReveal = !reducedMotion.matches && !smallOrTouch.matches && footer.offsetHeight <= window.innerHeight - 24;
+    const shouldReveal = !reducedMotion.matches && desktopFooterViewport.matches && footer.offsetHeight <= window.innerHeight - 24;
     document.body.toggleAttribute('data-footer-reveal', shouldReveal);
     document.body.style.setProperty('--footer-height', `${footer.offsetHeight}px`);
   };
   const footerObserver = new ResizeObserver(measureFooter);
   footerObserver.observe(footer);
   window.addEventListener('resize', measureFooter);
-  smallOrTouch.addEventListener('change', measureFooter);
+  desktopFooterViewport.addEventListener('change', measureFooter);
   reducedMotion.addEventListener('change', measureFooter);
   measureFooter();
   footer.addEventListener('focusin', () => {
