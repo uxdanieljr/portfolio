@@ -94,6 +94,17 @@ test('localized home navigation has a progressive mobile disclosure and cases ke
   }
 });
 
+test('footer reveal compacts on short desktop viewports and keeps a natural-flow fallback',async()=>{
+  const css=await readFile(path.join(root,'styles.css'),'utf8');
+  const script=await readFile(path.join(root,'script.js'),'utf8');
+  assert.match(css,/@media \(min-width: 901px\) and \(max-height: 760px\)/);
+  assert.match(css,/body\[data-footer-reveal\] > footer \{ position: fixed/);
+  assert.match(css,/@media \(max-width: 900px\) \{[\s\S]*?body\[data-footer-reveal\] > footer \{ position: relative/);
+  assert.match(css,/@media \(prefers-reduced-motion: reduce\)/);
+  assert.match(script,/footer\.offsetHeight <= window\.innerHeight - 24/);
+  assert.match(script,/\(max-width: 900px\), \(pointer: coarse\)/);
+});
+
 test('home resume downloads use the matching Portuguese or English PDF',async()=>{
   const expected={
     pt:{route:'/',href:'/Daniel%20Carvalho%20-%20Product%20Designer%202026.pdf',name:'Daniel Carvalho - Product Designer 2026.pdf'},
