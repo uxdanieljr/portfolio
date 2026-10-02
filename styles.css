@@ -119,7 +119,7 @@ button:disabled { cursor: not-allowed; color: var(--muted); }
 .project-stack { display: grid; gap: 24px; isolation: isolate; }
 .project-stack-spacer { display: none; }
 .project-card { position: relative; min-width: 0; }
-.project-card-surface { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: clamp(20px, 3vw, 48px); min-width: 0; background: var(--card); border: 1px solid var(--case-card-border); border-radius: 8px; padding: clamp(16px, 2vw, 32px); transform-origin: center top; transition: border-color .18s, box-shadow .18s; }
+.project-card-surface { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: clamp(20px, 3vw, 48px); min-width: 0; background: var(--card); border: 1px solid var(--case-card-border); border-radius: 8px; padding: clamp(16px, 2vw, 32px); color: inherit; text-decoration: none; cursor: pointer; transform-origin: center top; transition: border-color .18s, box-shadow .18s; }
 .project-card-surface:hover, .project-card-surface:focus-within { border-color: var(--accent); box-shadow: 2px 2px 0 var(--accent); }
 .image-placeholder { background: var(--placeholder); }
 .project-media-link { display: block; min-width: 0; }
@@ -224,7 +224,6 @@ button:disabled { cursor: not-allowed; color: var(--muted); }
 .related-project { flex: 1; min-width: min(100%, 280px); border: 1px solid var(--line); padding: 28px; background: var(--background); }
 .related-project h3 { font-size: 24px; line-height: 1.3; margin-block: 14px 24px; font-weight: 600; }
 .related-project .project-meta { font-size: 11px; color: var(--muted); text-transform: uppercase; }
-.case-footer { padding-top: 48px; }
 .not-found { min-height: 65vh; padding-block: 100px; }
 .not-found h1 { font-size: clamp(36px, 6vw, 72px); }
 .not-found p { margin-block: 24px; line-height: 1.6; }
@@ -311,7 +310,6 @@ button:disabled { cursor: not-allowed; color: var(--muted); }
 .contact-anchor { display: block; height: 0; }
 body[data-footer-reveal] .page-shell { position: relative; z-index: 2; background: var(--background); margin-bottom: var(--footer-height); }
 body[data-footer-reveal] > footer { position: fixed; inset: auto 0 0; z-index: 1; width: 100%; background: var(--background); border-top: 1px solid var(--line); }
-body[data-footer-reveal] .case-footer { padding-top: 0; }
 @media (max-width: 900px) {
   body[data-footer-reveal] .page-shell { margin-bottom: 0; }
   body[data-footer-reveal] > footer { position: relative; inset: auto; }

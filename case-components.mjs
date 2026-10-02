@@ -2,7 +2,8 @@ const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>
 
 function caseHero(study){
   const {ui,meta}=study;
-  return `<header class="study-hero"><div class="study-container study-hero-inner"><p class="eyebrow">${esc(study.category)}</p><h1>${esc(study.title)}</h1><p class="study-subtitle">${esc(study.subtitle)}</p><dl class="study-metrics">${study.metrics.map(m=>`<div class="study-metric"><dt>${esc(m.label)}</dt><dd><span>${esc(m.value)}</span><span class="metric-unit">${esc(m.unit)}</span></dd><dd class="metric-evidence">${esc(m.evidence)}</dd></div>`).join('')}</dl><dl class="study-meta"><div><dt>${esc(ui.role)}</dt><dd>${esc(meta.role)}</dd></div><div><dt>${esc(ui.period)}</dt><dd>${esc(meta.period)}</dd></div><div><dt>${esc(ui.focus)}</dt><dd>${meta.focus.map(f=>`<span>${esc(f)}</span>`).join('')}</dd></div></dl></div></header>`;
+  const cover=study.heroMedia?`<figure class="study-hero-cover"><img src="${esc(study.heroMedia.src)}" alt="${esc(study.heroMedia.alt)}" width="612" height="344" decoding="async"></figure>`:'';
+  return `<header class="study-hero"><div class="study-container study-hero-inner"><p class="eyebrow">${esc(study.category)}</p><h1>${esc(study.title)}</h1><p class="study-subtitle">${esc(study.subtitle)}</p><dl class="study-metrics">${study.metrics.map(m=>`<div class="study-metric${m.kind==='qualitative'?' study-metric-qualitative':''}"><dt>${esc(m.label)}</dt><dd><span>${esc(m.value)}</span>${m.unit?`<span class="metric-unit">${esc(m.unit)}</span>`:''}</dd><dd class="metric-evidence">${esc(m.evidence)}</dd></div>`).join('')}</dl><dl class="study-meta"><div><dt>${esc(ui.role)}</dt><dd>${esc(meta.role)}</dd></div><div><dt>${esc(ui.period)}</dt><dd>${esc(meta.period)}</dd></div><div><dt>${esc(ui.focus)}</dt><dd>${meta.focus.map(f=>`<span>${esc(f)}</span>`).join('')}</dd></div></dl>${cover}</div></header>`;
 }
 
 function mediaFigure(media,study,index){
@@ -20,7 +21,9 @@ function mediaFigure(media,study,index){
 
 function caseSection(section,study,index){
   let paragraphs=section.paragraphs.map(p=>esc(p));
-  if(section.contactLink){paragraphs=paragraphs.map(p=>p.replace('LinkedIn','<a href="https://www.linkedin.com/in/dccarvalhojr/" target="_blank" rel="noopener noreferrer">LinkedIn</a>'));}
+  if(section.contactLink){paragraphs=paragraphs.map(p=>p
+    .replace('LinkedIn','<a href="https://www.linkedin.com/in/dccarvalhojr/" target="_blank" rel="noopener noreferrer">LinkedIn</a>')
+    .replace(study.locale==='en'?'email':'e-mail',`<a href="mailto:uxdanieljr@gmail.com">${study.locale==='en'?'email':'e-mail'}</a>`));}
   const notes=section.notes?.length?`<ul class="study-notes">${section.notes.map(n=>`<li>${esc(n)}</li>`).join('')}</ul>`:'';
   return `<section class="study-section study-container" id="${section.id}" aria-labelledby="${section.id}-title"><div class="study-chapter"><header><p class="eyebrow">${esc(section.eyebrow)}</p><h2 id="${section.id}-title" data-reveal>${esc(section.heading)}</h2></header><div class="study-prose">${paragraphs.map(p=>`<p>${p}</p>`).join('')}${notes}</div></div>${section.media?.length?`<div class="study-media-grid">${section.media.map((m,i)=>mediaFigure(m,study,`${index}-${i}`)).join('')}</div>`:''}</section>`;
 }
@@ -28,7 +31,7 @@ function caseSection(section,study,index){
 function moreCases(study,home){
   const prefix=study.locale==='en'?'/en':'';
   const cards=study.relatedProjects.map(slug=>home.projects.items.find(item=>item.slug===slug));
-  return `<section class="study-more" aria-labelledby="more-title" data-node-id="23010:3"><div class="study-more-divider"></div><div class="study-container"><h2 id="more-title" data-reveal>${esc(study.ui.more)}</h2><div class="study-more-grid">${cards.map(card=>`<article class="study-more-card" data-reveal><a class="study-more-link" href="${prefix}/cases/${card.slug}" aria-labelledby="related-${card.slug}"><img src="${esc(card.image)}" alt="${esc(card.alt)}" width="580" height="326" loading="lazy" decoding="async"><h3 id="related-${card.slug}">${esc(card.title)}</h3><p>${esc(card.description)}</p><span class="button primary">${esc(study.ui.view)}</span></a></article>`).join('')}</div><a class="study-return" href="${prefix||'/'}#projetos">← ${esc(study.ui.backProjects)}</a></div></section>`;
+  return `<section class="study-more" aria-labelledby="more-title" data-node-id="23010:3"><div class="study-more-divider"></div><div class="study-container"><h2 id="more-title" data-reveal>${esc(study.ui.more)}</h2><div class="study-more-grid">${cards.map(card=>`<article class="study-more-card" data-reveal><a class="study-more-link" href="${prefix}/cases/${card.slug}" aria-labelledby="related-${card.slug}">${card.image?`<img src="${esc(card.image)}" alt="${esc(card.alt)}" width="580" height="326" loading="lazy" decoding="async">`:'<div class="study-more-placeholder" aria-hidden="true"></div>'}<h3 id="related-${card.slug}">${esc(card.title)}</h3><p>${esc(card.relatedDescription||card.description)}</p><span class="button primary">${esc(study.ui.view)}</span></a></article>`).join('')}</div><a class="study-return" href="${prefix||'/'}#projetos">← ${esc(study.ui.backProjects)}</a></div></section>`;
 }
 
 function mediaDialog(ui){

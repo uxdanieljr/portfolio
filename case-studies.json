@@ -2,89 +2,71 @@
   "/cases/bradesco-seguros": {
     "slug": "bradesco-seguros",
     "locale": "pt",
-    "category": "Sistema corporativo · Desktop",
-    "title": "Bradesco Seguros",
-    "subtitle": "Redesign de fluxos críticos e automações em um sistema legado essencial para a operação. A modernização reduziu aproximadamente 10 horas semanais de trabalho manual por funcionário, prevenindo erros e ampliando a visibilidade dos processos.",
+    "category": "Sistema interno · Seguros",
+    "title": "Bradesco Seguros — fluxos para um sistema interno",
+    "subtitle": "Redesenhei fluxos de um sistema interno com regras de negócio complexas. Ao longo do projeto, entreguei mais de 20 fluxos em cinco funcionalidades; uma comparação de tempos antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário.",
+    "heroMedia": {
+      "src": "/assets/banner-bradesco-negociacao.svg",
+      "alt": "Banner da Bradesco Seguros sobre negociação, com interface do sistema."
+    },
     "metrics": [
       {
         "value": "≈10",
         "unit": "h/semana",
-        "label": "de trabalho manual reduzido por funcionário",
-        "evidence": "Resultado descrito no case público."
+        "label": "de trabalho manual economizadas por funcionário",
+        "evidence": "Estimativa indicada por comparação de tempos antes e depois."
       }
     ],
     "meta": {
-      "role": "Product Designer",
-      "period": "2025–2026",
+      "role": "Product Designer pela Capgemini",
+      "period": "A partir de jul. 2025",
       "focus": [
-        "Fluxos críticos",
-        "Automação",
-        "Regras de negócio"
+        "Entrevistas com usuários",
+        "Definição da jornada",
+        "Prototipação"
       ]
     },
     "sections": [
       {
         "id": "context",
         "eyebrow": "Contexto",
-        "heading": "Um sistema central para a operação",
+        "heading": "Definir o sistema desde o início",
         "paragraphs": [
-          "Mudanças regulatórias exigiram a revisão de um sistema legado central para a operação."
-        ],
-        "media": [
-          {
-            "src": "/assets/banner-bradesco-negociacao.svg",
-            "alt": "Capa pública do projeto Bradesco Seguros",
-            "caption": "Capa do projeto. A versão pública apresenta contexto, processo e resultado.",
-            "width": 620,
-            "height": 320,
-            "span": 6
-          }
+          "O projeto estava no começo do discovery. A equipe precisava entender as tarefas dos usuários e definir os primeiros fluxos para discussão e validação."
         ]
       },
       {
         "id": "problem",
-        "eyebrow": "Problema",
-        "heading": "Fluxos difíceis de acompanhar",
+        "eyebrow": "Pesquisa",
+        "heading": "O que os usuários precisavam fazer",
         "paragraphs": [
-          "Sua estrutura rígida tornava os fluxos difíceis de acompanhar e mantinha parte do trabalho manual, o que aumentava o risco de erro."
-        ]
-      },
-      {
-        "id": "discovery",
-        "eyebrow": "Descoberta",
-        "heading": "Entender a rotina e as regras",
-        "paragraphs": [
-          "Conversei com usuários finais sobre a rotina, as regras de negócio e os pontos em que o processo travava."
+          "Conduzi entrevistas para identificar oportunidades e entender as necessidades de uso. Levei os achados à discussão da jornada, junto com objetivos do produto e requisitos das áreas envolvidas."
         ]
       },
       {
         "id": "approach",
-        "eyebrow": "Abordagem",
-        "heading": "Redesenhar o fluxo e tornar o estado visível",
+        "eyebrow": "Desenho",
+        "heading": "Tornar os fluxos discutíveis",
         "paragraphs": [
-          "Com esse material, mapeei a jornada e redesenhei os fluxos e protótipos. As principais decisões buscaram prevenir erros e mostrar o andamento de cada processo na própria interface."
-        ],
-        "notes": [
-          "Gestão de prazos e restrições técnicas severas.",
-          "Colaboração direta com usuários e engenharia."
+          "Prototipei telas no Figma, seguindo heurísticas de usabilidade e o design system existente. Participei de reuniões com stakeholders para refinar requisitos e prioridades. Usei IA na criação de microcopy e para facilitar a comunicação entre áreas, sempre revisando o resultado no contexto do projeto. Desenvolvi mais de 20 fluxos em cinco funcionalidades, com anotações para tornar as regras e os estados compreensíveis para a equipe."
         ]
       },
       {
         "id": "impact",
-        "eyebrow": "Impacto e aprendizado",
-        "heading": "Menos trabalho manual",
+        "eyebrow": "Resultado",
+        "heading": "Mais clareza para as próximas decisões",
         "paragraphs": [
-          "A solução incorpora automações em etapas antes manuais e mostra o status de cada processo na interface. Com processos mais enxutos, o projeto reduziu em aproximadamente 10 horas semanais o tempo de trabalho manual por funcionário."
+          "A comparação de tempos antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário. As anotações e os protótipos também ajudaram a alinhar requisitos técnicos e de negócio entre as áreas envolvidas."
         ]
       },
       {
         "id": "disclosure",
         "eyebrow": "Limites de divulgação",
         "heading": "O que posso compartilhar",
+        "contactLink": true,
         "paragraphs": [
-          "Parte deste projeto está protegida por um acordo de confidencialidade. A versão pública mostra apenas o contexto, o processo e os resultados que posso divulgar. Posso compartilhar mais informações em uma conversa, dentro dos limites desse acordo. Entre em contato pelo LinkedIn."
-        ],
-        "contactLink": true
+          "Parte deste projeto está sob acordo de confidencialidade. Esta versão mostra apenas o contexto, as decisões e os resultados que posso divulgar. Para conhecer melhor o trabalho, entre em contato comigo pelo LinkedIn ou por e-mail; posso conversar sobre ele dentro dos limites do acordo."
+        ]
       }
     ],
     "ui": {
@@ -101,8 +83,8 @@
       "zoomHelp": "Use os controles de zoom e role para explorar a imagem. Pressione Esc para fechar."
     },
     "seo": {
-      "title": "Bradesco Seguros — Sistema crítico de gestão | Daniel Carvalho",
-      "description": "Redesenhei fluxos de um sistema legado usado em uma operação sujeita a requisitos regulatórios. O objetivo era reduzir tarefas manuais, prevenir erros e facilitar o acompanhamento dos processos. Na prática, a solução reduziu cerca de 10 horas semanais de trabalho manual por funcionário."
+      "title": "Bradesco Seguros | Fluxos para um sistema interno | Daniel Carvalho",
+      "description": "Mais de 20 fluxos em cinco funcionalidades. Comparação de tempos antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário. Parte do projeto é restrita; entre em contato para saber mais."
     },
     "relatedProjects": [
       "conecta",
@@ -112,39 +94,39 @@
   "/cases/conecta": {
     "slug": "conecta",
     "locale": "pt",
-    "category": "Aplicativo mobile · Saúde digital",
+    "category": "Freelance · Saúde digital",
     "title": "Conecta",
-    "subtitle": "Revisei o onboarding e a navegação de um aplicativo de acompanhamento nutricional. A proposta procura explicar melhor as tarefas do paciente e organizar as informações de progresso usadas pelo nutricionista.",
+    "subtitle": "Em quatro semanas, redesenhei o aplicativo de acompanhamento nutricional. Entrevistas com usuários ajudaram a definir prioridades; protótipos navegáveis foram ajustados após testes de usabilidade.",
     "metrics": [
       {
         "value": "4",
         "unit": "semanas",
-        "label": "no cronograma do projeto",
-        "evidence": "Cronograma público organizado da semana 1 à semana 4."
+        "label": "Da pesquisa aos protótipos testados",
+        "evidence": "Projeto freelance realizado entre dez. 2024 e jan. 2025."
       }
     ],
     "meta": {
-      "role": "Product Designer",
-      "period": "2024–2025",
+      "role": "Product Designer, freelance",
+      "period": "dez. 2024–jan. 2025",
       "focus": [
-        "Onboarding",
-        "Arquitetura da informação",
-        "Saúde digital"
+        "Pesquisa com usuários",
+        "Testes de usabilidade",
+        "Prototipação"
       ]
     },
     "sections": [
       {
         "id": "context",
         "eyebrow": "Contexto",
-        "heading": "Acompanhamento entre consultas",
+        "heading": "O uso entre consultas",
         "paragraphs": [
-          "Entre as consultas, o aplicativo reúne tarefas, registros e informações sobre o progresso. No Conecta, o primeiro acesso não explicava bem o que o paciente poderia fazer nem por onde começar."
+          "O Conecta reunia informações para o acompanhamento nutricional. Entrevistas com usuários apontaram problemas de usabilidade que orientaram o redesenho."
         ],
         "media": [
           {
             "src": "/assets/Thumbnail-conecta.svg",
-            "alt": "Capa do aplicativo Conecta",
-            "caption": "Conecta: acompanhamento nutricional entre consultas.",
+            "alt": "",
+            "caption": "Conecta, aplicativo de acompanhamento nutricional.",
             "width": 1920,
             "height": 1080,
             "span": 6
@@ -153,46 +135,42 @@
       },
       {
         "id": "problem",
-        "eyebrow": "Problema",
-        "heading": "O próximo passo não estava claro",
+        "eyebrow": "Pesquisa",
+        "heading": "O que precisava mudar primeiro",
         "paragraphs": [
-          "A análise do onboarding e da arquitetura da informação mostrou que os pacientes podiam começar a usar o aplicativo sem entender suas tarefas nem o próximo passo."
+          "Organizei dúvidas e hipóteses em uma matriz CSD. Depois das entrevistas, participei de uma sessão de ideação para priorizar melhorias pelo impacto esperado e pela viabilidade."
         ]
       },
       {
         "id": "approach",
-        "eyebrow": "Abordagem",
-        "heading": "Reorganizar navegação e tarefas",
+        "eyebrow": "Desenho e testes",
+        "heading": "Quatro semanas para chegar a uma proposta",
         "paragraphs": [
-          "Analisei padrões recorrentes em outros produtos de saúde e nutrição. Depois, reorganizei a arquitetura da informação e usei wireframes para revisar a navegação."
+          "Criei protótipos navegáveis de alta fidelidade e os refinei em ciclos de teste e feedback. A entrega reuniu os fluxos redesenhados e as decisões validadas durante o projeto."
         ],
         "media": [
           {
             "src": "/assets/case-conecta/img-timeline-conecta.png",
-            "alt": "Cronograma do projeto Conecta, da semana 1 à semana 4",
-            "caption": "Cronograma de quatro semanas: alinhamento, discovery, design, revisões e entrega.",
+            "alt": "Cronograma de quatro semanas do redesign do Conecta",
+            "caption": "Cronograma do projeto organizado em quatro semanas.",
             "width": 1600,
             "height": 393,
             "span": 6
           }
-        ],
-        "notes": [
-          "Redesign voltado à redução do abandono.",
-          "Criação de novos padrões visuais consistentes."
         ]
       },
       {
         "id": "solution",
-        "eyebrow": "Solução",
-        "heading": "Um caminho mais claro no aplicativo",
+        "eyebrow": "Protótipo",
+        "heading": "Uma proposta refinada nos testes",
         "paragraphs": [
-          "Na interface de alta fidelidade, apliquei o novo fluxo e defini padrões visuais para manter consistência entre as telas."
+          "Os testes e o feedback ajudaram a refinar a proposta dentro do prazo de quatro semanas."
         ],
         "media": [
           {
             "src": "/assets/case-conecta/img-conecta-prints-atual.png",
             "alt": "Tela de atividades e progresso do Conecta",
-            "caption": "Atividades e progresso na interface publicada do projeto.",
+            "caption": "Atividades e progresso no protótipo redesenhado.",
             "width": 1600,
             "height": 1349,
             "span": 2,
@@ -206,7 +184,7 @@
           {
             "src": "/assets/case-conecta/img-conecta-prints-atual.png",
             "alt": "Tela de histórico de tarefas do Conecta",
-            "caption": "Histórico com tarefas organizadas por semana e status.",
+            "caption": "Histórico de tarefas organizado por semana e status no protótipo.",
             "width": 1600,
             "height": 1349,
             "span": 2,
@@ -220,7 +198,7 @@
           {
             "src": "/assets/case-conecta/img-conecta-prints-atual.png",
             "alt": "Tela de registros e medidas do Conecta",
-            "caption": "Registros e medidas na interface do projeto.",
+            "caption": "Registros e medidas no protótipo do aplicativo redesenhado.",
             "width": 1600,
             "height": 1349,
             "span": 2,
@@ -234,7 +212,7 @@
           {
             "src": "/assets/case-conecta/img-conecta-prints-atual.png",
             "alt": "Montagem completa das telas de alta fidelidade do Conecta",
-            "caption": "Visão geral das telas. Amplie para explorar a montagem completa.",
+            "caption": "Visão geral da proposta de interface. Amplie para explorar a montagem completa.",
             "width": 1600,
             "height": 1349,
             "span": 6
@@ -243,10 +221,10 @@
       },
       {
         "id": "impact",
-        "eyebrow": "Impacto e aprendizado",
-        "heading": "Mais tempo de uso",
+        "eyebrow": "Resultado",
+        "heading": "Pesquisa orientou a entrega",
         "paragraphs": [
-          "A proposta orienta o primeiro acesso passo a passo e reorganiza a exibição de tarefas. Após medição interna, o tempo de uso do aplicativo aumentou em média 50%. Esse engajamento facilitou o acompanhamento clínico pelos nutricionistas, resultando em maior adesão ao tratamento."
+          "Entrevistas, priorização e testes ajudaram a ajustar a proposta dentro de um prazo curto. O projeto foi concluído em quatro semanas."
         ]
       }
     ],
@@ -264,8 +242,8 @@
       "zoomHelp": "Use os controles de zoom e role para explorar a imagem. Pressione Esc para fechar."
     },
     "seo": {
-      "title": "Conecta: redesign da jornada de acompanhamento nutricional | Daniel Carvalho",
-      "description": "Revisei o primeiro acesso e a navegação de um aplicativo de acompanhamento nutricional. A proposta reorganiza tarefas e informações de progresso para pacientes e nutricionistas."
+      "title": "Conecta | Redesign de um app de nutrição | Daniel Carvalho",
+      "description": "Redesign freelance de quatro semanas para um aplicativo de acompanhamento nutricional, com entrevistas, priorização, protótipos navegáveis e testes de usabilidade."
     },
     "relatedProjects": [
       "bradesco-seguros",
@@ -275,39 +253,40 @@
   "/cases/mobinft": {
     "slug": "mobinft",
     "locale": "pt",
-    "category": "Aplicativo mobile · UX project",
+    "category": "Estudo voluntário · UX",
     "title": "Mobinft",
-    "subtitle": "Pesquisei e prototipei uma jornada de compra para pessoas sem experiência prévia com NFTs. Duas rodadas de testes de usabilidade orientaram as mudanças no fluxo.",
+    "subtitle": "Em um projeto voluntário com um time de design, pesquisei como tornar mais compreensível a compra de uma chave digital baseada em NFT. O trabalho foi de wireframes a protótipos testáveis.",
     "metrics": [
       {
-        "value": "2",
-        "unit": "rodadas",
-        "label": "de testes de usabilidade",
-        "evidence": "6 participantes na primeira; 5 na segunda."
+        "kind": "qualitative",
+        "value": "Pesquisa e testes de usabilidade",
+        "unit": "",
+        "label": "Estudo voluntário",
+        "evidence": "Realizado com um time de design."
       }
     ],
     "meta": {
-      "role": "Product Designer",
-      "period": "2023",
+      "role": "UX Designer em equipe",
+      "period": "abr. 2022–2023",
       "focus": [
-        "Pesquisa",
-        "Onboarding Web3",
-        "Testes de usabilidade"
+        "Pesquisa em UX",
+        "Fluxo de compra Web3",
+        "Prototipação"
       ]
     },
     "sections": [
       {
         "id": "context",
         "eyebrow": "Contexto",
-        "heading": "Uma chave digital para viagens",
+        "heading": "Comprar uma chave digital",
         "paragraphs": [
-          "A Mobinft usava uma chave digital baseada em NFT para dar acesso a viagens em veículos autônomos a partir de aeroportos."
+          "A Mobinft propunha uma chave baseada em NFT para acesso a viagens. Termos e etapas da compra criavam barreiras para pessoas sem familiaridade com esse tipo de produto."
         ],
         "media": [
           {
             "src": "/assets/banner-mobinft.svg",
-            "alt": "Capa do projeto Mobinft",
-            "caption": "Mobinft: uma chave digital para acessar viagens.",
+            "alt": "Mockups das telas do aplicativo Mobinft",
+            "caption": "A Mobinft propunha uma chave digital baseada em NFT para viagens.",
             "width": 612,
             "height": 344,
             "span": 6
@@ -316,60 +295,28 @@
       },
       {
         "id": "problem",
-        "eyebrow": "Problema",
-        "heading": "Conceitos e etapas desconhecidos",
+        "eyebrow": "Pesquisa e desenho",
+        "heading": "Tornar a compra compreensível",
         "paragraphs": [
-          "Para comprá-la, uma pessoa sem experiência com Web3 precisava lidar com conceitos desconhecidos e etapas técnicas que tornavam a compra mais difícil."
-        ]
-      },
-      {
-        "id": "objective",
-        "eyebrow": "Objetivo",
-        "heading": "O objetivo de negócio",
-        "paragraphs": [
-          "Ajudar novos usuários a entender as etapas da compra e adquirir a chave digital com menos dúvidas. Como objetivo de negócio definido pela empresa, a meta era aumentar a base de clientes em 20%."
-        ]
-      },
-      {
-        "id": "discovery",
-        "eyebrow": "Descoberta",
-        "heading": "O que a pesquisa revelou",
-        "paragraphs": [
-          "Na pesquisa, as pessoas tiveram dificuldade para entender os conceitos e termos usados na compra. Por isso, o primeiro wireframe incluía um onboarding que apresentava esses conceitos antes da compra."
-        ]
-      },
-      {
-        "id": "approach",
-        "eyebrow": "Abordagem",
-        "heading": "Orientação durante a compra",
-        "paragraphs": [
-          "Testei o primeiro wireframe com seis participantes sem experiência prévia com NFTs. As dúvidas sobre o tutorial do onboarding orientaram mudanças na ordem e na apresentação dos conceitos. Parte das orientações também passou a aparecer durante a compra."
+          "Com o time de design, mapeei o problema, participei de pesquisas qualitativas e quantitativas e ajudei a priorizar as funções básicas. Passei dos wireframes aos protótipos para testar o caminho de compra."
         ]
       },
       {
         "id": "solution",
-        "eyebrow": "Solução",
-        "heading": "Interface refinada",
+        "eyebrow": "Resultado",
+        "heading": "Uma proposta testável",
         "paragraphs": [
-          "Depois, uma segunda rodada com cinco participantes avaliou a interface de alta fidelidade."
+          "Os protótipos serviram para explorar o fluxo de compra em testes de usabilidade."
         ],
         "media": [
           {
             "src": "/assets/case-mobinft/img-hifi-mobinft.png",
-            "alt": "Montagem das telas de alta fidelidade do Mobinft",
-            "caption": "Interface final refinada com os achados da pesquisa. Amplie para explorar as telas.",
+            "alt": "Protótipo do fluxo de compra de chave digital da Mobinft",
+            "caption": "Telas de protótipo do fluxo de compra da chave digital. Amplie para explorar.",
             "width": 700,
             "height": 870,
             "span": 6
           }
-        ]
-      },
-      {
-        "id": "impact",
-        "eyebrow": "Impacto e aprendizado",
-        "heading": "Melhor compreensão, nova ambiguidade",
-        "paragraphs": [
-          "A segunda rodada indicou melhora na compreensão do tutorial, mas revelou uma nova ambiguidade: durante a compra, participantes escolheram “marketplace” com mais frequência do que “chave”. O achado mostrou que a terminologia e as opções de compra ainda precisavam ser refinadas."
         ]
       }
     ],
@@ -387,8 +334,8 @@
       "zoomHelp": "Use os controles de zoom e role para explorar a imagem. Pressione Esc para fechar."
     },
     "seo": {
-      "title": "Mobinft — Jornada de compra de NFTs | Daniel Carvalho",
-      "description": "Pesquisei e prototipei uma jornada de compra para pessoas sem experiência prévia com NFTs. Duas rodadas de testes de usabilidade orientaram os ajustes no fluxo."
+      "title": "Mobinft | Compra de chave digital em Web3 | Daniel Carvalho",
+      "description": "Estudo voluntário de UX em equipe sobre a compra de uma chave digital baseada em NFT, da pesquisa e dos wireframes a protótipos testáveis."
     },
     "relatedProjects": [
       "bradesco-seguros",
@@ -398,89 +345,71 @@
   "/en/cases/bradesco-seguros": {
     "slug": "bradesco-seguros",
     "locale": "en",
-    "category": "Enterprise system · Desktop",
-    "title": "Bradesco Seguros",
-    "subtitle": "Redesign of critical workflows and automations in a legacy system essential to operations. The modernization reduced manual work by approximately 10 hours per week per employee, preventing errors and improving process visibility.",
+    "category": "Internal system · Insurance",
+    "title": "Bradesco Seguros — workflows for an internal system",
+    "subtitle": "I redesigned workflows for an internal system with complex business rules. I delivered more than 20 workflows across five features; a before-and-after time comparison indicated approximately 10 hours of manual work saved per employee each week.",
+    "heroMedia": {
+      "src": "/assets/banner-bradesco-negociacao.svg",
+      "alt": "Bradesco Seguros banner about negotiation, featuring the system interface."
+    },
     "metrics": [
       {
         "value": "≈10",
         "unit": "h/week",
         "label": "less manual work per employee",
-        "evidence": "Outcome described in the public case."
+        "evidence": "Estimate indicated by a before-and-after time comparison."
       }
     ],
     "meta": {
-      "role": "Product Designer",
-      "period": "2025–2026",
+      "role": "Product Designer at Capgemini",
+      "period": "Since Jul 2025",
       "focus": [
-        "Critical workflows",
-        "Automation",
-        "Business rules"
+        "User interviews",
+        "Journey definition",
+        "Prototyping"
       ]
     },
     "sections": [
       {
         "id": "context",
         "eyebrow": "Context",
-        "heading": "A system central to operations",
+        "heading": "Define the system from the start",
         "paragraphs": [
-          "Regulatory changes required the team to review a legacy system central to the operation."
-        ],
-        "media": [
-          {
-            "src": "/assets/banner-bradesco-negociacao.svg",
-            "alt": "Public Bradesco Seguros project cover",
-            "caption": "Project cover. The public version presents context, process and outcome.",
-            "width": 620,
-            "height": 320,
-            "span": 6
-          }
+          "The project was at the beginning of discovery. The team needed to understand users’ tasks and define initial workflows for discussion and validation."
         ]
       },
       {
         "id": "problem",
-        "eyebrow": "Problem",
-        "heading": "Workflows that were difficult to follow",
+        "eyebrow": "Research",
+        "heading": "Understand what users needed to do",
         "paragraphs": [
-          "Its rigid structure made workflows difficult to follow and left some steps manual, increasing the risk of errors."
-        ]
-      },
-      {
-        "id": "discovery",
-        "eyebrow": "Discovery",
-        "heading": "Understanding routines and rules",
-        "paragraphs": [
-          "I spoke with end users about their routines, business rules, and the points where the process stalled."
+          "I interviewed users to identify opportunities and understand their needs. I brought the findings into discussions about the journey, product goals, and the requirements of the teams involved."
         ]
       },
       {
         "id": "approach",
-        "eyebrow": "Approach",
-        "heading": "Redesigning workflows and showing status",
+        "eyebrow": "Design",
+        "heading": "Make the workflows concrete enough to discuss",
         "paragraphs": [
-          "I used those findings to map the journey and redesign the workflows and prototypes. The main decisions focused on preventing errors and showing the status of each process in the interface."
-        ],
-        "notes": [
-          "Managing deadlines and severe technical constraints.",
-          "Direct collaboration with users and engineering."
+          "I prototyped screens in Figma, following usability heuristics and the existing design system. I joined stakeholder meetings to refine requirements and priorities. I used AI to draft microcopy and support communication across teams, reviewing its output in the project context. I developed more than 20 workflows across five features, with annotations that helped the team understand the rules and system states."
         ]
       },
       {
         "id": "impact",
-        "eyebrow": "Impact and learnings",
-        "heading": "Less manual work",
+        "eyebrow": "Outcome",
+        "heading": "Clearer ground for the next decisions",
         "paragraphs": [
-          "The solution adds automation to steps that were previously manual and shows the status of each process in the interface. With leaner processes, the project reduced manual work by approximately 10 hours per week per employee."
+          "A before-and-after time comparison indicated approximately 10 hours of manual work saved per employee each week. The annotations and prototypes also helped teams align on technical and business requirements."
         ]
       },
       {
         "id": "disclosure",
         "eyebrow": "Disclosure limits",
         "heading": "What I can share",
+        "contactLink": true,
         "paragraphs": [
-          "Part of this project is protected by a confidentiality agreement. The public version only shows the context, process, and outcomes I can disclose. I can share more information in a conversation, within the limits of that agreement. Reach me out via LinkedIn."
-        ],
-        "contactLink": true
+          "Part of this project is covered by a confidentiality agreement. This public version shows only the context, decisions, and outcomes I can disclose. Contact me by email or on LinkedIn to discuss more within the limits of that agreement."
+        ]
       }
     ],
     "ui": {
@@ -497,8 +426,8 @@
       "zoomHelp": "Use the zoom controls and scroll to explore the image. Press Esc to close."
     },
     "seo": {
-      "title": "Bradesco Seguros — Critical management system | Daniel Carvalho",
-      "description": "I redesigned workflows in a legacy system used in an operation subject to regulatory requirements. The goal was to reduce manual tasks, prevent errors, and make processes easier to track. In practice, the solution reduced manual work by about 10 hours per week per employee."
+      "title": "Bradesco Seguros — workflows for an internal system | Daniel Carvalho",
+      "description": "More than 20 workflows across five features. A before-and-after time comparison indicated approximately 10 hours of manual work saved per employee each week. Part of the project is restricted."
     },
     "relatedProjects": [
       "conecta",
@@ -508,24 +437,24 @@
   "/en/cases/conecta": {
     "slug": "conecta",
     "locale": "en",
-    "category": "Mobile app · Digital health",
+    "category": "Freelance · Digital health",
     "title": "Conecta",
-    "subtitle": "I reviewed the onboarding and navigation of a nutrition care app. The concept aims to explain patient tasks more clearly and organize the progress information used by nutritionists.",
+    "subtitle": "In four weeks, I redesigned a nutrition care app. User interviews helped set priorities, and usability testing informed changes to the interactive prototypes.",
     "metrics": [
       {
         "value": "4",
         "unit": "weeks",
-        "label": "in the project timeline",
-        "evidence": "Public project timeline organized from week 1 to week 4."
+        "label": "From research to tested prototypes",
+        "evidence": "Freelance project completed between Dec 2024 and Jan 2025."
       }
     ],
     "meta": {
-      "role": "Product Designer",
-      "period": "2024–2025",
+      "role": "Product Designer, freelance",
+      "period": "Dec 2024–Jan 2025",
       "focus": [
-        "Onboarding",
-        "Information architecture",
-        "Digital health"
+        "User research",
+        "Usability testing",
+        "Prototyping"
       ]
     },
     "sections": [
@@ -534,13 +463,13 @@
         "eyebrow": "Context",
         "heading": "Care between appointments",
         "paragraphs": [
-          "Between appointments, the app brings together tasks, records, and progress information. Conecta’s onboarding did not clearly explain what patients could do or where they should begin."
+          "Conecta brought together information for nutrition care. User interviews surfaced usability problems that guided the redesign."
         ],
         "media": [
           {
             "src": "/assets/Thumbnail-conecta.svg",
-            "alt": "Conecta app cover",
-            "caption": "Conecta: nutrition care between appointments.",
+            "alt": "",
+            "caption": "Conecta, a nutrition care app.",
             "width": 1920,
             "height": 1080,
             "span": 6
@@ -549,46 +478,42 @@
       },
       {
         "id": "problem",
-        "eyebrow": "Problem",
-        "heading": "The next step was unclear",
+        "eyebrow": "Research",
+        "heading": "What needed to change first",
         "paragraphs": [
-          "The onboarding and information architecture review showed that patients could start using the app without understanding their tasks or the next step."
+          "I organized questions and hypotheses in a CSD matrix. After the interviews, I joined an ideation session to prioritize improvements by expected impact and feasibility."
         ]
       },
       {
         "id": "approach",
-        "eyebrow": "Approach",
-        "heading": "Reorganizing navigation and tasks",
+        "eyebrow": "Design and testing",
+        "heading": "Four weeks to shape a proposal",
         "paragraphs": [
-          "I reviewed recurring patterns in other health and nutrition products. I then reorganized the information architecture and used wireframes to review the navigation."
+          "I created high-fidelity interactive prototypes and refined them through testing and feedback cycles. The delivery brought together redesigned workflows and decisions reviewed during the project."
         ],
         "media": [
           {
             "src": "/assets/case-conecta/img-timeline-conecta.png",
-            "alt": "Conecta project timeline, week 1 through week 4",
-            "caption": "Four-week timeline: alignment, discovery, design, reviews and delivery.",
+            "alt": "Four-week timeline for the Conecta redesign",
+            "caption": "Project timeline organized across four weeks.",
             "width": 1600,
             "height": 393,
             "span": 6
           }
-        ],
-        "notes": [
-          "Redesign focused on reducing drop-off.",
-          "Creation of new consistent visual patterns."
         ]
       },
       {
         "id": "solution",
-        "eyebrow": "Solution",
-        "heading": "A clearer path through the app",
+        "eyebrow": "Prototype",
+        "heading": "A proposal refined through testing",
         "paragraphs": [
-          "In the high-fidelity interface, I applied the new flow and defined visual patterns to keep the screens consistent."
+          "Testing and feedback helped refine the proposal within the four-week schedule."
         ],
         "media": [
           {
             "src": "/assets/case-conecta/img-conecta-prints-atual.png",
-            "alt": "Conecta activities and progress screen",
-            "caption": "Activities and progress in the published project interface.",
+            "alt": "Tela de atividades e progresso do Conecta",
+            "caption": "Activities and progress in the redesigned prototype.",
             "width": 1600,
             "height": 1349,
             "span": 2,
@@ -601,8 +526,8 @@
           },
           {
             "src": "/assets/case-conecta/img-conecta-prints-atual.png",
-            "alt": "Conecta task history screen",
-            "caption": "History with tasks organized by week and status.",
+            "alt": "Tela de histórico de tarefas do Conecta",
+            "caption": "Task history organized by week and status in the prototype.",
             "width": 1600,
             "height": 1349,
             "span": 2,
@@ -615,8 +540,8 @@
           },
           {
             "src": "/assets/case-conecta/img-conecta-prints-atual.png",
-            "alt": "Conecta records and measurements screen",
-            "caption": "Records and measurements in the project interface.",
+            "alt": "Tela de registros e medidas do Conecta",
+            "caption": "Records and measurements in the redesigned app prototype.",
             "width": 1600,
             "height": 1349,
             "span": 2,
@@ -629,8 +554,8 @@
           },
           {
             "src": "/assets/case-conecta/img-conecta-prints-atual.png",
-            "alt": "Full montage of high-fidelity Conecta screens",
-            "caption": "Screen overview. Enlarge to explore the full montage.",
+            "alt": "Montagem completa das telas de alta fidelidade do Conecta",
+            "caption": "Overview of the proposed interface. Enlarge to explore the full montage.",
             "width": 1600,
             "height": 1349,
             "span": 6
@@ -639,10 +564,10 @@
       },
       {
         "id": "impact",
-        "eyebrow": "Impact and learnings",
-        "heading": "More app usage time",
+        "eyebrow": "Outcome",
+        "heading": "Research shaped the delivery",
         "paragraphs": [
-          "The concept guides the onboarding step-by-step and reorganizes the task view. After internal measurement, app usage time increased by an average of 50%. This engagement made it easier for nutritionists to track clinical progress, resulting in higher treatment adherence."
+          "Interviews, prioritization, and testing helped the team adjust the proposal within a short timeframe. The project was completed in four weeks."
         ]
       }
     ],
@@ -660,8 +585,8 @@
       "zoomHelp": "Use the zoom controls and scroll to explore the image. Press Esc to close."
     },
     "seo": {
-      "title": "Conecta: nutrition care redesign | Daniel Carvalho",
-      "description": "I reviewed the onboarding and navigation of a nutrition care app. The concept reorganizes tasks and progress information for patients and nutritionists."
+      "title": "Conecta — nutrition app redesign | Daniel Carvalho",
+      "description": "A four-week freelance redesign of a nutrition care app, shaped by user interviews, prioritization, interactive prototypes, and usability testing."
     },
     "relatedProjects": [
       "bradesco-seguros",
@@ -671,39 +596,40 @@
   "/en/cases/mobinft": {
     "slug": "mobinft",
     "locale": "en",
-    "category": "Mobile app · UX project",
+    "category": "Volunteer UX study",
     "title": "Mobinft",
-    "subtitle": "I researched and prototyped a purchasing journey for people with no prior NFT experience. Two rounds of usability testing informed the changes to the flow.",
+    "subtitle": "In a volunteer UX study with a design team, I researched what made an NFT-based digital key difficult to buy. The work moved from wireframes to testable prototypes.",
     "metrics": [
       {
-        "value": "2",
-        "unit": "rounds",
-        "label": "of usability testing",
-        "evidence": "6 participants in the first; 5 in the second."
+        "kind": "qualitative",
+        "value": "Research and usability testing",
+        "unit": "",
+        "label": "Volunteer study",
+        "evidence": "Conducted with a design team."
       }
     ],
     "meta": {
-      "role": "Product Designer",
-      "period": "2023",
+      "role": "UX Designer on a team",
+      "period": "Apr 2022–2023",
       "focus": [
-        "Research",
-        "Web3 onboarding",
-        "Usability testing"
+        "UX research",
+        "Web3 purchase flow",
+        "Prototyping"
       ]
     },
     "sections": [
       {
         "id": "context",
         "eyebrow": "Context",
-        "heading": "A digital key for travel",
+        "heading": "Buying a digital key",
         "paragraphs": [
-          "Mobinft used an NFT-based digital key to provide access to autonomous vehicle rides from airports."
+          "Mobinft proposed an NFT-based key for access to rides. Unfamiliar terms and purchase steps created barriers for people new to this type of product."
         ],
         "media": [
           {
             "src": "/assets/banner-mobinft.svg",
-            "alt": "Mobinft project cover",
-            "caption": "Mobinft: a digital key for accessing rides.",
+            "alt": "Mobinft app screen mockups",
+            "caption": "Mobinft proposed an NFT-based digital key for travel.",
             "width": 612,
             "height": 344,
             "span": 6
@@ -712,60 +638,28 @@
       },
       {
         "id": "problem",
-        "eyebrow": "Problem",
-        "heading": "Unfamiliar concepts and steps",
+        "eyebrow": "Research and design",
+        "heading": "Make the purchase easier to understand",
         "paragraphs": [
-          "People with no Web3 experience had to understand unfamiliar concepts and complete technical steps before buying the key."
-        ]
-      },
-      {
-        "id": "objective",
-        "eyebrow": "Objective",
-        "heading": "The business objective",
-        "paragraphs": [
-          "Help new users understand each step and complete the purchase with clear guidance. As a business objective, the goal was to grow the customer base by 20%."
-        ]
-      },
-      {
-        "id": "discovery",
-        "eyebrow": "Discovery",
-        "heading": "What the research revealed",
-        "paragraphs": [
-          "During research, people struggled to understand the concepts and terms used in the purchase. The first wireframe therefore included onboarding that introduced those concepts before the purchase."
-        ]
-      },
-      {
-        "id": "approach",
-        "eyebrow": "Approach",
-        "heading": "Guidance during the purchase",
-        "paragraphs": [
-          "I tested the first wireframe with six participants who had no previous NFT experience. Their questions about the onboarding tutorial informed changes to the order and presentation of the concepts. Some guidance also moved into the purchase flow."
+          "With the design team, I mapped the problem, contributed to qualitative and quantitative research, and helped prioritize the core features. We moved from wireframes to prototypes that could be tested along the purchase flow."
         ]
       },
       {
         "id": "solution",
-        "eyebrow": "Solution",
-        "heading": "A refined interface",
+        "eyebrow": "Outcome",
+        "heading": "A testable proposal",
         "paragraphs": [
-          "A second round with five participants then evaluated the high-fidelity interface."
+          "The prototypes gave the team a way to explore the purchase flow in usability testing."
         ],
         "media": [
           {
             "src": "/assets/case-mobinft/img-hifi-mobinft.png",
-            "alt": "Montage of high-fidelity Mobinft screens",
-            "caption": "Final interface refined with research findings. Enlarge to explore the screens.",
+            "alt": "Mobinft digital key purchase flow prototype",
+            "caption": "Prototype screens for the digital key purchase flow. Enlarge to explore the screens.",
             "width": 700,
             "height": 870,
             "span": 6
           }
-        ]
-      },
-      {
-        "id": "impact",
-        "eyebrow": "Impact and learnings",
-        "heading": "Better comprehension, a new ambiguity",
-        "paragraphs": [
-          "The second round showed improvement in tutorial comprehension but revealed a new ambiguity: during the purchase, participants chose \"marketplace\" more frequently than \"key.\" This finding showed that terminology and purchasing options still needed refinement."
         ]
       }
     ],
@@ -783,8 +677,8 @@
       "zoomHelp": "Use the zoom controls and scroll to explore the image. Press Esc to close."
     },
     "seo": {
-      "title": "Mobinft — NFT purchasing journey | Daniel Carvalho",
-      "description": "I researched and prototyped a purchasing journey for people with no prior NFT experience. Two rounds of usability testing informed the changes to the flow."
+      "title": "Mobinft — Web3 digital key purchase | Daniel Carvalho",
+      "description": "A volunteer UX study with a design team, exploring the purchase of an NFT-based digital key through research, wireframes, and testable prototypes."
     },
     "relatedProjects": [
       "bradesco-seguros",

@@ -7,7 +7,7 @@
         "skip": "Pular para o conteúdo",
         "projects": "Projetos",
         "about": "Sobre",
-        "services": "Serviços",
+        "services": "Atuação",
         "resume": "Currículo",
         "contact": "Contato",
         "themeDark": "Modo escuro",
@@ -38,55 +38,58 @@
           "Produtos complexos.",
           "Experiências simples."
         ],
-        "description": "Sou Daniel Carvalho, Product Designer com mais de 4 anos de experiência em sistemas corporativos, aplicativos e SaaS.",
-        "cta": "Ver cases",
+        "description": "Redesenho fluxos complexos. Na Bradesco Seguros, a comparação antes/depois indicou cerca de 10 horas semanais a menos de trabalho manual por funcionário.",
+        "cta": "Ver projetos",
         "resume": "Baixar currículo"
       },
       "projects": {
-        "eyebrow": "Cases Selecionados",
-        "title": "Problemas reais, decisões de design e resultados.",
-        "intro": "Projetos em sistemas corporativos, saúde digital e Web3.",
+        "eyebrow": "PROJETOS",
+        "title": "Projetos selecionados",
+        "intro": "Sistemas internos de seguros, um aplicativo de saúde e um estudo de UX. Em cada case, mostro o problema, as decisões de design e o que pude observar.",
         "items": [
           {
             "slug": "bradesco-seguros",
-            "category": "Sistema corporativo · Desktop",
-            "title": "Bradesco Seguros: modernização de um sistema de gestão",
-            "description": "Redesenhei fluxos de um sistema legado usado em uma operação sujeita a requisitos regulatórios. O objetivo era reduzir tarefas manuais, prevenir erros e facilitar o acompanhamento dos processos. Na prática, a solução reduziu cerca de 10 horas semanais de trabalho manual por funcionário.",
-            "image": "/assets/banner-bradesco-negociacao.svg",
-            "alt": "Bradesco Seguros",
-            "cta": "Ler case completo →"
+            "category": "Sistema interno · Seguros",
+      "title": "Bradesco Seguros — fluxos para um sistema interno",
+      "description": "Em um sistema interno da Bradesco Seguros, entreguei mais de 20 fluxos em cinco funcionalidades. A comparação de tempos antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário. Parte do projeto é restrita; compartilho mais detalhes em conversa.",
+      "image": "/assets/banner-bradesco-negociacao.svg",
+      "alt": "Banner da Bradesco Seguros sobre negociação, com interface do sistema.",
+            "cta": "Ver versão pública →",
+            "relatedDescription": "Mais de 20 fluxos em cinco funcionalidades. Comparação antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário. Parte do projeto é restrita."
           },
           {
             "slug": "conecta",
-            "category": "Aplicativo mobile · Saúde digital",
-            "title": "Conecta: redesign da jornada de acompanhamento nutricional",
-            "description": "Revisei o primeiro acesso e a navegação de um aplicativo de acompanhamento nutricional. A proposta reorganiza tarefas e informações de progresso para pacientes e nutricionistas.",
+            "category": "Freelance · Saúde digital",
+            "title": "Conecta — redesign de um app de nutrição",
+            "description": "Em quatro semanas de trabalho freelance, entrevistei usuários, priorizei problemas de uso e criei protótipos navegáveis. Os testes orientaram os ajustes antes da entrega.",
             "image": "/assets/Thumbnail-conecta.svg",
-            "alt": "Conecta",
-            "cta": "Ler case completo →"
+            "alt": "",
+            "cta": "Ler case completo →",
+            "relatedDescription": "Veja como descobertas e testes ajudaram a priorizar o que cabia em quatro semanas."
           },
           {
             "slug": "mobinft",
-            "category": "Aplicativo mobile · UX project",
-            "title": "Mobinft: compra de chaves digitais em Web3",
-            "description": "Pesquisei e prototipei uma jornada de compra para pessoas sem experiência prévia com NFTs. Duas rodadas de testes de usabilidade orientaram os ajustes no fluxo.",
+            "category": "Estudo voluntário · UX",
+            "title": "Mobinft — compra de chave digital em Web3",
+            "description": "Em um estudo voluntário com um time de design, pesquisei barreiras na compra de uma chave digital baseada em NFT. Transformamos os achados em wireframes e protótipos testáveis.",
             "image": "/assets/banner-mobinft.svg",
-            "alt": "Mobinft",
-            "cta": "Ler case completo →"
+            "alt": "Mockups das telas do aplicativo Mobinft",
+            "cta": "Ler case completo →",
+            "relatedDescription": "Conheça o estudo em equipe que levou uma ideia de chave Web3 a protótipos testáveis."
           }
         ]
       },
       "about": {
         "eyebrow": "SOBRE",
-        "title": "Como abordo produtos complexos",
+        "title": "Trabalho entre regras, pessoas e interfaces",
         "paragraphs": [
-          "Já trabalhei na modernização de um sistema legado sujeito a requisitos regulatórios e no redesign de jornadas mobile. Em cada projeto, procuro entender as regras que organizam o trabalho antes de desenhar o fluxo.",
-          "Trabalho com usuários e equipes de Produto e Tecnologia. As conversas e os materiais do projeto orientam os primeiros fluxos; os protótipos ajudam o time a comparar alternativas antes do desenvolvimento."
+          "Na Capgemini, atuei tanto na implementação responsiva de um e-commerce de seguros quanto no design de sistemas internos da Bradesco Seguros. Trabalhei com fluxos de propostas, notificações e outros processos operacionais.",
+          "Também redesenhei o Conecta como freelancer. Minha contribuição vai de entrevistas e mapeamento de fluxos a protótipos, testes com usuários e alinhamento com quem desenvolve o produto."
         ],
         "education": [
           {
-            "title": "MBA em Inovação Orientada a AI e UX",
-            "school": "UNIFAST"
+            "title": "MBA em Inovação Orientada a IA e UX",
+            "school": "UNIFAST · 2025–2027 · em andamento"
           },
           {
             "title": "Especialização em UX, UI e Product Design",
@@ -95,47 +98,43 @@
         ]
       },
       "capabilities": {
-        "eyebrow": "COMO CONTRIBUO",
+        "eyebrow": "COMO TRABALHO",
         "title": "Áreas em que atuo",
         "items": [
           {
-            "title": "Pesquisa com usuários",
-            "description": "Planejo pesquisas, converso com usuários e organizo os achados que orientam as decisões do produto."
+            "title": "Pesquisa e testes",
+            "description": "Conduzo entrevistas e testes de usabilidade para entender tarefas, dúvidas e critérios de decisão dos usuários."
           },
           {
-            "title": "Design de interação e UI",
-            "description": "Transformo requisitos e descobertas em interfaces claras, consistentes e adequadas ao contexto de uso."
+            "title": "Fluxos e interfaces",
+            "description": "Mapeio processos e transformo regras de negócio em fluxos e interfaces para sistemas internos e aplicativos."
           },
           {
-            "title": "Prototipação e validação",
-            "description": "Crio protótipos para testar hipóteses, alinhar o time e identificar problemas antes do desenvolvimento."
+            "title": "Prototipação e entrega",
+            "description": "Crio protótipos navegáveis, testo alternativas com usuários e preparo especificações para o desenvolvimento."
           },
           {
-            "title": "Design systems",
-            "description": "Estruturo componentes, padrões e documentação para apoiar consistência, manutenção e escala."
+            "title": "Design System",
+            "description": "Crio e evoluo design systems de produtos com diferentes necessidades e escalas. Defino componentes e padrões para manter a consistência visual conforme a aplicação cresce."
           },
           {
-            "title": "Estratégia e fluxos",
-            "description": "Mapeio jornadas, regras de negócio e fluxos críticos para reduzir ambiguidades e orientar prioridades."
-          },
-          {
-            "title": "IA aplicada ao processo",
-            "description": "Uso IA para acelerar exploração, síntese e prototipação, preservando análise crítica, contexto e validação humana."
+            "title": "IA no processo",
+            "description": "Uso IA em todas as etapas do meu trabalho para acelerar pesquisas, protótipos e a criação de artefatos. Exploro diferentes pontos de vista, reviso as saídas e aproveito o que ajuda a melhorar a qualidade das entregas."
           }
         ]
       },
       "contact": {
         "eyebrow": "CONTATO",
-        "title": "Quer conversar sobre meu trabalho?",
-        "description": "Se meu perfil fizer sentido para uma oportunidade ou para o seu time, entre em contato pelo LinkedIn ou por e-mail.",
+        "title": "Tem um problema complexo para resolver?",
+        "description": "Conte-me onde seu produto ou sua equipe está travando. Posso investigar com usuários, testar alternativas e desenhar os próximos fluxos. Escreva por e-mail ou LinkedIn.",
         "emailCta": "Enviar e-mail"
       },
       "footer": {
         "name": "Daniel Carvalho"
       },
       "seo": {
-        "title": "Daniel Carvalho — Product Designer | Produtos digitais complexos",
-        "description": "Daniel Carvalho, Product Designer. Produtos complexos, experiências simples. Cases em sistemas corporativos, saúde digital e Web3."
+        "title": "Daniel Carvalho | Product Designer",
+        "description": "Product Designer com experiência em sistemas internos de seguros, e-commerce e aplicativos digitais. Trabalho com pesquisa, fluxos, protótipos e testes com usuários."
       }
     },
     "en": {
@@ -143,8 +142,8 @@
         "skip": "Skip to content",
         "projects": "Projects",
         "about": "About",
-        "services": "Services",
-        "resume": "Résumé",
+        "services": "Practice",
+        "resume": "Resume",
         "contact": "Contact",
         "themeDark": "Dark mode",
         "themeLight": "Light mode",
@@ -161,7 +160,7 @@
         "footerNav": "Footer navigation",
         "language": "Language",
         "portrait": "Portrait of Daniel Carvalho",
-        "download": "Download résumé",
+        "download": "Download resume",
         "notFound": "Page not found",
         "notFoundBody": "This page is not available. Return home to explore the projects."
       },
@@ -174,104 +173,103 @@
           "Complex products.",
           "Simple experiences."
         ],
-        "description": "I’m Daniel Carvalho, a Product Designer with 4+ years of experience in enterprise systems, mobile apps, and SaaS. Before designing an interface, I work to understand the business rules, day-to-day operations, and the people who use the product.",
-        "cta": "View selected work",
-        "resume": "Download résumé"
+        "description": "I redesign complex workflows. At Bradesco Seguros, a before-and-after comparison indicated about 10 fewer hours of manual work per employee each week.",
+        "cta": "View projects",
+        "resume": "Download resume"
       },
       "projects": {
-        "eyebrow": "Selected Work",
-        "title": "Real problems, design decisions, and outcomes.",
-        "intro": "Projects in enterprise software, digital health, and Web3.",
+        "eyebrow": "PROJECTS",
+        "title": "Selected work",
+        "intro": "Insurance systems, a nutrition app, and a UX study. Each case shows the problem, the design decisions, and what the work allowed us to observe.",
         "items": [
           {
             "slug": "bradesco-seguros",
-            "category": "Enterprise system · Desktop",
-            "title": "Bradesco Seguros: modernizing a management system",
-            "description": "I redesigned workflows in a legacy system used in an operation subject to regulatory requirements. The goal was to reduce manual tasks, prevent errors, and make processes easier to track. In practice, the solution reduced manual work by about 10 hours per week per employee.",
-            "image": "/assets/banner-bradesco-negociacao.svg",
-            "alt": "Bradesco Seguros",
-            "cta": "Read full case →"
+            "category": "Internal system · Insurance",
+      "title": "Bradesco Seguros — workflows for an internal system",
+      "description": "I delivered more than 20 workflows across five features of an internal Bradesco Seguros system. A before-and-after time comparison indicated approximately 10 hours of manual work saved per employee each week. Part of the project is restricted; I can discuss more of the work in a conversation.",
+      "image": "/assets/banner-bradesco-negociacao.svg",
+      "alt": "Bradesco Seguros banner about negotiation, featuring the system interface.",
+            "cta": "View public case →",
+            "relatedDescription": "More than 20 workflows across five features. A before-and-after comparison indicated approximately 10 hours of manual work saved per employee each week. Part of the project is restricted."
           },
           {
             "slug": "conecta",
-            "category": "Mobile app · Digital health",
-            "title": "Conecta: redesigning the nutrition care journey",
-            "description": "I reviewed the onboarding and navigation of a nutrition care app. The concept reorganizes tasks and progress information for patients and nutritionists.",
+            "category": "Freelance · Digital health",
+            "title": "Conecta — redesigning a nutrition app",
+            "description": "In a four-week freelance project, I interviewed users, prioritized usability issues, and built interactive prototypes. Testing informed the changes before delivery.",
             "image": "/assets/Thumbnail-conecta.svg",
-            "alt": "Conecta",
-            "cta": "Read full case →"
+            "alt": "",
+            "cta": "Read full case →",
+            "relatedDescription": "See how interviews and testing helped prioritize the redesign within four weeks."
           },
           {
             "slug": "mobinft",
-            "category": "Mobile app · UX project",
-            "title": "Mobinft: purchasing digital keys in Web3",
-            "description": "I researched and prototyped a purchasing journey for people with no prior NFT experience. Two rounds of usability testing informed the changes to the flow.",
+            "category": "Volunteer UX study",
+            "title": "Mobinft — purchasing a Web3 digital key",
+            "description": "In a volunteer UX study with a design team, we researched what made an NFT-based digital key difficult to buy. We turned the findings into wireframes and testable prototypes.",
             "image": "/assets/banner-mobinft.svg",
-            "alt": "Mobinft",
-            "cta": "Read full case →"
+            "alt": "Mobinft app screen mockups",
+            "cta": "Read full case →",
+            "relatedDescription": "See how a team-based UX study turned a Web3 key concept into testable prototypes."
           }
         ]
       },
       "about": {
         "eyebrow": "ABOUT",
-        "title": "How I approach complex products",
+        "title": "Work between rules, people, and interfaces",
         "paragraphs": [
-          "I have worked on a legacy system subject to regulatory requirements and on mobile workflow redesigns. In each project, I try to understand the rules that shape the work before designing the flow.",
-          "I work with users, product managers, and engineers. Conversations and project materials inform my first workflow concepts, while prototypes help the team compare options before development."
+          "At Capgemini, I worked on the responsive implementation of an insurance e-commerce product and on internal systems for Bradesco Seguros. Those systems covered proposals, notifications, and other operational processes.",
+          "I also redesigned Conecta as a freelancer. My work spans user interviews, workflow mapping, prototypes, usability testing, and collaboration with developers."
         ],
         "education": [
           {
-            "title": "MBA in AI and UX-driven Innovation",
-            "school": "UNIFAST"
+            "title": "MBA em Inovação Orientada a IA e UX",
+            "school": "UNIFAST · 2025–2027 · in progress"
           },
           {
-            "title": "UX Unicórnio Certification",
+            "title": "Especialização em UX, UI e Product Design",
             "school": "UX Unicórnio"
           }
         ]
       },
       "capabilities": {
-        "eyebrow": "HOW I CONTRIBUTE",
-        "title": "Areas I work in",
+        "eyebrow": "HOW I WORK",
+        "title": "Areas of practice",
         "items": [
           {
-            "title": "User research",
-            "description": "I plan and conduct research to understand behaviors, needs, and constraints, then organize evidence to support product decisions."
+            "title": "Research and testing",
+            "description": "I conduct interviews and usability tests to understand users' tasks, questions, and decision criteria."
           },
           {
-            "title": "Interaction and UI design",
-            "description": "I translate requirements and findings into clear, consistent interfaces suited to the context of use."
+            "title": "Workflows and interfaces",
+            "description": "I map processes and turn business rules into workflows and interfaces for internal systems and apps."
           },
           {
-            "title": "Prototyping and validation",
-            "description": "I create prototypes to test hypotheses, align teams, and identify problems before development."
+            "title": "Prototyping and delivery",
+            "description": "I build interactive prototypes, test options with users, and prepare specifications for development."
           },
           {
-            "title": "Design systems",
-            "description": "I structure components, patterns, and documentation to support consistency, maintenance, and scale."
+            "title": "Design System",
+            "description": "I create and evolve design systems for products with different needs and scales. I define components and patterns that keep the interface visually consistent as the application grows."
           },
           {
-            "title": "Product strategy and workflows",
-            "description": "I map journeys, business rules, and critical workflows to reduce ambiguity and guide priorities."
-          },
-          {
-            "title": "AI-supported workflow",
-            "description": "I use AI to accelerate exploration, synthesis, and prototyping while preserving critical thinking, context, and human validation."
+            "title": "AI in my workflow",
+            "description": "I use AI throughout my work to speed up research, prototyping, and artifact creation. I use it to explore different perspectives, review the outputs, and improve the quality of what I deliver."
           }
         ]
       },
       "contact": {
         "eyebrow": "CONTACT",
-        "title": "Interested in discussing my work?",
-        "description": "If my experience could be a good fit for an opportunity or your team, feel free to reach out on LinkedIn or by email.",
+        "title": "Have a complex problem to solve?",
+        "description": "Tell me where your product or team is getting stuck. I can investigate with users, test options, and design the next workflows. Reach out by email or on LinkedIn.",
         "emailCta": "Send email"
       },
       "footer": {
         "name": "Daniel Carvalho"
       },
       "seo": {
-        "title": "Daniel Carvalho — Product Designer | Complex digital products",
-        "description": "Daniel Carvalho, Product Designer. Complex products, simple experiences. Selected work in enterprise software, digital health, and Web3."
+        "title": "Daniel Carvalho | Product Designer",
+        "description": "Product Designer experienced in internal insurance systems, e-commerce, and digital apps. I work across user research, workflows, prototypes, and usability testing."
       }
     }
   }

@@ -48,15 +48,21 @@ for(const lang of ['pt','en']){
       }
       if(!route.includes('/cases/')){
         assert.equal((html.match(/class="project-card"/g)||[]).length,3);
-        assert.equal((html.match(/<li><h3>/g)||[]).length,6);
+        assert.equal((html.match(/<li><h3>/g)||[]).length,5);
         assert.ok(html.includes('mailto:uxdanieljr@gmail.com'));
         assert.ok(html.includes('https://www.linkedin.com/in/dccarvalhojr/'));
       }
-      if(route.endsWith('/bradesco-seguros')) assert.match(html,lang==='en'?/confidentiality agreement/:/acordo de confidencialidade/);
+      if(route.endsWith('/bradesco-seguros')) {
+        assert.doesNotMatch(html,/GPRS|img_fluxos_brds/i);
+        assert.match(html,lang==='en'?/confidentiality agreement/:/acordo de confidencialidade/);
+        assert.match(html,/mailto:uxdanieljr@gmail\.com/);
+        assert.match(html,/https:\/\/www\.linkedin\.com\/in\/dccarvalhojr\//);
+        assert.ok(html.indexOf('id="disclosure"')<html.indexOf('class="study-more"'));
+        assert.match(html,/study-hero-cover[\s\S]*banner-bradesco-negociacao\.svg/);
+      }
       if(route.endsWith('/mobinft')){
-        assert.match(html,lang==='en'?/business objective/i:/objetivo de negócio/);
-        assert.match(html,/20%/);
-        assert.doesNotMatch(html,/alcance da meta comercial|achieving the business goal|successfully achieved|atingido com sucesso/);
+        assert.match(html,lang==='en'?/Volunteer UX study/:/Estudo voluntário/);
+        assert.doesNotMatch(html,/20%|marketplace|six participants|five participants|seis participantes|cinco participantes/i);
       }
     });
   }
@@ -97,32 +103,183 @@ test('motion preserves both home narratives and destinations',async()=>{
   }
 });
 
+test('home project cards are whole-card links with one accessible target',async()=>{
+  for(const [lang,prefix] of [['pt',''],['en','/en']]){
+    const html=await (await fetch(origin+(prefix||'/'))).text();
+    const cards=[...html.matchAll(/<article class="project-card"[^>]*>([\s\S]*?)<\/article>/g)].map(match=>match[1]);
+    assert.equal(cards.length,3);
+    for(const [index,card] of cards.entries()){
+      const slug=slugs[index];
+      assert.match(card,new RegExp(`<a class="project-card-surface" href="${prefix}/cases/${slug}" aria-labelledby="project-title-${slug} project-cta-${slug}" aria-describedby="project-description-${slug}">`));
+      assert.equal((card.match(/<a\b/g)||[]).length,1,'Card must have one link target');
+      assert.match(card,new RegExp(`<h3 id="project-title-${slug}">`));
+      assert.match(card,new RegExp(`<p id="project-description-${slug}">`));
+      assert.match(card,new RegExp(`<span class="button outline" id="project-cta-${slug}">`));
+    }
+    assert.ok(html.includes(lang==='pt'
+      ?'Redesenho fluxos complexos. Na Bradesco Seguros, a comparação antes/depois indicou cerca de 10 horas semanais a menos de trabalho manual por funcionário.'
+      :'I redesign complex workflows. At Bradesco Seguros, a before-and-after comparison indicated about 10 fewer hours of manual work per employee each week.'));
+  }
+});
+
 test('every case links to the other two public cases with localized cover cards',async()=>{
+  const home=JSON.parse(await readFile(path.join(root,'content.json'),'utf8'));
   for(const prefix of ['','/en']) for(const slug of slugs){
     const html=await (await fetch(origin+prefix+'/cases/'+slug)).text();
     const section=html.split('<section class="study-more"')[1].split('</section>')[0];
     const links=[...section.matchAll(/class="study-more-link" href="([^"]+)"/g)].map(m=>m[1]);
-    assert.deepEqual(links,slugs.filter(s=>s!==slug).map(s=>prefix+'/cases/'+s));
-    assert.equal((section.match(/<img /g)||[]).length,2);
+    const related=slugs.filter(s=>s!==slug);
+    assert.deepEqual(links,related.map(s=>prefix+'/cases/'+s));
+    assert.equal((section.match(/<img /g)||[]).length,related.length);
+    assert.equal((section.match(/class="study-more-placeholder"/g)||[]).length,0);
     assert.equal((section.match(/<h3 /g)||[]).length,2);
     assert.equal((section.match(/class="button primary"/g)||[]).length,2);
     assert.ok(section.includes(prefix?'See more':'Veja também'));
     assert.ok(section.includes(prefix?'View project':'Ver projeto'));
     for(const card of section.matchAll(/<article class="study-more-card"[^>]*>([\s\S]*?)<\/article>/g))assert.equal((card[1].match(/<a /g)||[]).length,1);
     assert.ok(html.indexOf('study-more-divider')<html.indexOf('<footer'));
+    if(slug!=='bradesco-seguros'){
+      const bradescoSummary=home.locales[prefix? 'en':'pt'].projects.items.find(item=>item.slug==='bradesco-seguros').relatedDescription;
+      assert.ok(section.includes(bradescoSummary),`${prefix||'pt'} Bradesco related card summary missing from ${slug}`);
+    }
   }
 });
 
-test('published narrative and summary survive chapter recomposition',async()=>{
-  const originals=JSON.parse(await readFile(path.join(root,'public-cases.json'),'utf8'));
+test('all case pages reuse the home footer base with localized navigation',async()=>{
+  for(const prefix of ['','/en']){
+    const homeHtml=await (await fetch(origin+(prefix||'/'))).text();
+    const footerMarkup=html=>{
+      const start=html.lastIndexOf('<footer class="contact">');
+      assert.notEqual(start,-1,'Missing shared contact footer');
+      const end=html.indexOf('</footer>',start);
+      assert.notEqual(end,-1,'Unclosed contact footer');
+      return html.slice(start,end+'</footer>'.length);
+    };
+    const homeFooter=footerMarkup(homeHtml);
+    const normalizeLinks=markup=>markup.replace(/href="[^"]*"/g,'href="$link"');
+    const normalizedHomeFooter=normalizeLinks(homeFooter);
+    const sharedContact=homeFooter.slice(0,homeFooter.indexOf('<div class="footer-bottom'));
+    for(const slug of slugs){
+      const html=await (await fetch(origin+prefix+'/cases/'+slug)).text();
+      const footer=footerMarkup(html);
+      assert.equal(normalizeLinks(footer),normalizedHomeFooter,slug+' footer markup differs from home');
+      assert.equal(footer.slice(0,footer.indexOf('<div class="footer-bottom')),sharedContact,slug);
+      assert.doesNotMatch(html,/class="case-footer"/);
+      const nav=footer.slice(footer.indexOf('<nav aria-label='));
+      const home=prefix||'/';
+      for(const section of ['projetos','sobre','contato','hero']) assert.ok(nav.includes(`href="${home}#${section}"`),`${slug} footer missing ${section} destination`);
+    }
+  }
+});
+
+test('editorial copy keeps outcomes, targets, authorship and evidence bounded',async()=>{
+  const home=JSON.parse(await readFile(path.join(root,'content.json'),'utf8'));
   const studies=JSON.parse(await readFile(path.join(root,'case-studies.json'),'utf8'));
-  const plain=s=>s.replace(/<[^>]*>/g,'').replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&#39;',"'").replace(/\s+/g,' ').trim();
-  for(const [route,original] of Object.entries(originals)){
-    const paragraphs=[...original.html.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/g)].map(m=>plain(m[1]));
+  for(const lang of ['pt','en']){
+    const cards=home.locales[lang].projects.items;
+    const bradescoCard=cards.find(item=>item.slug==='bradesco-seguros');
+    const bradesco=bradescoCard.description;
+    const conecta=cards.find(item=>item.slug==='conecta').description;
+    const mobinft=cards.find(item=>item.slug==='mobinft').description;
+    assert.match(bradesco,lang==='pt'?/mais de 20 fluxos em cinco funcionalidades/i:/more than 20 workflows across five features/i);
+    assert.match(bradesco,lang==='pt'?/economia aproximada de 10 horas semanais.*por funcionário/i:/approximately 10 hours of manual work saved per employee each week/i);
+    assert.match(bradescoCard.cta,lang==='pt'?/Ver versão pública/i:/View public case/i);
+    assert.match(bradescoCard.relatedDescription,lang==='pt'?/aproximada.*por funcionário.*restrita/i:/approximately.*per employee.*restricted/i);
+    assert.doesNotMatch(bradesco,/GPRS|automação|automation/i);
+    assert.match(conecta,lang==='pt'?/quatro semanas.*freelance/i:/four-week freelance project/i);
+    assert.match(conecta,lang==='pt'?/testes/i:/Testing informed/i);
+    assert.doesNotMatch(conecta,/50%|relatório interno|internal report|lançada|launched|after launch/i);
+    assert.match(mobinft,lang==='pt'?/estudo voluntário.*time de design/i:/volunteer UX study with a design team/i);
+    assert.match(mobinft,/wireframes/i);
+    assert.doesNotMatch(mobinft,/20%|six participants|five participants|seis participantes|cinco participantes|marketplace/i);
+    assert.match(home.locales[lang].ui.services,lang==='pt'?/Atuação/:/Practice/);
+    assert.equal(home.locales[lang].capabilities.items.length,5);
+    const capabilities=home.locales[lang].capabilities.items;
+    assert.deepEqual(capabilities.map(item=>item.title),lang==='pt'
+      ?['Pesquisa e testes','Fluxos e interfaces','Prototipação e entrega','Design System','IA no processo']
+      :['Research and testing','Workflows and interfaces','Prototyping and delivery','Design System','AI in my workflow']);
+    const expectedOpenings=lang==='pt'?['Conduzo ','Mapeio ','Crio ','Crio ','Uso ']:Array(5).fill('I ');
+    assert.deepEqual(capabilities.map(item=>expectedOpenings.some(opening=>item.description.startsWith(opening))),Array(5).fill(true));
+    assert.equal(home.locales[lang].contact.title,lang==='pt'?'Tem um problema complexo para resolver?':'Have a complex problem to solve?');
+    assert.equal(home.locales[lang].contact.description,lang==='pt'
+      ?'Conte-me onde seu produto ou sua equipe está travando. Posso investigar com usuários, testar alternativas e desenhar os próximos fluxos. Escreva por e-mail ou LinkedIn.'
+      :'Tell me where your product or team is getting stuck. I can investigate with users, test options, and design the next workflows. Reach out by email or on LinkedIn.');
+    assert.match(home.locales[lang].about.education[0].school,lang==='pt'?/em andamento/:/in progress/);
+  }
+  const body=study=>[
+    study.category,
+    study.title,
+    study.subtitle,
+    ...study.metrics.flatMap(metric=>[metric.kind,metric.value,metric.unit,metric.label,metric.evidence]),
+    ...(study.heroMedia?[study.heroMedia.alt]:[]),
+    study.meta.role,
+    study.meta.period,
+    ...study.meta.focus,
+    ...study.sections.flatMap(section=>[
+      section.eyebrow,
+      section.heading,
+      ...section.paragraphs,
+      ...(section.notes||[]),
+      ...(section.media||[]).flatMap(media=>[media.alt,media.caption])
+    ]),
+    study.seo.title,
+    study.seo.description
+  ].join(' ');
+
+  for(const [route,lang] of [['/cases/bradesco-seguros','pt'],['/en/cases/bradesco-seguros','en']]){
     const study=studies[route];
-    assert.equal(study.subtitle,paragraphs.shift(),route+' summary');
-    assert.equal(study.sections.flatMap(s=>s.paragraphs).join(' '),paragraphs.join(' '),route+' narrative');
-    for(const note of study.sections.flatMap(s=>s.notes||[]))assert.ok(plain(original.html).includes(note),route+' notes must be published facts');
+    const copy=body(study);
+    assert.match(copy,lang==='pt'?/Redesenhei fluxos.*mais de 20 fluxos em cinco funcionalidades/i:/I redesigned workflows.*more than 20 workflows across five features/i);
+    assert.match(copy,lang==='pt'?/A comparação de tempos antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário/i:/A before-and-after time comparison indicated approximately 10 hours of manual work saved per employee each week/i);
+    assert.match(copy,lang==='pt'?/As anotações e os protótipos também ajudaram a alinhar requisitos técnicos e de negócio/i:/The annotations and prototypes also helped teams align on technical and business requirements/i);
+    assert.match(copy,lang==='pt'?/Parte deste projeto está sob acordo de confidencialidade/i:/Part of this project is covered by a confidentiality agreement/i);
+    assert.match(copy,lang==='pt'?/Product Designer pela Capgemini/i:/Product Designer at Capgemini/i);
+    assert.doesNotMatch(copy,/GPRS|regulatório|regulatory|automação|automation/i);
+    assert.equal(study.metrics[0].value,'≈10');
+    assert.equal(study.metrics[0].unit,lang==='pt'?'h/semana':'h/week');
+    assert.match(study.metrics[0].label,lang==='pt'?/trabalho manual.*por funcionário/:/manual work per employee/);
+    assert.match(study.metrics[0].evidence,lang==='pt'?/comparação de tempos antes e depois/i:/before-and-after time comparison/i);
+    const approach=study.sections.find(section=>section.id==='approach');
+    assert.match(approach.paragraphs.join(' '),lang==='pt'?/Desenvolvi mais de 20 fluxos em cinco funcionalidades/i:/I developed more than 20 workflows across five features/i);
+    assert.match(approach.paragraphs.join(' '),lang==='pt'?/anotações para tornar as regras e os estados compreensíveis/i:/annotations that helped the team understand the rules and system states/i);
+    const disclosure=study.sections.at(-1);
+    assert.equal(disclosure.id,'disclosure');
+    assert.equal(disclosure.contactLink,true);
+    assert.match(study.seo.description,lang==='pt'?/comparação de tempos antes e depois.*aproximada.*restrita/i:/before-and-after time comparison.*approximately.*restricted/i);
+    const media=studies[route].sections.flatMap(section=>section.media||[]);
+    assert.deepEqual(media,[]);
+    const homeHtml=await (await fetch(origin+(lang==='en'?'/en':''))).text();
+    assert.match(homeHtml,/src="\/assets\/banner-bradesco-negociacao\.svg"/);
+    const caseHtml=await (await fetch(origin+route)).text();
+    assert.match(caseHtml,/study-hero-cover[\s\S]*banner-bradesco-negociacao\.svg/);
+    assert.ok(caseHtml.includes(`name="description" content="${study.seo.description}"`));
+    const disclosureMarkup=caseHtml.split('<section class="study-section study-container" id="disclosure"')[1].split('</section>')[0];
+    assert.match(disclosureMarkup,/href="mailto:uxdanieljr@gmail\.com"/);
+    assert.match(disclosureMarkup,/href="https:\/\/www\.linkedin\.com\/in\/dccarvalhojr\//);
+    assert.ok(caseHtml.indexOf('id="disclosure"')<caseHtml.indexOf('class="study-more"'));
+  }
+
+  for(const [route,lang] of [['/cases/conecta','pt'],['/en/cases/conecta','en']]){
+    const study=studies[route];
+    const copy=body(study);
+    assert.equal(study.metrics[0].value,'4');
+    assert.equal(study.metrics[0].unit,lang==='pt'?'semanas':'weeks');
+    assert.match(study.meta.role,/freelance/i);
+    assert.match(copy,lang==='pt'?/testes de usabilidade/i:/usability testing/i);
+    assert.match(copy,lang==='pt'?/priorizar melhorias pelo impacto esperado e pela viabilidade/i:/prioritize improvements by expected impact and feasibility/i);
+    assert.doesNotMatch(copy,/50%|relatório interno|internal report|lançamento|launched|after launch/i);
+    assert.doesNotMatch(copy,/maior adesão|higher treatment adherence|retenção|retention|drop-off/i);
+    assert.match(copy,/quatro semanas|four weeks/i);
+  }
+
+  for(const [route,lang] of [['/cases/mobinft','pt'],['/en/cases/mobinft','en']]){
+    const study=studies[route];
+    const copy=body(study);
+    assert.equal(study.metrics[0].kind,'qualitative');
+    assert.match(copy,lang==='pt'?/Estudo voluntário/i:/Volunteer UX study/i);
+    assert.match(copy,lang==='pt'?/protótipos testáveis/i:/testable prototypes/i);
+    assert.match(copy,lang==='pt'?/UX Designer em equipe/i:/UX Designer on a team/i);
+    assert.doesNotMatch(copy,/20%|six participants|five participants|seis participantes|cinco participantes|marketplace/i);
   }
 });
 
@@ -132,22 +289,22 @@ test('metric semantics, empty-media chapters and public media boundaries',async(
     assert.equal(study.metrics.length,1);
     assert.ok(study.sections.some(s=>!s.media?.length),'Must accept chapters without images');
     const media=study.sections.flatMap(s=>s.media||[]);
-    assert.ok(media.every(m=>m.caption&&m.alt&&m.src.startsWith('/assets/')));
+    assert.ok(media.every(m=>m.caption&&m.alt!==undefined&&m.src.startsWith('/assets/')));
     if(study.slug==='bradesco-seguros'){
       assert.equal(study.metrics[0].value,'≈10');
-      assert.match(study.metrics[0].label,/funcionário|employee/);
-      assert.deepEqual(media.map(m=>m.src),['/assets/banner-bradesco-negociacao.svg']);
+      assert.ok(['h/semana','h/week'].includes(study.metrics[0].unit));
+      assert.equal(study.heroMedia.src,'/assets/banner-bradesco-negociacao.svg');
+      assert.equal(study.sections.at(-1).id,'disclosure');
+      assert.deepEqual(media,[]);
     }
     if(study.slug==='conecta'){
       assert.equal(study.metrics[0].value,'4');
-      assert.match(study.metrics[0].unit,/semanas|weeks/);
-      assert.ok(study.sections.flatMap(s=>s.paragraphs).join(' ').includes('50%'));
+      assert.ok(study.sections.flatMap(s=>s.paragraphs).join(' ').includes('four weeks')||study.sections.flatMap(s=>s.paragraphs).join(' ').includes('quatro semanas'));
       assert.ok(media.filter(m=>m.region).length===3);
     }
     if(study.slug==='mobinft'){
-      assert.equal(study.metrics[0].value,'2');
-      assert.match(study.metrics[0].evidence,/6.*5/);
-      assert.ok(!study.metrics.some(m=>m.value.includes('20')));
+      assert.equal(study.metrics[0].kind,'qualitative');
+      assert.equal(study.metrics[0].unit,'');
     }
   }
 });

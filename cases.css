@@ -6,11 +6,14 @@
 .study-hero .eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; }
 .study-hero h1 { font-size: clamp(48px, 6vw, 88px); line-height: 1.05; font-weight: 700; letter-spacing: -.05em; margin-top: 24px; }
 .study-subtitle { font-size: clamp(18px, 1.6vw, 22px); line-height: 1.6; color: var(--muted); max-width: 900px; margin-top: 24px; }
+.study-hero-cover { margin: clamp(32px, 4vw, 56px) 0 0; border: 1px solid var(--line); background: var(--placeholder); }
+.study-hero-cover img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
 .study-metrics { display: flex; flex-wrap: wrap; gap: 40px 80px; margin: 48px 0 0; }
 .study-metric { max-width: 350px; display: flex; flex-direction: column; }
 .study-metric dt { order: 2; font-size: 16px; color: var(--muted); line-height: 1.5; margin-top: 10px; }
 .study-metric dd { order: 1; margin: 0; display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; font-family: var(--font-heading); font-weight: 700; color: var(--accent); font-size: clamp(48px, 4.5vw, 66px); line-height: 1; letter-spacing: -.045em; }
 .study-metric .metric-unit { font-size: clamp(22px, 2vw, 30px); letter-spacing: -.02em; }
+.study-metric-qualitative dd:not(.metric-evidence) { font-size: clamp(30px, 3.4vw, 46px); line-height: 1.08; letter-spacing: -.035em; max-width: 24ch; }
 .study-metric .metric-evidence { display: block; order: 3; color: var(--muted); line-height: 1.5; font-size: 12px; letter-spacing: 0; margin-top: 12px; }
 .study-meta { border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr .7fr 2.3fr; gap: 32px; margin: 40px 0 0; padding-top: 32px; }
 .study-meta dt { font-size: 11px; color: var(--slate); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 12px; }
@@ -54,7 +57,7 @@
 .study-more-link { display: flex; flex-direction: column; height: 100%; color: var(--text); background: var(--card); border: 2px solid var(--line-strong); padding: clamp(16px, 2vw, 28px); transition: border-color .18s, box-shadow .18s, translate .18s; }
 .study-more-link:hover { color: var(--text); }
 .study-more-link:hover, .study-more-link:focus-visible { border-color: var(--accent); box-shadow: 3px 3px 0 var(--accent); translate: -2px -2px; }
-.study-more-link > img { display: block; width: 100%; height: auto; aspect-ratio: 580/326; object-fit: contain; border-radius: var(--radius); background: var(--placeholder); }
+.study-more-link > img, .study-more-placeholder { display: block; width: 100%; height: auto; aspect-ratio: 580/326; object-fit: contain; border-radius: var(--radius); background: var(--placeholder); }
 .study-more-link h3 { font-size: clamp(25px, 2.3vw, 32.4px); line-height: 1.1; font-weight: 600; letter-spacing: -.03em; margin-top: 24px; }
 .study-more-link p { font-size: clamp(16px, 1.4vw, 19.44px); line-height: 1.5; color: var(--muted); margin-block: 12px 24px; }
 .study-more-link .button { align-self: flex-start; margin-top: auto; min-height: 44px; font-size: 15px; }
@@ -85,6 +88,7 @@
   .study-hero { width: 100%; border-inline: 0; }
   .study-hero-inner { padding-top: 56px; }
   .study-metrics { margin-top: 32px; }
+  .study-hero-cover { margin-top: 32px; }
   .study-meta dd span + span::before { margin-inline: 8px; }
   .study-lightbox { padding: 12px; }
   .study-lightbox-toolbar { align-items: flex-start; flex-direction: column; gap: 12px; }
