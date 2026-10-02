@@ -73,7 +73,26 @@ if (oldAnchor && document.getElementById(oldAnchor)) {
 }
 syncLanguageHash();
 
-// Native scrolling remains the default for keyboard, touch, reduced motion and no-JS.
+// Keep browser/hash navigation instant by default; animate only explicit pointer clicks.
+document.addEventListener('click', event => {
+  if (event.defaultPrevented || event.detail === 0 || event.button !== 0 ||
+      (event.pointerType && event.pointerType !== 'mouse') ||
+      !window.matchMedia('(hover: hover) and (pointer: fine)').matches ||
+      event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  const link = event.target.closest('a[href]');
+  if (!link || (link.target && link.target !== '_self')) return;
+  const destination = new URL(link.href, location.href);
+  if (destination.origin !== location.origin || destination.pathname !== location.pathname ||
+      destination.search !== location.search || !destination.hash) return;
+  const target = document.getElementById(decodeURIComponent(destination.hash.slice(1)));
+  if (!target) return;
+  event.preventDefault();
+  history.pushState(history.state, '', destination.href);
+  syncLanguageHash();
+  target.scrollIntoView({behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start'});
+});
+
+// Native scrolling remains the default for keyboard, touch, coarse pointers, reduced motion and no-JS.
 if (!reducedMotion.matches && document.querySelector('.hero') && (!location.hash || location.hash === '#hero')) {
   document.documentElement.classList.add('motion-enabled');
 }
