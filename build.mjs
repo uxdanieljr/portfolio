@@ -5,21 +5,31 @@ import { caseStudyPage } from './case-components.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const esc = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
-const pdf = '/Daniel%20Carvalho%20-%20Product%20Designer%202026.pdf';
+const resumeFiles = {
+  pt: { href: '/Daniel%20Carvalho%20-%20Product%20Designer%202026.pdf', name: 'Daniel Carvalho - Product Designer 2026.pdf' },
+  en: { href: '/Daniel%20Carvalho%20-%20Product%20Designer%20Resume%202026.pdf', name: 'Daniel Carvalho - Product Designer Resume 2026.pdf' }
+};
 const mail = 'mailto:uxdanieljr@gmail.com';
 const linkedin = 'https://www.linkedin.com/in/dccarvalhojr/';
 const canonicalOrigin = 'https://danielcarvalhodesign.com';
 
 function nav(c, lang, route, isCase) {
   const u = c.ui;
+  const resume = resumeFiles[lang] ?? resumeFiles.pt;
   const home = lang === 'en' ? '/en' : '/';
   const localRoute = route.replace(/^\/en(?=\/|$)/, '') || '/';
   const pt = localRoute;
   const en = localRoute === '/' ? '/en' : '/en' + localRoute;
+  const menuToggle = isCase ? '' :
+    '<button class="menu-toggle" type="button" aria-label="' + esc(u.openMenu) +
+    '" aria-expanded="false" aria-controls="primary-navigation" data-open-label="' + esc(u.openMenu) +
+    '" data-close-label="' + esc(u.closeMenu) + '" hidden><span class="menu-toggle-icon" aria-hidden="true"></span><span>' +
+    esc(u.menu) + '</span></button>';
+  const navClass = isCase ? 'case-nav' : 'home-nav';
   return `<a class="skip-link" href="#main">${esc(u.skip)}</a>
-  <header class="navigation"><nav class="nav-inner container" aria-label="${esc(u.nav)}">
+  <header class="navigation"><nav class="nav-inner container ${navClass}" aria-label="${esc(u.nav)}">
     <a class="wordmark" href="${home}#hero">${esc(isCase ? u.back : c.header.name)}</a>
-    ${isCase ? '' : `<div class="nav-links"><a href="#projetos">${esc(u.projects)}</a><a href="#sobre">${esc(u.about)}</a><a href="#servicos">${esc(u.services)}</a><a href="${pdf}" download="Daniel Carvalho - Product Designer 2026.pdf">${esc(u.resume)}</a><a href="#contato">${esc(u.contact)}</a></div>`}
+    ${menuToggle}${isCase ? '' : `<div class="nav-links" id="primary-navigation"><a href="#projetos">${esc(u.projects)}</a><a href="#sobre">${esc(u.about)}</a><a href="#servicos">${esc(u.services)}</a><a href="${resume.href}" download="${esc(resume.name)}">${esc(u.resume)}</a><a href="#contato">${esc(u.contact)}</a></div>`}
     <div class="nav-tools"><div class="language-switch" role="group" aria-label="${esc(u.language)}"><a href="${pt}" lang="pt-BR" hreflang="pt-BR" ${lang === 'pt' ? 'aria-current="page"' : ''}>PT</a><span aria-hidden="true">/</span><a href="${en}" lang="en" hreflang="en" ${lang === 'en' ? 'aria-current="page"' : ''}>EN</a></div><button class="theme-switch" type="button" aria-pressed="false" data-dark="${esc(u.themeDark)}" data-light="${esc(u.themeLight)}">${esc(u.themeDark)}</button></div>
   </nav></header>`;
 }
@@ -39,12 +49,13 @@ function homeFooter(c, lang, isCase = false) {
 function homePage(c, lang) {
   const u = c.ui;
   const prefix = lang === 'en' ? '/en' : '';
+  const resume = resumeFiles[lang] ?? resumeFiles.pt;
   return `<main id="main">
     <section class="hero" id="hero" aria-labelledby="hero-title"><div class="hero-main container"><p class="eyebrow">${esc(c.hero.eyebrow)}</p><h1 id="hero-title"><span class="hero-line-mask"><span class="hero-line">${esc(c.hero.title[0])}</span></span><span class="hero-line-mask"><span class="hero-line secondary-line">${esc(c.hero.title[1])}</span></span></h1></div>
-    <div class="hero-bottom"><div class="hero-bottom-inner container"><p class="hero-description">${esc(c.hero.description)}</p><div class="hero-actions"><a class="button primary" href="#projetos">${esc(c.hero.cta)}</a><a class="button outline" href="${pdf}" download="Daniel Carvalho - Product Designer 2026.pdf">${esc(c.hero.resume)}</a></div><a class="scroll-link" href="#projetos">${esc(u.scroll)}</a></div></div></section>
+    <div class="hero-bottom"><div class="hero-bottom-inner container"><p class="hero-description">${esc(c.hero.description)}</p><div class="hero-actions"><a class="button primary" href="#projetos">${esc(c.hero.cta)}</a><a class="button outline" href="${resume.href}" download="${esc(resume.name)}">${esc(c.hero.resume)}</a></div><a class="scroll-link" href="#projetos">${esc(u.scroll)}</a></div></div></section>
     <section class="work section" id="projetos" aria-labelledby="work-title"><div class="container"><header class="section-heading work-heading"><div class="work-heading-copy"><p class="eyebrow">${esc(c.projects.eyebrow)}</p><p class="section-intro">${esc(c.projects.intro)}</p></div><h2 id="work-title" data-reveal>${esc(c.projects.title)}</h2></header></div>
     <div class="project-stack container" style="--stack-count:${c.projects.items.length}" aria-label="${esc(c.projects.eyebrow)}">${c.projects.items.map((p,index) => `<article class="project-card" style="--stack-layer:${index+1};--stack-target-scale:${(1 - (c.projects.items.length - index - 1) * .04).toFixed(2)}"><a class="project-card-surface" href="${prefix}/cases/${p.slug}" aria-labelledby="project-title-${p.slug} project-cta-${p.slug}" aria-describedby="project-description-${p.slug}">${p.image ? `<span class="project-media-link"><img class="project-image" src="${esc(p.image)}" alt="${esc(p.alt)}" loading="lazy" decoding="async" width="1600" height="900" draggable="false"></span>` : '<span class="project-media-link"><span class="project-image project-image-placeholder image-placeholder" aria-hidden="true"></span></span>'}<div class="project-copy"><span class="project-index" aria-hidden="true">${String(index+1).padStart(2,'0')} / ${String(c.projects.items.length).padStart(2,'0')}</span><p class="project-category">${esc(p.category)}</p><h3 id="project-title-${p.slug}">${esc(p.title)}</h3><p id="project-description-${p.slug}">${esc(p.description)}</p><span class="button outline" id="project-cta-${p.slug}">${esc(p.cta)}</span></div></a></article><div class="project-stack-spacer" aria-hidden="true"></div>`).join('')}</div></section>
-    <section class="about" id="sobre" aria-labelledby="about-title"><figure class="about-figure" data-reveal><img class="portrait-image" src="/assets/foto_site_portfolio.png" alt="${esc(u.portrait)}" width="900" height="1200" loading="lazy" decoding="async"></figure><div class="about-content"><header class="section-heading"><h2 id="about-title" data-reveal>${esc(c.about.title)}</h2></header><div class="about-copy">${c.about.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}<div class="about-bottom"><div><p class="eyebrow">${esc(u.education)}</p><ul class="education-list">${c.about.education.map(e=>`<li><strong>${esc(e.title)}</strong><span>${esc(e.school)}</span></li>`).join('')}</ul></div><a class="button outline" href="${pdf}" download="Daniel Carvalho - Product Designer 2026.pdf">${esc(u.download)}</a></div></div></div></section>
+    <section class="about" id="sobre" aria-labelledby="about-title"><figure class="about-figure" data-reveal><img class="portrait-image" src="/assets/foto_site_portfolio.png" alt="${esc(u.portrait)}" width="900" height="1200" loading="lazy" decoding="async"></figure><div class="about-content"><header class="section-heading"><h2 id="about-title" data-reveal>${esc(c.about.title)}</h2></header><div class="about-copy">${c.about.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}<div class="about-bottom"><div><p class="eyebrow">${esc(u.education)}</p><ul class="education-list">${c.about.education.map(e=>`<li><strong>${esc(e.title)}</strong><span>${esc(e.school)}</span></li>`).join('')}</ul></div><a class="button outline" href="${resume.href}" download="${esc(resume.name)}">${esc(u.download)}</a></div></div></div></section>
     <section class="capabilities section" id="servicos" aria-labelledby="capabilities-title"><div class="container"><header class="section-heading"><p class="eyebrow">${esc(c.capabilities.eyebrow)}</p><h2 id="capabilities-title" data-reveal>${esc(c.capabilities.title)}</h2></header><ul class="capability-list">${c.capabilities.items.map(item=>`<li><h3>${esc(item.title)}</h3><p>${esc(item.description)}</p></li>`).join('')}</ul></div></section>
   </main>`;
 }

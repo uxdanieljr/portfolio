@@ -17,6 +17,49 @@ themeButton?.addEventListener('click', () => {
   try { localStorage.setItem('daniel-portfolio-theme', dark ? 'dark' : 'light'); } catch { /* Storage may be unavailable. */ }
   syncThemeButton();
 });
+const menuButton = document.querySelector('.menu-toggle');
+if (menuButton) {
+  const nav = menuButton.closest('.nav-inner');
+  const links = nav?.querySelector('.nav-links');
+  const mobileNav = window.matchMedia('(max-width: 760px)');
+  function setMobileMenu(open, restoreFocus = false) {
+    if (!nav) return;
+    nav.dataset.mobileMenu = open ? 'open' : 'closed';
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? menuButton.dataset.closeLabel : menuButton.dataset.openLabel);
+    if (restoreFocus) menuButton.focus({preventScroll:true});
+  }
+  function syncMobileNav() {
+    menuButton.hidden = !mobileNav.matches;
+    if (mobileNav.matches) {
+      setMobileMenu(false);
+      return;
+    }
+    nav?.removeAttribute('data-mobile-menu');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', menuButton.dataset.openLabel);
+  }
+  menuButton.addEventListener('click', () => {
+    setMobileMenu(menuButton.getAttribute('aria-expanded') !== 'true');
+  });
+  links?.addEventListener('click', event => {
+    if (mobileNav.matches && event.target.closest('a')) setMobileMenu(false, true);
+  });
+  nav?.addEventListener('focusout', event => {
+    if (mobileNav.matches && nav.dataset.mobileMenu === 'open' && !nav.contains(event.relatedTarget)) setMobileMenu(false);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && nav?.dataset.mobileMenu === 'open') {
+      event.preventDefault();
+      setMobileMenu(false, true);
+    }
+  });
+  document.addEventListener('pointerdown', event => {
+    if (mobileNav.matches && nav?.dataset.mobileMenu === 'open' && !nav.contains(event.target)) setMobileMenu(false);
+  });
+  mobileNav.addEventListener('change', syncMobileNav);
+  syncMobileNav();
+}
 document.querySelectorAll('[data-year]').forEach(element => { element.textContent = String(new Date().getFullYear()); });
 function syncLanguageHash() {
   document.querySelectorAll('.language-switch a').forEach(link => { link.hash = location.hash; });
@@ -135,6 +178,10 @@ if (stack) {
     }
   }
 
+  if (navigation && 'ResizeObserver' in window) {
+    const navigationObserver = new ResizeObserver(measureStack);
+    navigationObserver.observe(navigation);
+  }
   stack.addEventListener('focusin', event => {
     if (stack.dataset.stacked !== 'true') return;
     const card = event.target.closest('.project-card');
@@ -150,55 +197,6 @@ if (stack) {
   document.fonts?.ready.then(measureStack);
   stack.querySelectorAll('img').forEach(image => image.addEventListener('load',measureStack,{once:true}));
   measureStack();
-}
-
-// Public case media keeps a direct image link when JavaScript is unavailable.
-const imageDialog = document.querySelector('.study-lightbox');
-if (imageDialog) {
-  const image = imageDialog.querySelector('[data-lightbox-image]');
-  const viewport = imageDialog.querySelector('.study-lightbox-scroll');
-  const scaleOutput = imageDialog.querySelector('[data-image-scale]');
-  const caption = imageDialog.querySelector('[data-lightbox-caption]');
-  const closeButton = imageDialog.querySelector('[data-close-image]');
-  let trigger = null;
-  let scale = 1;
-  let initialWidth = 0;
-  function applyScale() {
-    image.style.width = `${initialWidth * scale}px`;
-    scaleOutput.value = `${Math.round(scale * 100)}%`;
-    imageDialog.querySelector('[data-image-zoom="-1"]').disabled = scale <= 1;
-    imageDialog.querySelector('[data-image-zoom="1"]').disabled = scale >= 4;
-  }
-  document.querySelectorAll('[data-zoom-image]').forEach(link => {
-    link.addEventListener('click', event => {
-      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      trigger = link;
-      scale = 1;
-      image.alt = link.dataset.imageAlt;
-      caption.textContent = link.dataset.imageCaption;
-      imageDialog.showModal();
-      document.documentElement.classList.add('image-dialog-open');
-      image.onload = () => {
-        initialWidth = Math.min(image.naturalWidth, viewport.clientWidth - 24);
-        applyScale();
-        viewport.scrollTo(0, 0);
-      };
-      image.src = link.href;
-      closeButton.focus();
-    });
-  });
-  imageDialog.querySelectorAll('[data-image-zoom]').forEach(button => {
-    button.addEventListener('click', () => {
-      scale = Math.max(1, Math.min(4, scale + Number(button.dataset.imageZoom) * .5));
-      applyScale();
-    });
-  });
-  closeButton.addEventListener('click', () => imageDialog.close());
-  imageDialog.addEventListener('close', () => {
-    document.documentElement.classList.remove('image-dialog-open');
-    trigger?.focus({preventScroll:true});
-  });
 }
 
 // Static routes can finish measuring after the browser's first hash jump.

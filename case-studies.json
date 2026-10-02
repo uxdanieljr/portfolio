@@ -5,10 +5,6 @@
     "category": "Sistema interno · Seguros",
     "title": "Bradesco Seguros — fluxos para um sistema interno",
     "subtitle": "Redesenhei fluxos de um sistema interno com regras de negócio complexas. Ao longo do projeto, entreguei mais de 20 fluxos em cinco funcionalidades; uma comparação de tempos antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário.",
-    "heroMedia": {
-      "src": "/assets/banner-bradesco-negociacao.svg",
-      "alt": "Banner da Bradesco Seguros sobre negociação, com interface do sistema."
-    },
     "metrics": [
       {
         "value": "≈10",
@@ -33,6 +29,16 @@
         "heading": "Definir o sistema desde o início",
         "paragraphs": [
           "O projeto estava no começo do discovery. A equipe precisava entender as tarefas dos usuários e definir os primeiros fluxos para discussão e validação."
+        ],
+        "media": [
+          {
+            "src": "/assets/banner-bradesco-negociacao.svg",
+            "alt": "Banner da Bradesco Seguros sobre negociação, com interface do sistema.",
+            "width": 612,
+            "height": 344,
+            "span": 6,
+            "caption": "Banner do case Bradesco Seguros."
+          }
         ]
       },
       {
@@ -75,12 +81,7 @@
       "focus": "Foco",
       "more": "Veja também",
       "view": "Ver projeto",
-      "backProjects": "Voltar aos projetos",
-      "zoom": "Ampliar imagem",
-      "close": "Fechar imagem",
-      "zoomIn": "Aumentar zoom",
-      "zoomOut": "Diminuir zoom",
-      "zoomHelp": "Use os controles de zoom e role para explorar a imagem. Pressione Esc para fechar."
+      "backProjects": "Voltar aos projetos"
     },
     "seo": {
       "title": "Bradesco Seguros | Fluxos para um sistema interno | Daniel Carvalho",
@@ -103,6 +104,12 @@
         "unit": "semanas",
         "label": "Da pesquisa aos protótipos testados",
         "evidence": "Projeto freelance realizado entre dez. 2024 e jan. 2025."
+      },
+      {
+        "value": "+50%",
+        "unit": "",
+        "label": "Aumento médio no tempo de uso do aplicativo",
+        "evidence": "Medição interna após o lançamento."
       }
     ],
     "meta": {
@@ -125,6 +132,7 @@
         "media": [
           {
             "src": "/assets/Thumbnail-conecta.svg",
+            "surface": "conecta-cover",
             "alt": "",
             "caption": "Conecta, aplicativo de acompanhamento nutricional.",
             "width": 1920,
@@ -168,51 +176,34 @@
         ],
         "media": [
           {
-            "src": "/assets/case-conecta/img-conecta-prints-atual.png",
+            "src": "/assets/case-conecta/conecta-activities-mobile.png",
             "alt": "Tela de atividades e progresso do Conecta",
             "caption": "Atividades e progresso no protótipo redesenhado.",
-            "width": 1600,
-            "height": 1349,
-            "span": 2,
-            "region": [
-              817,
-              1043,
-              119,
-              259
-            ]
+            "width": 375,
+            "height": 812,
+            "span": 2
           },
           {
-            "src": "/assets/case-conecta/img-conecta-prints-atual.png",
+            "src": "/assets/case-conecta/conecta-history-mobile.png",
             "alt": "Tela de histórico de tarefas do Conecta",
             "caption": "Histórico de tarefas organizado por semana e status no protótipo.",
-            "width": 1600,
-            "height": 1349,
-            "span": 2,
-            "region": [
-              971,
-              926,
-              119,
-              258
-            ]
+            "width": 375,
+            "height": 812,
+            "span": 2
           },
           {
-            "src": "/assets/case-conecta/img-conecta-prints-atual.png",
+            "src": "/assets/case-conecta/conecta-tracking-mobile.png",
             "alt": "Tela de registros e medidas do Conecta",
             "caption": "Registros e medidas no protótipo do aplicativo redesenhado.",
-            "width": 1600,
-            "height": 1349,
-            "span": 2,
-            "region": [
-              1433,
-              750,
-              119,
-              259
-            ]
+            "width": 375,
+            "height": 812,
+            "span": 2
           },
           {
             "src": "/assets/case-conecta/img-conecta-prints-atual.png",
+            "surface": "conecta-prototype",
             "alt": "Montagem completa das telas de alta fidelidade do Conecta",
-            "caption": "Visão geral da proposta de interface. Amplie para explorar a montagem completa.",
+            "caption": "Visão geral da proposta de interface.",
             "width": 1600,
             "height": 1349,
             "span": 6
@@ -222,9 +213,10 @@
       {
         "id": "impact",
         "eyebrow": "Resultado",
-        "heading": "Pesquisa orientou a entrega",
+        "heading": "Resultados e impacto",
         "paragraphs": [
-          "Entrevistas, priorização e testes ajudaram a ajustar a proposta dentro de um prazo curto. O projeto foi concluído em quatro semanas."
+          "Entrevistas, priorização e testes ajudaram a ajustar a proposta dentro de um prazo curto. O projeto foi concluído em quatro semanas.",
+          "A proposta orienta o primeiro acesso passo a passo e reorganiza a exibição de tarefas. Uma medição interna após o lançamento apontou aumento médio de **50%** no tempo de uso do aplicativo. Esse engajamento facilitou o acompanhamento clínico pelos nutricionistas, resultando em maior adesão ao tratamento."
         ]
       }
     ],
@@ -234,12 +226,7 @@
       "focus": "Foco",
       "more": "Veja também",
       "view": "Ver projeto",
-      "backProjects": "Voltar aos projetos",
-      "zoom": "Ampliar imagem",
-      "close": "Fechar imagem",
-      "zoomIn": "Aumentar zoom",
-      "zoomOut": "Diminuir zoom",
-      "zoomHelp": "Use os controles de zoom e role para explorar a imagem. Pressione Esc para fechar."
+      "backProjects": "Voltar aos projetos"
     },
     "seo": {
       "title": "Conecta | Redesign de um app de nutrição | Daniel Carvalho",
@@ -312,7 +299,7 @@
           {
             "src": "/assets/case-mobinft/img-hifi-mobinft.png",
             "alt": "Protótipo do fluxo de compra de chave digital da Mobinft",
-            "caption": "Telas de protótipo do fluxo de compra da chave digital. Amplie para explorar.",
+            "caption": "Telas de protótipo do fluxo de compra da chave digital.",
             "width": 700,
             "height": 870,
             "span": 6
@@ -326,12 +313,7 @@
       "focus": "Foco",
       "more": "Veja também",
       "view": "Ver projeto",
-      "backProjects": "Voltar aos projetos",
-      "zoom": "Ampliar imagem",
-      "close": "Fechar imagem",
-      "zoomIn": "Aumentar zoom",
-      "zoomOut": "Diminuir zoom",
-      "zoomHelp": "Use os controles de zoom e role para explorar a imagem. Pressione Esc para fechar."
+      "backProjects": "Voltar aos projetos"
     },
     "seo": {
       "title": "Mobinft | Compra de chave digital em Web3 | Daniel Carvalho",
@@ -348,10 +330,6 @@
     "category": "Internal system · Insurance",
     "title": "Bradesco Seguros — workflows for an internal system",
     "subtitle": "I redesigned workflows for an internal system with complex business rules. I delivered more than 20 workflows across five features; a before-and-after time comparison indicated approximately 10 hours of manual work saved per employee each week.",
-    "heroMedia": {
-      "src": "/assets/banner-bradesco-negociacao.svg",
-      "alt": "Bradesco Seguros banner about negotiation, featuring the system interface."
-    },
     "metrics": [
       {
         "value": "≈10",
@@ -376,6 +354,16 @@
         "heading": "Define the system from the start",
         "paragraphs": [
           "The project was at the beginning of discovery. The team needed to understand users’ tasks and define initial workflows for discussion and validation."
+        ],
+        "media": [
+          {
+            "src": "/assets/banner-bradesco-negociacao.svg",
+            "alt": "Bradesco Seguros banner about negotiation, featuring the system interface.",
+            "width": 612,
+            "height": 344,
+            "span": 6,
+            "caption": "Bradesco Seguros case banner."
+          }
         ]
       },
       {
@@ -418,12 +406,7 @@
       "focus": "Focus",
       "more": "See more",
       "view": "View project",
-      "backProjects": "Back to selected work",
-      "zoom": "Enlarge image",
-      "close": "Close image",
-      "zoomIn": "Zoom in",
-      "zoomOut": "Zoom out",
-      "zoomHelp": "Use the zoom controls and scroll to explore the image. Press Esc to close."
+      "backProjects": "Back to selected work"
     },
     "seo": {
       "title": "Bradesco Seguros — workflows for an internal system | Daniel Carvalho",
@@ -446,6 +429,12 @@
         "unit": "weeks",
         "label": "From research to tested prototypes",
         "evidence": "Freelance project completed between Dec 2024 and Jan 2025."
+      },
+      {
+        "value": "+50%",
+        "unit": "",
+        "label": "Average increase in app usage time",
+        "evidence": "Internal measurement after launch."
       }
     ],
     "meta": {
@@ -468,6 +457,7 @@
         "media": [
           {
             "src": "/assets/Thumbnail-conecta.svg",
+            "surface": "conecta-cover",
             "alt": "",
             "caption": "Conecta, a nutrition care app.",
             "width": 1920,
@@ -511,51 +501,34 @@
         ],
         "media": [
           {
-            "src": "/assets/case-conecta/img-conecta-prints-atual.png",
-            "alt": "Tela de atividades e progresso do Conecta",
+            "src": "/assets/case-conecta/conecta-activities-mobile.png",
+            "alt": "Conecta activities and progress screen",
             "caption": "Activities and progress in the redesigned prototype.",
-            "width": 1600,
-            "height": 1349,
-            "span": 2,
-            "region": [
-              817,
-              1043,
-              119,
-              259
-            ]
+            "width": 375,
+            "height": 812,
+            "span": 2
           },
           {
-            "src": "/assets/case-conecta/img-conecta-prints-atual.png",
-            "alt": "Tela de histórico de tarefas do Conecta",
+            "src": "/assets/case-conecta/conecta-history-mobile.png",
+            "alt": "Conecta task history screen",
             "caption": "Task history organized by week and status in the prototype.",
-            "width": 1600,
-            "height": 1349,
-            "span": 2,
-            "region": [
-              971,
-              926,
-              119,
-              258
-            ]
+            "width": 375,
+            "height": 812,
+            "span": 2
           },
           {
-            "src": "/assets/case-conecta/img-conecta-prints-atual.png",
-            "alt": "Tela de registros e medidas do Conecta",
+            "src": "/assets/case-conecta/conecta-tracking-mobile.png",
+            "alt": "Conecta health measurements and records screen",
             "caption": "Records and measurements in the redesigned app prototype.",
-            "width": 1600,
-            "height": 1349,
-            "span": 2,
-            "region": [
-              1433,
-              750,
-              119,
-              259
-            ]
+            "width": 375,
+            "height": 812,
+            "span": 2
           },
           {
             "src": "/assets/case-conecta/img-conecta-prints-atual.png",
+            "surface": "conecta-prototype",
             "alt": "Montagem completa das telas de alta fidelidade do Conecta",
-            "caption": "Overview of the proposed interface. Enlarge to explore the full montage.",
+            "caption": "Overview of the proposed interface.",
             "width": 1600,
             "height": 1349,
             "span": 6
@@ -565,9 +538,10 @@
       {
         "id": "impact",
         "eyebrow": "Outcome",
-        "heading": "Research shaped the delivery",
+        "heading": "Results and impact",
         "paragraphs": [
-          "Interviews, prioritization, and testing helped the team adjust the proposal within a short timeframe. The project was completed in four weeks."
+          "Interviews, prioritization, and testing helped the team adjust the proposal within a short timeframe. The project was completed in four weeks.",
+          "The proposal guides patients through their first use of the app and reorganizes how tasks are displayed. An internal measurement after launch found an average **50%** increase in app usage time. This engagement made clinical follow-up easier for nutritionists, resulting in greater treatment adherence."
         ]
       }
     ],
@@ -577,12 +551,7 @@
       "focus": "Focus",
       "more": "See more",
       "view": "View project",
-      "backProjects": "Back to selected work",
-      "zoom": "Enlarge image",
-      "close": "Close image",
-      "zoomIn": "Zoom in",
-      "zoomOut": "Zoom out",
-      "zoomHelp": "Use the zoom controls and scroll to explore the image. Press Esc to close."
+      "backProjects": "Back to selected work"
     },
     "seo": {
       "title": "Conecta — nutrition app redesign | Daniel Carvalho",
@@ -655,7 +624,7 @@
           {
             "src": "/assets/case-mobinft/img-hifi-mobinft.png",
             "alt": "Mobinft digital key purchase flow prototype",
-            "caption": "Prototype screens for the digital key purchase flow. Enlarge to explore the screens.",
+            "caption": "Prototype screens for the digital key purchase flow.",
             "width": 700,
             "height": 870,
             "span": 6
@@ -669,12 +638,7 @@
       "focus": "Focus",
       "more": "See more",
       "view": "View project",
-      "backProjects": "Back to selected work",
-      "zoom": "Enlarge image",
-      "close": "Close image",
-      "zoomIn": "Zoom in",
-      "zoomOut": "Zoom out",
-      "zoomHelp": "Use the zoom controls and scroll to explore the image. Press Esc to close."
+      "backProjects": "Back to selected work"
     },
     "seo": {
       "title": "Mobinft — Web3 digital key purchase | Daniel Carvalho",

@@ -58,7 +58,11 @@ for(const lang of ['pt','en']){
         assert.match(html,/mailto:uxdanieljr@gmail\.com/);
         assert.match(html,/https:\/\/www\.linkedin\.com\/in\/dccarvalhojr\//);
         assert.ok(html.indexOf('id="disclosure"')<html.indexOf('class="study-more"'));
-        assert.match(html,/study-hero-cover[\s\S]*banner-bradesco-negociacao\.svg/);
+        assert.doesNotMatch(html,/study-hero-cover/);
+        const contextStart=html.indexOf('id="context"');
+        const contextEnd=html.indexOf('</section>',contextStart);
+        const bannerPosition=html.indexOf('/assets/banner-bradesco-negociacao.svg',contextStart);
+        assert.ok(contextStart<bannerPosition&&bannerPosition<contextEnd,'Bradesco banner should appear within the Context chapter');
       }
       if(route.endsWith('/mobinft')){
         assert.match(html,lang==='en'?/Volunteer UX study/:/Estudo voluntário/);
@@ -68,7 +72,44 @@ for(const lang of ['pt','en']){
   }
 }
 
-test('local assets match downloaded originals and have valid formats',async()=>{
+test('localized home navigation has a progressive mobile disclosure and cases keep the return bar',async()=>{
+  const content=JSON.parse(await readFile(path.join(root,'content.json'),'utf8'));
+  const css=await readFile(path.join(root,'styles.css'),'utf8');
+  const script=await readFile(path.join(root,'script.js'),'utf8');
+  assert.match(css,/@media \(max-width: 760px\)/);
+  assert.match(css,/\.nav-inner\.home-nav\[data-mobile-menu='closed'\]/);
+  assert.match(script,/event\.key === 'Escape'/);
+  assert.match(script,/aria-expanded/);
+  for(const [lang,prefix] of [['pt',''],['en','/en']]){
+    const home=await (await fetch(origin+(prefix||'/'))).text();
+    const nav=home.match(/<nav class="nav-inner container home-nav"[\s\S]*?<\/nav>/)?.[0];
+    assert.ok(nav,'Home navigation should have a stable mobile layout hook');
+    assert.ok(nav.includes('aria-label="'+content.locales[lang].ui.openMenu+'"'));
+    assert.ok(nav.includes('data-close-label="'+content.locales[lang].ui.closeMenu+'"'));
+    assert.match(nav,/aria-expanded="false" aria-controls="primary-navigation"/);
+    assert.match(nav,/class="nav-links" id="primary-navigation"/);
+    const caseHtml=await (await fetch(origin+prefix+'/cases/conecta')).text();
+    assert.match(caseHtml,/class="nav-inner container case-nav"/);
+    assert.doesNotMatch(caseHtml,/class="menu-toggle"/);
+  }
+});
+
+test('home resume downloads use the matching Portuguese or English PDF',async()=>{
+  const expected={
+    pt:{route:'/',href:'/Daniel%20Carvalho%20-%20Product%20Designer%202026.pdf',name:'Daniel Carvalho - Product Designer 2026.pdf'},
+    en:{route:'/en',href:'/Daniel%20Carvalho%20-%20Product%20Designer%20Resume%202026.pdf',name:'Daniel Carvalho - Product Designer Resume 2026.pdf'}
+  };
+  const manifest=JSON.parse((await readFile(path.join(root,'asset-manifest.json'),'utf8')).replace(/^\uFEFF/,''));
+  for(const [lang,{route,href,name}] of Object.entries(expected)){
+    const html=await (await fetch(origin+route)).text();
+    const downloads=[...html.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*download="([^"]+)"/g)].map(match=>({href:match[1],name:match[2]}));
+    assert.equal(downloads.length,3,`Expected three ${lang} resume links on the home page`);
+    assert.ok(downloads.every(item=>item.href===href&&item.name===name),`Unexpected ${lang} resume destination`);
+    assert.ok(manifest.some(item=>item.path===decodeURIComponent(href)&&item.path.endsWith('.pdf')),`Missing ${lang} resume asset in the build manifest`);
+  }
+});
+
+test('local assets match recorded SHA-256 values and have valid formats',async()=>{
   const manifest=JSON.parse((await readFile(path.join(root,'asset-manifest.json'),'utf8')).replace(/^\uFEFF/,''));
   for(const item of manifest){
     const response=await fetch(origin+encodeURI(item.path));
@@ -247,11 +288,19 @@ test('editorial copy keeps outcomes, targets, authorship and evidence bounded',a
     assert.equal(disclosure.contactLink,true);
     assert.match(study.seo.description,lang==='pt'?/comparação de tempos antes e depois.*aproximada.*restrita/i:/before-and-after time comparison.*approximately.*restricted/i);
     const media=studies[route].sections.flatMap(section=>section.media||[]);
-    assert.deepEqual(media,[]);
+    assert.equal(study.heroMedia,undefined);
+    assert.equal(study.sections[0].id,'context');
+    assert.equal(media.length,1);
+    assert.equal(media[0].src,'/assets/banner-bradesco-negociacao.svg');
+    assert.equal(media[0].span,6);
     const homeHtml=await (await fetch(origin+(lang==='en'?'/en':''))).text();
     assert.match(homeHtml,/src="\/assets\/banner-bradesco-negociacao\.svg"/);
     const caseHtml=await (await fetch(origin+route)).text();
-    assert.match(caseHtml,/study-hero-cover[\s\S]*banner-bradesco-negociacao\.svg/);
+    assert.doesNotMatch(caseHtml,/study-hero-cover/);
+    const contextStart=caseHtml.indexOf('id="context"');
+    const contextEnd=caseHtml.indexOf('</section>',contextStart);
+    const bannerPosition=caseHtml.indexOf('/assets/banner-bradesco-negociacao.svg',contextStart);
+    assert.ok(contextStart<bannerPosition&&bannerPosition<contextEnd,'Bradesco banner should render after the Context chapter copy');
     assert.ok(caseHtml.includes(`name="description" content="${study.seo.description}"`));
     const disclosureMarkup=caseHtml.split('<section class="study-section study-container" id="disclosure"')[1].split('</section>')[0];
     assert.match(disclosureMarkup,/href="mailto:uxdanieljr@gmail\.com"/);
@@ -262,14 +311,20 @@ test('editorial copy keeps outcomes, targets, authorship and evidence bounded',a
   for(const [route,lang] of [['/cases/conecta','pt'],['/en/cases/conecta','en']]){
     const study=studies[route];
     const copy=body(study);
+    const impact=study.sections.find(section=>section.id==='impact');
     assert.equal(study.metrics[0].value,'4');
     assert.equal(study.metrics[0].unit,lang==='pt'?'semanas':'weeks');
     assert.match(study.meta.role,/freelance/i);
     assert.match(copy,lang==='pt'?/testes de usabilidade/i:/usability testing/i);
     assert.match(copy,lang==='pt'?/priorizar melhorias pelo impacto esperado e pela viabilidade/i:/prioritize improvements by expected impact and feasibility/i);
-    assert.doesNotMatch(copy,/50%|relatório interno|internal report|lançamento|launched|after launch/i);
-    assert.doesNotMatch(copy,/maior adesão|higher treatment adherence|retenção|retention|drop-off/i);
+    assert.equal(impact.heading,lang==='pt'?'Resultados e impacto':'Results and impact');
+    assert.match(copy,lang==='pt'?/medição interna após o lançamento.*aumento médio de \*\*50%\*\*.*tempo de uso do aplicativo/i:/internal measurement after launch found an average \*\*50%\*\*.*increase in app usage time/i);
+    assert.match(copy,lang==='pt'?/maior adesão ao tratamento/i:/greater treatment adherence/i);
+    assert.doesNotMatch(copy,/retenção|retention|drop-off/i);
     assert.match(copy,/quatro semanas|four weeks/i);
+    const html=await (await fetch(origin+route)).text();
+    assert.match(html,lang==='pt'?/aumento médio de <strong>50%<\/strong> no tempo de uso/i:/average <strong>50%<\/strong> increase in app usage time/i);
+    assert.doesNotMatch(html,/\*\*50%\*\*/);
   }
 
   for(const [route,lang] of [['/cases/mobinft','pt'],['/en/cases/mobinft','en']]){
@@ -286,26 +341,71 @@ test('editorial copy keeps outcomes, targets, authorship and evidence bounded',a
 test('metric semantics, empty-media chapters and public media boundaries',async()=>{
   const studies=JSON.parse(await readFile(path.join(root,'case-studies.json'),'utf8'));
   for(const [route,study] of Object.entries(studies)){
-    assert.equal(study.metrics.length,1);
+    assert.equal(study.metrics.length,study.slug==='conecta'?2:1);
     assert.ok(study.sections.some(s=>!s.media?.length),'Must accept chapters without images');
     const media=study.sections.flatMap(s=>s.media||[]);
     assert.ok(media.every(m=>m.caption&&m.alt!==undefined&&m.src.startsWith('/assets/')));
     if(study.slug==='bradesco-seguros'){
       assert.equal(study.metrics[0].value,'≈10');
       assert.ok(['h/semana','h/week'].includes(study.metrics[0].unit));
-      assert.equal(study.heroMedia.src,'/assets/banner-bradesco-negociacao.svg');
+      assert.equal(study.heroMedia,undefined);
       assert.equal(study.sections.at(-1).id,'disclosure');
-      assert.deepEqual(media,[]);
+      assert.equal(media.length,1);
+      assert.equal(media[0].src,'/assets/banner-bradesco-negociacao.svg');
+      assert.equal(study.sections.find(section=>section.id==='context').media[0].span,6);
     }
     if(study.slug==='conecta'){
       assert.equal(study.metrics[0].value,'4');
+      assert.equal(study.metrics[1].value,'+50%');
+      assert.equal(study.metrics[1].unit,'');
+      assert.equal(study.metrics[1].label,study.locale==='pt'?'Aumento médio no tempo de uso do aplicativo':'Average increase in app usage time');
+      assert.equal(study.metrics[1].evidence,study.locale==='pt'?'Medição interna após o lançamento.':'Internal measurement after launch.');
       assert.ok(study.sections.flatMap(s=>s.paragraphs).join(' ').includes('four weeks')||study.sections.flatMap(s=>s.paragraphs).join(' ').includes('quatro semanas'));
-      assert.ok(media.filter(m=>m.region).length===3);
+      const mobileScreens=media.filter(m=>/conecta-(activities|history|tracking)-mobile\.png$/.test(m.src));
+      assert.equal(mobileScreens.length,3);
+      assert.ok(mobileScreens.every(m=>m.width===375&&m.height===812&&!m.region));
+      assert.equal(media.filter(m=>m.region).length,0);
     }
     if(study.slug==='mobinft'){
       assert.equal(study.metrics[0].kind,'qualitative');
       assert.equal(study.metrics[0].unit,'');
     }
+  }
+});
+
+test('case media stays in static figures without image enlargement controls',async()=>{
+  const studies=JSON.parse(await readFile(path.join(root,'case-studies.json'),'utf8'));
+  for(const [route,study] of Object.entries(studies)){
+    const html=await (await fetch(origin+route)).text();
+    const media=study.sections.flatMap(section=>section.media||[]);
+    assert.equal((html.match(/<figure class="study-figure /g)||[]).length,media.length);
+    assert.doesNotMatch(html,/data-zoom-image|study-image-link|study-lightbox|study-zoom-label|data-image-zoom|<dialog\b|Ampliar imagem|Enlarge image|Amplie para explorar|Enlarge to explore/i);
+    for(const item of media) assert.ok(html.includes(`<figcaption>${item.caption}</figcaption>`),`Missing static caption on ${route}: ${item.caption}`);
+    assert.equal(study.ui.zoom,undefined);
+  }
+});
+
+test('Conecta replacement thumbnail is registered and scoped to its cover surface',async()=>{
+  const studies=JSON.parse(await readFile(path.join(root,'case-studies.json'),'utf8'));
+  const svg=await readFile(path.join(root,'assets','Thumbnail-conecta.svg'),'utf8');
+  const css=await readFile(path.join(root,'cases.css'),'utf8');
+  const tokens=await readFile(path.join(root,'styles.css'),'utf8');
+  assert.match(svg,/^<svg width="1920" height="1080" viewBox="0 0 1920 1080"/);
+  assert.match(svg,/<rect width="1920" height="1080" fill="#18181E"\/>/);
+  assert.doesNotMatch(svg,/conecta-background-gradient/);
+  assert.match(tokens,/--conecta-cover-surface: #68faff;/);
+  assert.match(css,/\.study-figure\[data-surface="conecta-cover"\] > img \{ background-color: var\(--conecta-cover-surface\); \}/);
+  assert.match(tokens,/--conecta-prototype-surface: #899ab5;/);
+  assert.match(css,/\.study-figure\[data-surface="conecta-prototype"\] > img \{ background-color: var\(--conecta-prototype-surface\); \}/);
+  for(const route of ['/cases/conecta','/en/cases/conecta']){
+    const study=studies[route];
+    const context=study.sections.find(section=>section.id==='context').media[0];
+    const montage=study.sections.find(section=>section.id==='solution').media.find(media=>media.src.endsWith('img-conecta-prints-atual.png'));
+    assert.equal(context.src,'/assets/Thumbnail-conecta.svg');
+    assert.equal(context.surface,'conecta-cover');
+    assert.equal(montage.surface,'conecta-prototype');
+    const html=await (await fetch(origin+route)).text();
+    assert.match(html,/data-surface="conecta-prototype"/);
   }
 });
 

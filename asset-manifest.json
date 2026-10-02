@@ -15,10 +15,10 @@
   },
   {
     "path": "/assets/Thumbnail-conecta.svg",
-    "source": "https://danielcarvalhodesign.com/assets/Thumbnail-conecta.svg",
+    "source": "Local replacement provided by the user",
     "status": 200,
-    "bytes": 3601914,
-    "sha256": "1A91528939BFFE008D12F6538D2FD24145D9A782E0D48475D679DF0D49FBE889"
+    "bytes": 3601892,
+    "sha256": "5525E7D31CD83CAC17ECA8F93B877868DDE7934EAB19C661B93C382039BDA596"
   },
   {
     "path": "/assets/banner-mobinft.svg",
@@ -54,5 +54,33 @@
     "status": 200,
     "bytes": 126800,
     "sha256": "CA17F8FA8B4764F897B10BC8DDF46E90E44860202D6C3E0748522A1D91056573"
+  },
+  {
+    "path": "/Daniel Carvalho - Product Designer Resume 2026.pdf",
+    "source": "Provided by the user",
+    "status": 200,
+    "bytes": 120863,
+    "sha256": "79D722C4456A51CDB0A9A7668073EA67E947362DFAD29D3FFB61129F8EAF93B7"
+  },
+  {
+    "path": "/assets/case-conecta/conecta-history-mobile.png",
+    "source": "Provided by the user",
+    "status": 200,
+    "bytes": 52871,
+    "sha256": "E13F1108966859E5E6780476C14BA3726C47F0965EB6D6B8BBC66646EB08071D"
+  },
+  {
+    "path": "/assets/case-conecta/conecta-tracking-mobile.png",
+    "source": "Provided by the user",
+    "status": 200,
+    "bytes": 42580,
+    "sha256": "08F533B748F80EDCB42980A0FF944CB4FF65A3B766C066AD00C7EFBC31D2B45D"
+  },
+  {
+    "path": "/assets/case-conecta/conecta-activities-mobile.png",
+    "source": "Provided by the user",
+    "status": 200,
+    "bytes": 53922,
+    "sha256": "ECA70D2A647CDCE5C6CC4FDA4B8C8E4C7C6849A6B8A0227BEBC7A5E02BE7ACCD"
   }
 ]

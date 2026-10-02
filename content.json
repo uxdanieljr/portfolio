@@ -5,6 +5,9 @@
     "pt": {
       "ui": {
         "skip": "Pular para o conteúdo",
+        "menu": "Menu",
+        "openMenu": "Abrir menu de navegação",
+        "closeMenu": "Fechar menu de navegação",
         "projects": "Projetos",
         "about": "Sobre",
         "services": "Atuação",
@@ -140,6 +143,9 @@
     "en": {
       "ui": {
         "skip": "Skip to content",
+        "menu": "Menu",
+        "openMenu": "Open navigation menu",
+        "closeMenu": "Close navigation menu",
         "projects": "Projects",
         "about": "About",
         "services": "Practice",
