@@ -117,7 +117,7 @@ test('home project cards are whole-card links with one accessible target',async(
       assert.match(card,new RegExp(`<span class="button outline" id="project-cta-${slug}">`));
     }
     assert.ok(html.includes(lang==='pt'
-      ?'Redesenho fluxos complexos. Na Bradesco Seguros, a comparação antes/depois indicou cerca de 10 horas semanais a menos de trabalho manual por funcionário.'
+      ?'Sou Daniel Carvalho, Product Designer há mais de 4 anos. Conduzo pesquisas, prototipo e desenho interfaces para sistemas corporativos, aplicativos e SaaS, conectando necessidades dos usuários aos objetivos do negócio.'
       :'I redesign complex workflows. At Bradesco Seguros, a before-and-after comparison indicated about 10 fewer hours of manual work per employee each week.'));
   }
 });

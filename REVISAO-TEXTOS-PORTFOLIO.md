@@ -48,7 +48,7 @@ Fontes: content.json e case-studies.json.
 - **Título:**
   - Produtos complexos.
   - Experiências simples.
-- **Apresentação:** Redesenho fluxos complexos. Na Bradesco Seguros, a comparação antes/depois indicou cerca de 10 horas semanais a menos de trabalho manual por funcionário.
+- **Apresentação:** Sou Daniel Carvalho, Product Designer há mais de 4 anos. Conduzo pesquisas, prototipo e desenho interfaces para sistemas corporativos, aplicativos e SaaS, conectando necessidades dos usuários aos objetivos do negócio.
 - **Ação principal:** Ver projetos
 - **Ação de currículo:** Baixar currículo
 
