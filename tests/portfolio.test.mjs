@@ -135,6 +135,11 @@ test('local assets match recorded SHA-256 values and have valid formats',async()
       assert.ok(jpeg || bytes.subarray(0,8).toString('hex')==='89504e470d0a1a0a','Invalid raster image '+item.path);
       assert.match(response.headers.get('content-type'),jpeg?/image\/jpeg/:/image\/png/);
     }
+    if(item.path.endsWith('.webp')) {
+      assert.equal(bytes.subarray(0,4).toString(),'RIFF','Invalid WebP container '+item.path);
+      assert.equal(bytes.subarray(8,12).toString(),'WEBP','Invalid WebP signature '+item.path);
+      assert.match(response.headers.get('content-type'),/image\/webp/);
+    }
     if(item.path.endsWith('.svg')) assert.match(bytes.toString(),/<svg[\s>]/);
   }
 });
@@ -296,7 +301,8 @@ test('editorial copy keeps outcomes, targets, authorship and evidence bounded',a
   for(const [route,lang] of [['/cases/bradesco-seguros','pt'],['/en/cases/bradesco-seguros','en']]){
     const study=studies[route];
     const copy=body(study);
-    assert.match(copy,lang==='pt'?/Redesenhei fluxos.*mais de 20 fluxos em cinco funcionalidades/i:/I redesigned workflows.*more than 20 workflows across five features/i);
+    assert.match(copy,lang==='pt'?/Modernizei fluxos.*mais de 20 fluxos em cinco funcionalidades/i:/I modernized workflows.*more than 20 workflows across five features/i);
+    assert.doesNotMatch(copy,/redesenh|redesign/i);
     assert.match(copy,lang==='pt'?/A comparação de tempos antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário/i:/A before-and-after time comparison indicated approximately 10 hours of manual work saved per employee each week/i);
     assert.match(copy,lang==='pt'?/As anotações e os protótipos também ajudaram a alinhar requisitos técnicos e de negócio/i:/The annotations and prototypes also helped teams align on technical and business requirements/i);
     assert.match(copy,lang==='pt'?/Parte deste projeto está sob acordo de confidencialidade/i:/Part of this project is covered by a confidentiality agreement/i);
@@ -411,14 +417,13 @@ test('case media stays in static figures without image enlargement controls',asy
   }
 });
 
-test('Conecta replacement thumbnail is registered and scoped to its cover surface',async()=>{
+test('Conecta WebP images are registered and used on the home and case pages',async()=>{
   const studies=JSON.parse(await readFile(path.join(root,'case-studies.json'),'utf8'));
-  const svg=await readFile(path.join(root,'assets','Thumbnail-conecta.svg'),'utf8');
+  const thumbnail=await readFile(path.join(root,'assets','Thumbnail_Conecta.webp'));
+  assert.equal(thumbnail.subarray(0,4).toString(),'RIFF');
+  assert.equal(thumbnail.subarray(8,12).toString(),'WEBP');
   const css=await readFile(path.join(root,'cases.css'),'utf8');
   const tokens=await readFile(path.join(root,'styles.css'),'utf8');
-  assert.match(svg,/^<svg width="1920" height="1080" viewBox="0 0 1920 1080"/);
-  assert.match(svg,/<rect width="1920" height="1080" fill="#18181E"\/>/);
-  assert.doesNotMatch(svg,/conecta-background-gradient/);
   assert.match(tokens,/--conecta-cover-surface: #68faff;/);
   assert.match(css,/\.study-figure\[data-surface="conecta-cover"\] > img \{ background-color: var\(--conecta-cover-surface\); \}/);
   assert.match(tokens,/--conecta-prototype-surface: #899ab5;/);
@@ -426,12 +431,21 @@ test('Conecta replacement thumbnail is registered and scoped to its cover surfac
   for(const route of ['/cases/conecta','/en/cases/conecta']){
     const study=studies[route];
     const context=study.sections.find(section=>section.id==='context').media[0];
-    const montage=study.sections.find(section=>section.id==='solution').media.find(media=>media.src.endsWith('img-conecta-prints-atual.png'));
-    assert.equal(context.src,'/assets/Thumbnail-conecta.svg');
+    const montage=study.sections.find(section=>section.id==='solution').media.find(media=>media.src.endsWith('img-conecta-prints-atual.webp'));
+    assert.equal(context.src,'/assets/Thumbnail_Conecta.webp');
+    assert.deepEqual([context.width,context.height],[1919,1079]);
+    assert.equal(montage.src,'/assets/case-conecta/img-conecta-prints-atual.webp');
     assert.equal(context.surface,'conecta-cover');
     assert.equal(montage.surface,'conecta-prototype');
     const html=await (await fetch(origin+route)).text();
+    assert.match(html,/src="\/assets\/Thumbnail_Conecta\.webp"/);
+    assert.match(html,/src="\/assets\/case-conecta\/img-conecta-prints-atual\.webp"/);
     assert.match(html,/data-surface="conecta-prototype"/);
+  }
+  for(const route of ['/','/en']){
+    const html=await (await fetch(origin+route)).text();
+    assert.match(html,/src="\/assets\/Thumbnail_Conecta\.webp"/);
+    assert.match(html,/src="\/assets\/foto_site_portfolio\.webp"/);
   }
 });
 

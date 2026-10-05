@@ -7,6 +7,13 @@
     "sha256": "9D837F79455CCB2A83814522A69BC144217DA1E8270D79ADB44267C43ACBBBF8"
   },
   {
+    "path": "/assets/foto_site_portfolio.webp",
+    "source": "Provided by the user",
+    "status": 200,
+    "bytes": 3578132,
+    "sha256": "93A042E23A686FF65861D8FF4083B80CDA4C8B7309B6B83C4BFF5B695414FA4E"
+  },
+  {
     "path": "/assets/banner-bradesco-negociacao.svg",
     "source": "Local replacement provided by the user",
     "status": 200,
@@ -14,11 +21,11 @@
     "sha256": "3B324786CE287DAA314A14D21885EFC75045F01BDE87E9676D1C950A4A3B8D5C"
   },
   {
-    "path": "/assets/Thumbnail-conecta.svg",
+    "path": "/assets/Thumbnail_Conecta.webp",
     "source": "Local replacement provided by the user",
     "status": 200,
-    "bytes": 3601892,
-    "sha256": "5525E7D31CD83CAC17ECA8F93B877868DDE7934EAB19C661B93C382039BDA596"
+    "bytes": 711470,
+    "sha256": "F16F31A77C723BDDB9D8C0A3169EB20B2544E0964C652EEEB314AF50EE7AE9E2"
   },
   {
     "path": "/assets/banner-mobinft.svg",
@@ -35,11 +42,11 @@
     "sha256": "78696D58999410BF07B11FBDF4CAFC552DC3D321347F23DC513DDB61DB995D90"
   },
   {
-    "path": "/assets/case-conecta/img-conecta-prints-atual.png",
-    "source": "https://danielcarvalhodesign.com/assets/case-conecta/img-conecta-prints-atual.png",
+    "path": "/assets/case-conecta/img-conecta-prints-atual.webp",
+    "source": "Provided by the user",
     "status": 200,
-    "bytes": 1547251,
-    "sha256": "92F42AD80B127D14F2D3263D9CFCB997909FF9FC9E7745259358B5000CC49ED1"
+    "bytes": 1000026,
+    "sha256": "737D334A5926B2B565B47B671B60E2D0A1A874156125D8B6C06DF9F3DDEB3943"
   },
   {
     "path": "/assets/case-mobinft/img-hifi-mobinft.png",

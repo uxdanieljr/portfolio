@@ -4,7 +4,7 @@
     "locale": "pt",
     "category": "Sistema interno · Seguros",
     "title": "Bradesco Seguros — fluxos para um sistema interno",
-    "subtitle": "Redesenhei fluxos de um sistema interno com regras de negócio complexas. Ao longo do projeto, entreguei mais de 20 fluxos em cinco funcionalidades; uma comparação de tempos antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário.",
+    "subtitle": "Modernizei fluxos de um sistema interno com regras de negócio complexas. Ao longo do projeto, entreguei mais de 20 fluxos em cinco funcionalidades. Uma comparação de tempos antes e depois indicou uma economia aproximada de 10 horas semanais de trabalho manual por funcionário.",
     "metrics": [
       {
         "value": "≈10",
@@ -131,12 +131,12 @@
         ],
         "media": [
           {
-            "src": "/assets/Thumbnail-conecta.svg",
+            "src": "/assets/Thumbnail_Conecta.webp",
             "surface": "conecta-cover",
             "alt": "",
             "caption": "Conecta, aplicativo de acompanhamento nutricional.",
-            "width": 1920,
-            "height": 1080,
+            "width": 1919,
+            "height": 1079,
             "span": 6
           }
         ]
@@ -200,7 +200,7 @@
             "span": 2
           },
           {
-            "src": "/assets/case-conecta/img-conecta-prints-atual.png",
+            "src": "/assets/case-conecta/img-conecta-prints-atual.webp",
             "surface": "conecta-prototype",
             "alt": "Montagem completa das telas de alta fidelidade do Conecta",
             "caption": "Visão geral da proposta de interface.",
@@ -329,7 +329,7 @@
     "locale": "en",
     "category": "Internal system · Insurance",
     "title": "Bradesco Seguros — workflows for an internal system",
-    "subtitle": "I redesigned workflows for an internal system with complex business rules. I delivered more than 20 workflows across five features; a before-and-after time comparison indicated approximately 10 hours of manual work saved per employee each week.",
+    "subtitle": "I modernized workflows for an internal system with complex business rules. I delivered more than 20 workflows across five features. A before-and-after time comparison indicated approximately 10 hours of manual work saved per employee each week.",
     "metrics": [
       {
         "value": "≈10",
@@ -456,12 +456,12 @@
         ],
         "media": [
           {
-            "src": "/assets/Thumbnail-conecta.svg",
+            "src": "/assets/Thumbnail_Conecta.webp",
             "surface": "conecta-cover",
             "alt": "",
             "caption": "Conecta, a nutrition care app.",
-            "width": 1920,
-            "height": 1080,
+            "width": 1919,
+            "height": 1079,
             "span": 6
           }
         ]
@@ -525,7 +525,7 @@
             "span": 2
           },
           {
-            "src": "/assets/case-conecta/img-conecta-prints-atual.png",
+            "src": "/assets/case-conecta/img-conecta-prints-atual.webp",
             "surface": "conecta-prototype",
             "alt": "Montagem completa das telas de alta fidelidade do Conecta",
             "caption": "Overview of the proposed interface.",

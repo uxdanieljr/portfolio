@@ -6,7 +6,7 @@ import { build } from './build.mjs';
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)),'dist');
 const port = Number(process.env.PORT || 5173);
 const {routes,assets} = await build();
-const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.pdf':'application/pdf','.xml':'application/xml; charset=utf-8','.txt':'text/plain; charset=utf-8'};
+const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.pdf':'application/pdf','.xml':'application/xml; charset=utf-8','.txt':'text/plain; charset=utf-8'};
 const allowed = new Map([...routes.map(route=>[route,path.join(route,'index.html')]),...assets.map(asset=>[asset,asset]),...['styles.css','cases.css','script.js','sitemap.xml','robots.txt'].map(name=>['/'+name,name])]);
 allowed.set('/index.html','index.html');
 http.createServer(async(request,response)=>{
