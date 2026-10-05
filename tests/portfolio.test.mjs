@@ -258,7 +258,20 @@ test('editorial copy keeps outcomes, targets, authorship and evidence bounded',a
     assert.equal(home.locales[lang].contact.description,lang==='pt'
       ?'Conte-me onde seu produto ou sua equipe está travando. Posso investigar com usuários, testar alternativas e desenhar os próximos fluxos. Escreva por e-mail ou LinkedIn.'
       :'Tell me where your product or team is getting stuck. I can investigate with users, test options, and design the next workflows. Reach out by email or on LinkedIn.');
-    assert.match(home.locales[lang].about.education[0].school,lang==='pt'?/em andamento/:/in progress/);
+    const education=home.locales[lang].about.education;
+    assert.equal(education.length,3);
+    assert.deepEqual(education[0],{
+      title:'Design Boost | AI Creative',
+      school:lang==='pt'?'DesignBoost · 2026–2027 · em andamento':'DesignBoost · 2026–2027 · in progress'
+    });
+    assert.deepEqual(education[1],{
+      title:'MBA em Inovação Orientada a IA e UX',
+      school:lang==='pt'?'UNIFAST · 2025–2027 · em andamento':'UNIFAST · 2025–2027 · in progress'
+    });
+    assert.deepEqual(education[2],{
+      title:'Especialização em UX, UI e Product Design',
+      school:'UX Unicórnio · 2022–2023'
+    });
   }
   const body=study=>[
     study.category,

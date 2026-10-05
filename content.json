@@ -91,12 +91,16 @@
         ],
         "education": [
           {
+            "title": "Design Boost | AI Creative",
+            "school": "DesignBoost · 2026–2027 · em andamento"
+          },
+          {
             "title": "MBA em Inovação Orientada a IA e UX",
             "school": "UNIFAST · 2025–2027 · em andamento"
           },
           {
             "title": "Especialização em UX, UI e Product Design",
-            "school": "UX Unicórnio"
+            "school": "UX Unicórnio · 2022–2023"
           }
         ]
       },
@@ -229,12 +233,16 @@
         ],
         "education": [
           {
+            "title": "Design Boost | AI Creative",
+            "school": "DesignBoost · 2026–2027 · in progress"
+          },
+          {
             "title": "MBA em Inovação Orientada a IA e UX",
             "school": "UNIFAST · 2025–2027 · in progress"
           },
           {
             "title": "Especialização em UX, UI e Product Design",
-            "school": "UX Unicórnio"
+            "school": "UX Unicórnio · 2022–2023"
           }
         ]
       },
