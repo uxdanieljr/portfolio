@@ -11,9 +11,9 @@ function mediaFigure(media){
   if(media.region){
     const [x,y,w,h]=media.region;
     const style=`--screen-ratio:${w}/${h};--screen-width:${media.width/w*100}%;--screen-left:${-x/w*100}%;--screen-top:${-y/h*100}%`;
-    image=`<div class="study-screen" style="${style}"><img src="${esc(media.src)}" alt="${esc(media.alt)}" width="${media.width}" height="${media.height}" loading="lazy" decoding="async"></div>`;
+    image=`<div class="study-screen" style="${style}"><img src="${esc(media.src)}"${media.srcset?` srcset="${esc(media.srcset)}"`:''}${media.sizes?` sizes="${esc(media.sizes)}"`:''} alt="${esc(media.alt)}" width="${media.width}" height="${media.height}" loading="lazy" decoding="async"></div>`;
   }else{
-    image=`<img src="${esc(media.src)}" alt="${esc(media.alt)}" width="${media.width}" height="${media.height}" loading="lazy" decoding="async">`;
+    image=`<img src="${esc(media.src)}"${media.srcset?` srcset="${esc(media.srcset)}"`:''}${media.sizes?` sizes="${esc(media.sizes)}"`:''} alt="${esc(media.alt)}" width="${media.width}" height="${media.height}" loading="lazy" decoding="async">`;
   }
   const framedImage=media.region?`<div class="study-figure-detail">${image}</div>`:image;
   const surface=media.surface?` data-surface="${esc(media.surface)}"`:'';
@@ -32,7 +32,7 @@ function caseSection(section,study){
 function moreCases(study,home){
   const prefix=study.locale==='en'?'/en':'';
   const cards=study.relatedProjects.map(slug=>home.projects.items.find(item=>item.slug===slug));
-  return `<section class="study-more" aria-labelledby="more-title" data-node-id="23010:3"><div class="study-more-divider"></div><div class="study-container"><h2 id="more-title" data-reveal>${esc(study.ui.more)}</h2><div class="study-more-grid">${cards.map(card=>`<article class="study-more-card" data-reveal><a class="study-more-link" href="${prefix}/cases/${card.slug}" aria-labelledby="related-${card.slug}">${card.image?`<img src="${esc(card.image)}" alt="${esc(card.alt)}" width="580" height="326" loading="lazy" decoding="async">`:'<div class="study-more-placeholder" aria-hidden="true"></div>'}<h3 id="related-${card.slug}">${esc(card.title)}</h3><p>${esc(card.relatedDescription||card.description)}</p><span class="button primary">${esc(study.ui.view)}</span></a></article>`).join('')}</div><a class="study-return" href="${prefix||'/'}#projetos">← ${esc(study.ui.backProjects)}</a></div></section>`;
+  return `<section class="study-more" aria-labelledby="more-title" data-node-id="23010:3"><div class="study-more-divider"></div><div class="study-container"><h2 id="more-title" data-reveal>${esc(study.ui.more)}</h2><div class="study-more-grid">${cards.map(card=>`<article class="study-more-card" data-reveal><a class="study-more-link" href="${prefix}/cases/${card.slug}" aria-labelledby="related-${card.slug}">${card.image?`<img src="${esc(card.image)}"${card.imageSrcset?` srcset="${esc(card.imageSrcset)}"`:''}${card.imageSizes?` sizes="${esc(card.imageSizes)}"`:''} alt="${esc(card.alt)}" width="580" height="326" loading="lazy" decoding="async">`:'<div class="study-more-placeholder" aria-hidden="true"></div>'}<h3 id="related-${card.slug}">${esc(card.title)}</h3><p>${esc(card.relatedDescription||card.description)}</p><span class="button primary">${esc(study.ui.view)}</span></a></article>`).join('')}</div><a class="study-return" href="${prefix||'/'}#projetos">← ${esc(study.ui.backProjects)}</a></div></section>`;
 }
 
 export function caseStudyPage(study,home){

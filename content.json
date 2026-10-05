@@ -53,32 +53,38 @@
           {
             "slug": "bradesco-seguros",
             "category": "Sistema interno · Seguros",
-      "title": "Bradesco Seguros — fluxos para um sistema interno",
-      "description": "Em um sistema interno da Bradesco Seguros, entreguei mais de 20 fluxos em cinco funcionalidades. A comparação de tempos antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário. Parte do projeto é restrita; compartilho mais detalhes em conversa.",
-      "image": "/assets/banner-bradesco-negociacao.svg",
-      "alt": "Banner da Bradesco Seguros sobre negociação, com interface do sistema.",
+            "title": "Bradesco Seguros — fluxos para um sistema interno",
+            "description": "Em um sistema interno da Bradesco Seguros, entreguei mais de 20 fluxos em cinco funcionalidades. A comparação de tempos antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário. Parte do projeto é restrita; compartilho mais detalhes em conversa.",
+            "image": "/assets/banner-bradesco-negociacao-1280.webp",
+            "alt": "Banner da Bradesco Seguros sobre negociação, com interface do sistema.",
             "cta": "Ver versão pública →",
-            "relatedDescription": "Mais de 20 fluxos em cinco funcionalidades. Comparação antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário. Parte do projeto é restrita."
+            "relatedDescription": "Mais de 20 fluxos em cinco funcionalidades. Comparação antes e depois indicou economia aproximada de 10 horas semanais de trabalho manual por funcionário. Parte do projeto é restrita.",
+            "imageSrcset": "/assets/banner-bradesco-negociacao-640.webp 640w, /assets/banner-bradesco-negociacao-1280.webp 1280w",
+            "imageSizes": "(max-width: 760px) calc(100vw - 64px), 50vw"
           },
           {
             "slug": "conecta",
             "category": "Freelance · Saúde digital",
             "title": "Conecta — redesign de um app de nutrição",
             "description": "Em quatro semanas de trabalho freelance, entrevistei usuários, priorizei problemas de uso e criei protótipos navegáveis. Os testes orientaram os ajustes antes da entrega.",
-            "image": "/assets/Thumbnail_Conecta.webp",
+            "image": "/assets/Thumbnail_Conecta-1280.webp",
             "alt": "",
             "cta": "Ler case completo →",
-            "relatedDescription": "Veja como descobertas e testes ajudaram a priorizar o que cabia em quatro semanas."
+            "relatedDescription": "Veja como descobertas e testes ajudaram a priorizar o que cabia em quatro semanas.",
+            "imageSrcset": "/assets/Thumbnail_Conecta-640.webp 640w, /assets/Thumbnail_Conecta-1280.webp 1280w",
+            "imageSizes": "(max-width: 760px) calc(100vw - 64px), 50vw"
           },
           {
             "slug": "mobinft",
             "category": "Estudo voluntário · UX",
             "title": "Mobinft — compra de chave digital em Web3",
             "description": "Em um estudo voluntário com um time de design, pesquisei barreiras na compra de uma chave digital baseada em NFT. Transformamos os achados em wireframes e protótipos testáveis.",
-            "image": "/assets/banner-mobinft.svg",
+            "image": "/assets/banner-mobinft-1280.webp",
             "alt": "Mockups das telas do aplicativo Mobinft",
             "cta": "Ler case completo →",
-            "relatedDescription": "Conheça o estudo em equipe que levou uma ideia de chave Web3 a protótipos testáveis."
+            "relatedDescription": "Conheça o estudo em equipe que levou uma ideia de chave Web3 a protótipos testáveis.",
+            "imageSrcset": "/assets/banner-mobinft-640.webp 640w, /assets/banner-mobinft-1280.webp 1280w",
+            "imageSizes": "(max-width: 760px) calc(100vw - 64px), 50vw"
           }
         ]
       },
@@ -195,32 +201,38 @@
           {
             "slug": "bradesco-seguros",
             "category": "Internal system · Insurance",
-      "title": "Bradesco Seguros — workflows for an internal system",
-      "description": "I delivered more than 20 workflows across five features of an internal Bradesco Seguros system. A before-and-after time comparison indicated approximately 10 hours of manual work saved per employee each week. Part of the project is restricted; I can discuss more of the work in a conversation.",
-      "image": "/assets/banner-bradesco-negociacao.svg",
-      "alt": "Bradesco Seguros banner about negotiation, featuring the system interface.",
+            "title": "Bradesco Seguros — workflows for an internal system",
+            "description": "I delivered more than 20 workflows across five features of an internal Bradesco Seguros system. A before-and-after time comparison indicated approximately 10 hours of manual work saved per employee each week. Part of the project is restricted; I can discuss more of the work in a conversation.",
+            "image": "/assets/banner-bradesco-negociacao-1280.webp",
+            "alt": "Bradesco Seguros banner about negotiation, featuring the system interface.",
             "cta": "View public case →",
-            "relatedDescription": "More than 20 workflows across five features. A before-and-after comparison indicated approximately 10 hours of manual work saved per employee each week. Part of the project is restricted."
+            "relatedDescription": "More than 20 workflows across five features. A before-and-after comparison indicated approximately 10 hours of manual work saved per employee each week. Part of the project is restricted.",
+            "imageSrcset": "/assets/banner-bradesco-negociacao-640.webp 640w, /assets/banner-bradesco-negociacao-1280.webp 1280w",
+            "imageSizes": "(max-width: 760px) calc(100vw - 64px), 50vw"
           },
           {
             "slug": "conecta",
             "category": "Freelance · Digital health",
             "title": "Conecta — redesigning a nutrition app",
             "description": "In a four-week freelance project, I interviewed users, prioritized usability issues, and built interactive prototypes. Testing informed the changes before delivery.",
-            "image": "/assets/Thumbnail_Conecta.webp",
+            "image": "/assets/Thumbnail_Conecta-1280.webp",
             "alt": "",
             "cta": "Read full case →",
-            "relatedDescription": "See how interviews and testing helped prioritize the redesign within four weeks."
+            "relatedDescription": "See how interviews and testing helped prioritize the redesign within four weeks.",
+            "imageSrcset": "/assets/Thumbnail_Conecta-640.webp 640w, /assets/Thumbnail_Conecta-1280.webp 1280w",
+            "imageSizes": "(max-width: 760px) calc(100vw - 64px), 50vw"
           },
           {
             "slug": "mobinft",
             "category": "Volunteer UX study",
             "title": "Mobinft — purchasing a Web3 digital key",
             "description": "In a volunteer UX study with a design team, we researched what made an NFT-based digital key difficult to buy. We turned the findings into wireframes and testable prototypes.",
-            "image": "/assets/banner-mobinft.svg",
+            "image": "/assets/banner-mobinft-1280.webp",
             "alt": "Mobinft app screen mockups",
             "cta": "Read full case →",
-            "relatedDescription": "See how a team-based UX study turned a Web3 key concept into testable prototypes."
+            "relatedDescription": "See how a team-based UX study turned a Web3 key concept into testable prototypes.",
+            "imageSrcset": "/assets/banner-mobinft-640.webp 640w, /assets/banner-mobinft-1280.webp 1280w",
+            "imageSizes": "(max-width: 760px) calc(100vw - 64px), 50vw"
           }
         ]
       },

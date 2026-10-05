@@ -7,46 +7,11 @@
     "sha256": "9D837F79455CCB2A83814522A69BC144217DA1E8270D79ADB44267C43ACBBBF8"
   },
   {
-    "path": "/assets/foto_site_portfolio.webp",
-    "source": "Provided by the user",
-    "status": 200,
-    "bytes": 3578132,
-    "sha256": "93A042E23A686FF65861D8FF4083B80CDA4C8B7309B6B83C4BFF5B695414FA4E"
-  },
-  {
-    "path": "/assets/banner-bradesco-negociacao.svg",
-    "source": "Local replacement provided by the user",
-    "status": 200,
-    "bytes": 732401,
-    "sha256": "3B324786CE287DAA314A14D21885EFC75045F01BDE87E9676D1C950A4A3B8D5C"
-  },
-  {
-    "path": "/assets/Thumbnail_Conecta.webp",
-    "source": "Local replacement provided by the user",
-    "status": 200,
-    "bytes": 711470,
-    "sha256": "F16F31A77C723BDDB9D8C0A3169EB20B2544E0964C652EEEB314AF50EE7AE9E2"
-  },
-  {
-    "path": "/assets/banner-mobinft.svg",
-    "source": "Local replacement provided by the user",
-    "status": 200,
-    "bytes": 608561,
-    "sha256": "E7AC7B8D44327CDB032C8FCBF936FD53F776EFAADA98182133FB4490A18D68EC"
-  },
-  {
     "path": "/assets/case-conecta/img-timeline-conecta.png",
     "source": "https://danielcarvalhodesign.com/assets/case-conecta/img-timeline-conecta.png",
     "status": 200,
     "bytes": 55515,
     "sha256": "78696D58999410BF07B11FBDF4CAFC552DC3D321347F23DC513DDB61DB995D90"
-  },
-  {
-    "path": "/assets/case-conecta/img-conecta-prints-atual.webp",
-    "source": "Provided by the user",
-    "status": 200,
-    "bytes": 1000026,
-    "sha256": "737D334A5926B2B565B47B671B60E2D0A1A874156125D8B6C06DF9F3DDEB3943"
   },
   {
     "path": "/assets/case-mobinft/img-hifi-mobinft.png",
@@ -89,5 +54,75 @@
     "status": 200,
     "bytes": 53922,
     "sha256": "ECA70D2A647CDCE5C6CC4FDA4B8C8E4C7C6849A6B8A0227BEBC7A5E02BE7ACCD"
+  },
+  {
+    "path": "/assets/foto_site_portfolio-640.webp",
+    "source": "Responsive WebP optimized from /assets/foto_site_portfolio.webp",
+    "status": 200,
+    "bytes": 37880,
+    "sha256": "CB6C800B0DAA7A225C7D763F33BB0D77010CD2533E4DD9F3B6FC19B783857A0C"
+  },
+  {
+    "path": "/assets/foto_site_portfolio-1280.webp",
+    "source": "Responsive WebP optimized from /assets/foto_site_portfolio.webp",
+    "status": 200,
+    "bytes": 120512,
+    "sha256": "30456E02EEB769ED1AA9D9766020BA676105E8D36999BAAE3E13EE46B7BE7718"
+  },
+  {
+    "path": "/assets/banner-bradesco-negociacao-640.webp",
+    "source": "Responsive WebP optimized from /assets/banner-bradesco-negociacao.svg",
+    "status": 200,
+    "bytes": 11904,
+    "sha256": "C439F67588E33654491B043201BD0852FD335E29E6AD94BF16589F32BAB51048"
+  },
+  {
+    "path": "/assets/banner-bradesco-negociacao-1280.webp",
+    "source": "Responsive WebP optimized from /assets/banner-bradesco-negociacao.svg",
+    "status": 200,
+    "bytes": 26814,
+    "sha256": "9EE550FC4FA5C951E3520193A8A1677748925F02C8C53EA88AEBF32B000644F4"
+  },
+  {
+    "path": "/assets/Thumbnail_Conecta-640.webp",
+    "source": "Responsive WebP optimized from /assets/Thumbnail_Conecta.webp",
+    "status": 200,
+    "bytes": 26726,
+    "sha256": "C5333015DA09E28271F7418DA63D3058C23361C124BFF90045147FA43740AAFA"
+  },
+  {
+    "path": "/assets/Thumbnail_Conecta-1280.webp",
+    "source": "Responsive WebP optimized from /assets/Thumbnail_Conecta.webp",
+    "status": 200,
+    "bytes": 64838,
+    "sha256": "DB694AF76424E33AD439557F2BF82E040EC5D3DB249BF8B6DAFC19245E7FFD7C"
+  },
+  {
+    "path": "/assets/banner-mobinft-640.webp",
+    "source": "Responsive WebP optimized from /assets/banner-mobinft.svg",
+    "status": 200,
+    "bytes": 14958,
+    "sha256": "C4ECC6037DBE565E86B6FA450780FEE756066B7EFB42F085EB4F5CD5E8A5A7D9"
+  },
+  {
+    "path": "/assets/banner-mobinft-1280.webp",
+    "source": "Responsive WebP optimized from /assets/banner-mobinft.svg",
+    "status": 200,
+    "bytes": 38776,
+    "sha256": "135FA761E916EAB1608930E985450347EA6FB1B87917514D2AD1E35CC5E08345"
+  },
+  {
+    "path": "/assets/case-conecta/img-conecta-prints-atual-640.webp",
+    "source": "Responsive WebP optimized from /assets/case-conecta/img-conecta-prints-atual.webp",
+    "status": 200,
+    "bytes": 58846,
+    "sha256": "3CEF80F0A51AB242C553BFF787C854D61423E34C50DCAAE09E51717F9F93E9E2"
+  },
+  {
+    "path": "/assets/case-conecta/img-conecta-prints-atual-1280.webp",
+    "source": "Responsive WebP optimized from /assets/case-conecta/img-conecta-prints-atual.webp",
+    "status": 200,
+    "bytes": 174398,
+    "sha256": "487D7F0B4E8EF8C5C4A5C932CF38F23DEDAADF36ECA4A1BF471EB3E90DE0BAED"
   }
 ]

@@ -1,4 +1,5 @@
 import { readFile, writeFile, mkdir, copyFile, rm } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { caseStudyPage } from './case-components.mjs';
@@ -12,6 +13,23 @@ const resumeFiles = {
 const mail = 'mailto:uxdanieljr@gmail.com';
 const linkedin = 'https://www.linkedin.com/in/dccarvalhojr/';
 const canonicalOrigin = 'https://danielcarvalhodesign.com';
+
+function fingerprintedName(name, bytes) {
+  const hash = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
+  const extension = path.extname(name);
+  return `${name.slice(0, -extension.length)}.${hash}${extension}`;
+}
+
+function rewritePublicUrls(markup, replacements) {
+  let output = markup;
+  for (const [source, target] of [...replacements].sort((a, b) => b[0].length - a[0].length)) {
+    const encodedSource = encodeURI(source);
+    const encodedTarget = encodeURI(target);
+    output = output.replaceAll(encodedSource, encodedTarget);
+    if (source !== encodedSource) output = output.replaceAll(source, encodedTarget);
+  }
+  return output;
+}
 
 function nav(c, lang, route, isCase) {
   const u = c.ui;
@@ -54,8 +72,8 @@ function homePage(c, lang) {
     <section class="hero" id="hero" aria-labelledby="hero-title"><div class="hero-main container"><p class="eyebrow">${esc(c.hero.eyebrow)}</p><h1 id="hero-title"><span class="hero-line-mask"><span class="hero-line">${esc(c.hero.title[0])}</span></span><span class="hero-line-mask"><span class="hero-line secondary-line">${esc(c.hero.title[1])}</span></span></h1></div>
     <div class="hero-bottom"><div class="hero-bottom-inner container"><p class="hero-description">${esc(c.hero.description)}</p><div class="hero-actions"><a class="button primary" href="#projetos">${esc(c.hero.cta)}</a><a class="button outline" href="${resume.href}" download="${esc(resume.name)}">${esc(c.hero.resume)}</a></div><a class="scroll-link" href="#projetos">${esc(u.scroll)}</a></div></div></section>
     <section class="work section" id="projetos" aria-labelledby="work-title"><div class="container"><header class="section-heading work-heading"><div class="work-heading-copy"><p class="eyebrow">${esc(c.projects.eyebrow)}</p><p class="section-intro">${esc(c.projects.intro)}</p></div><h2 id="work-title" data-reveal>${esc(c.projects.title)}</h2></header></div>
-    <div class="project-stack container" style="--stack-count:${c.projects.items.length}" aria-label="${esc(c.projects.eyebrow)}">${c.projects.items.map((p,index) => `<article class="project-card" style="--stack-layer:${index+1};--stack-target-scale:${(1 - (c.projects.items.length - index - 1) * .04).toFixed(2)}"><a class="project-card-surface" href="${prefix}/cases/${p.slug}" aria-labelledby="project-title-${p.slug} project-cta-${p.slug}" aria-describedby="project-description-${p.slug}">${p.image ? `<span class="project-media-link"><img class="project-image" src="${esc(p.image)}" alt="${esc(p.alt)}" loading="lazy" decoding="async" width="1600" height="900" draggable="false"></span>` : '<span class="project-media-link"><span class="project-image project-image-placeholder image-placeholder" aria-hidden="true"></span></span>'}<div class="project-copy"><span class="project-index" aria-hidden="true">${String(index+1).padStart(2,'0')} / ${String(c.projects.items.length).padStart(2,'0')}</span><p class="project-category">${esc(p.category)}</p><h3 id="project-title-${p.slug}">${esc(p.title)}</h3><p id="project-description-${p.slug}">${esc(p.description)}</p><span class="button outline" id="project-cta-${p.slug}">${esc(p.cta)}</span></div></a></article><div class="project-stack-spacer" aria-hidden="true"></div>`).join('')}</div></section>
-    <section class="about" id="sobre" aria-labelledby="about-title"><figure class="about-figure" data-reveal><img class="portrait-image" src="/assets/foto_site_portfolio.webp" alt="${esc(u.portrait)}" width="1536" height="2752" loading="lazy" decoding="async"></figure><div class="about-content"><header class="section-heading"><h2 id="about-title" data-reveal>${esc(c.about.title)}</h2></header><div class="about-copy">${c.about.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}<div class="about-bottom"><div><p class="eyebrow">${esc(u.education)}</p><ul class="education-list">${c.about.education.map(e=>`<li><strong>${esc(e.title)}</strong><span>${esc(e.school)}</span></li>`).join('')}</ul></div><a class="button outline" href="${resume.href}" download="${esc(resume.name)}">${esc(u.download)}</a></div></div></div></section>
+    <div class="project-stack container" style="--stack-count:${c.projects.items.length}" aria-label="${esc(c.projects.eyebrow)}">${c.projects.items.map((p,index) => `<article class="project-card" style="--stack-layer:${index+1};--stack-target-scale:${(1 - (c.projects.items.length - index - 1) * .04).toFixed(2)}"><a class="project-card-surface" href="${prefix}/cases/${p.slug}" aria-labelledby="project-title-${p.slug} project-cta-${p.slug}" aria-describedby="project-description-${p.slug}">${p.image ? `<span class="project-media-link"><img class="project-image" src="${esc(p.image)}"${p.imageSrcset?` srcset="${esc(p.imageSrcset)}"`:''}${p.imageSizes?` sizes="${esc(p.imageSizes)}"`:''} alt="${esc(p.alt)}" loading="lazy" decoding="async" width="1600" height="900" draggable="false"></span>` : '<span class="project-media-link"><span class="project-image project-image-placeholder image-placeholder" aria-hidden="true"></span></span>'}<div class="project-copy"><span class="project-index" aria-hidden="true">${String(index+1).padStart(2,'0')} / ${String(c.projects.items.length).padStart(2,'0')}</span><p class="project-category">${esc(p.category)}</p><h3 id="project-title-${p.slug}">${esc(p.title)}</h3><p id="project-description-${p.slug}">${esc(p.description)}</p><span class="button outline" id="project-cta-${p.slug}">${esc(p.cta)}</span></div></a></article><div class="project-stack-spacer" aria-hidden="true"></div>`).join('')}</div></section>
+    <section class="about" id="sobre" aria-labelledby="about-title"><figure class="about-figure" data-reveal><img class="portrait-image" src="/assets/foto_site_portfolio-1280.webp" srcset="/assets/foto_site_portfolio-640.webp 640w, /assets/foto_site_portfolio-1280.webp 1280w" sizes="(max-width: 900px) calc(100vw - 40px), 38vw" alt="${esc(u.portrait)}" width="1143" height="2048" loading="lazy" decoding="async"></figure><div class="about-content"><header class="section-heading"><h2 id="about-title" data-reveal>${esc(c.about.title)}</h2></header><div class="about-copy">${c.about.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}<div class="about-bottom"><div><p class="eyebrow">${esc(u.education)}</p><ul class="education-list">${c.about.education.map(e=>`<li><strong>${esc(e.title)}</strong><span>${esc(e.school)}</span></li>`).join('')}</ul></div><a class="button outline" href="${resume.href}" download="${esc(resume.name)}">${esc(u.download)}</a></div></div></div></section>
     <section class="capabilities section" id="servicos" aria-labelledby="capabilities-title"><div class="container"><header class="section-heading"><p class="eyebrow">${esc(c.capabilities.eyebrow)}</p><h2 id="capabilities-title" data-reveal>${esc(c.capabilities.title)}</h2></header><ul class="capability-list">${c.capabilities.items.map(item=>`<li><h3>${esc(item.title)}</h3><p>${esc(item.description)}</p></li>`).join('')}</ul></div></section>
   </main>`;
 }
@@ -76,9 +94,30 @@ export async function build() {
   const data = JSON.parse(await readFile(path.join(root,'content.json'),'utf8'));
   const cases = JSON.parse(await readFile(path.join(root,'case-studies.json'),'utf8'));
   const manifest = JSON.parse((await readFile(path.join(root,'asset-manifest.json'),'utf8')).replace(/^\uFEFF/, ''));
+  const replacements = new Map();
+  const files = [];
+  for (const entry of manifest) {
+    const source = entry.path.slice(1);
+    const bytes = await readFile(path.join(root,source));
+    const destination = fingerprintedName(source,bytes);
+    files.push({source,destination,bytes});
+    replacements.set(entry.path,`/${destination}`);
+  }
+  const staticFiles = [];
+  for (const source of ['styles.css','cases.css','script.js']) {
+    const bytes = await readFile(path.join(root,source));
+    const destination = fingerprintedName(source,bytes);
+    staticFiles.push({source,destination,bytes});
+    replacements.set(`/${source}`,`/${destination}`);
+  }
   const dist = path.join(root,'dist');
   await rm(dist,{recursive:true,force:true});
   await mkdir(dist,{recursive:true});
+  for (const file of [...files,...staticFiles]) {
+    const destination = path.join(dist,file.destination);
+    await mkdir(path.dirname(destination),{recursive:true});
+    await copyFile(path.join(root,file.source),destination);
+  }
   const routes = [];
   for (const lang of ['pt','en']) {
     const c = data.locales[lang];
@@ -87,24 +126,32 @@ export async function build() {
     for (const page of pages) {
       const directory = path.join(dist,page.route);
       await mkdir(directory,{recursive:true});
-      await writeFile(path.join(directory,'index.html'),documentPage({...page,c,lang}));
+      const html = rewritePublicUrls(documentPage({...page,c,lang}),replacements);
+      await writeFile(path.join(directory,'index.html'),html);
       routes.push(page.route);
     }
-    await writeFile(path.join(dist,lang==='en'?'404-en.html':'404.html'),documentPage({c,lang,route:homeRoute,isCase:true,title:`${c.ui.notFound} | Daniel Carvalho`,description:c.ui.notFoundBody,main:`<main id="main" class="not-found container"><h1>${esc(c.ui.notFound)}</h1><p>${esc(c.ui.notFoundBody)}</p><a class="button primary" href="${homeRoute}">${esc(c.ui.home)}</a></main>`}));
+    const notFound = documentPage({c,lang,route:homeRoute,isCase:true,title:`${c.ui.notFound} | Daniel Carvalho`,description:c.ui.notFoundBody,main:`<main id="main" class="not-found container"><h1>${esc(c.ui.notFound)}</h1><p>${esc(c.ui.notFoundBody)}</p><a class="button primary" href="${homeRoute}">${esc(c.ui.home)}</a></main>`});
+    await writeFile(path.join(dist,lang==='en'?'404-en.html':'404.html'),rewritePublicUrls(notFound,replacements));
   }
-  for (const entry of manifest) {
-    const name = entry.path.slice(1);
-    const destination = path.join(dist,name);
-    await mkdir(path.dirname(destination),{recursive:true});
-    await copyFile(path.join(root,name),destination);
-  }
-  for (const name of ['styles.css','cases.css','script.js']) await copyFile(path.join(root,name),path.join(dist,name));
   await writeFile(path.join(dist,'_redirects'),'/cases/bradesco-seguros-completo /cases/bradesco-seguros 301\n/en/cases/bradesco-seguros-completo /en/cases/bradesco-seguros 301\n');
-  await writeFile(path.join(dist,'_headers'),'/assets/case-mobinft/img-hifi-mobinft.png\n  Content-Type: image/jpeg\n');
+  const mimeOverrides = files.filter(file=>file.source.endsWith('/img-hifi-mobinft.png')).map(file=>`/${encodeURI(file.destination)}\n  Content-Type: image/jpeg`).join('\n');
+  await writeFile(path.join(dist,'_headers'),[
+    '/assets/*\n  Cache-Control: public, max-age=31536000, immutable',
+    '/styles.*\n  Cache-Control: public, max-age=31536000, immutable',
+    '/cases.*\n  Cache-Control: public, max-age=31536000, immutable',
+    '/script.*\n  Cache-Control: public, max-age=31536000, immutable',
+    '/cases/*\n  Cache-Control: no-cache',
+    '/en/*\n  Cache-Control: no-cache',
+    '/en\n  Cache-Control: no-cache',
+    '/\n  Cache-Control: no-cache',
+    mimeOverrides
+  ].filter(Boolean).join('\n')+'\n');
+  await writeFile(path.join(dist,'.htaccess'),`<IfModule mod_rewrite.c>\n  RewriteEngine On\n  RewriteRule ^(en/)?cases/bradesco-seguros-completo/?$ /$1cases/bradesco-seguros [R=301,L]\n</IfModule>\n<IfModule mod_headers.c>\n  <FilesMatch "\\.[a-f0-9]{12}\\.(css|js|svg|png|webp|pdf)$">\n    Header set Cache-Control "public, max-age=31536000, immutable"\n  </FilesMatch>\n  <FilesMatch "\\.html$">\n    Header set Cache-Control "no-cache"\n  </FilesMatch>\n</IfModule>\n<IfModule mod_mime.c>\n  <FilesMatch "^img-hifi-mobinft\\.[a-f0-9]{12}\\.png$">\n    ForceType image/jpeg\n  </FilesMatch>\n</IfModule>\n<IfModule mod_deflate.c>\n  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml\n</IfModule>\n`);
   await writeFile(path.join(dist,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${routes.map(route=>`<url><loc>${canonicalOrigin}${route}</loc></url>`).join('')}</urlset>`);
   await writeFile(path.join(dist,'robots.txt'),`User-agent: *\nAllow: /\nSitemap: ${canonicalOrigin}/sitemap.xml\n`);
-  await writeFile(path.join(root,'index.html'),await readFile(path.join(dist,'index.html'),'utf8'));
-  return {routes,assets:manifest.map(a=>a.path)};
+  const portugueseHome = data.locales.pt;
+  await writeFile(path.join(root,'index.html'),documentPage({c:portugueseHome,lang:'pt',route:'/',main:homePage(portugueseHome,'pt'),title:portugueseHome.seo.title,description:portugueseHome.seo.description}));
+  return {routes,assets:[...files,...staticFiles].map(file=>`/${file.destination}`)};
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

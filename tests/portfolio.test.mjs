@@ -8,6 +8,11 @@ import path from 'node:path';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const origin='http://127.0.0.1:5174';
+const publishedAssetPath=item=>{
+  const source=item.path.slice(1);
+  const extension=path.extname(source);
+  return `/${source.slice(0,-extension.length)}.${item.sha256.slice(0,12).toLowerCase()}${extension}`;
+};
 let server;
 let serverOutput='';
 before(async()=>{
@@ -46,6 +51,10 @@ for(const lang of ['pt','en']){
         assert.equal(linked.status,200,'Broken internal URL '+link);
         if(parsed.hash){const destination=await (await fetch(parsed)).text();assert.ok(destination.includes('id="'+parsed.hash.slice(1)+'"'),'Missing linked anchor '+link);}
       }
+      for(const match of html.matchAll(/\bsrcset="([^"]+)"/g)) for(const candidate of match[1].split(',').map(item=>item.trim().split(/\s+/)[0])){
+        const linked=await fetch(new URL(candidate,origin),{method:'HEAD'});
+        assert.equal(linked.status,200,'Broken responsive image URL '+candidate);
+      }
       if(!route.includes('/cases/')){
         assert.equal((html.match(/class="project-card"/g)||[]).length,3);
         assert.equal((html.match(/<li><h3>/g)||[]).length,5);
@@ -61,7 +70,7 @@ for(const lang of ['pt','en']){
         assert.doesNotMatch(html,/study-hero-cover/);
         const contextStart=html.indexOf('id="context"');
         const contextEnd=html.indexOf('</section>',contextStart);
-        const bannerPosition=html.indexOf('/assets/banner-bradesco-negociacao.svg',contextStart);
+        const bannerPosition=html.indexOf('/assets/banner-bradesco-negociacao-1280.',contextStart);
         assert.ok(contextStart<bannerPosition&&bannerPosition<contextEnd,'Bradesco banner should appear within the Context chapter');
       }
       if(route.endsWith('/mobinft')){
@@ -117,18 +126,21 @@ test('home resume downloads use the matching Portuguese or English PDF',async()=
     const html=await (await fetch(origin+route)).text();
     const downloads=[...html.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*download="([^"]+)"/g)].map(match=>({href:match[1],name:match[2]}));
     assert.equal(downloads.length,3,`Expected three ${lang} resume links on the home page`);
-    assert.ok(downloads.every(item=>item.href===href&&item.name===name),`Unexpected ${lang} resume destination`);
-    assert.ok(manifest.some(item=>item.path===decodeURIComponent(href)&&item.path.endsWith('.pdf')),`Missing ${lang} resume asset in the build manifest`);
+    const manifestItem=manifest.find(item=>item.path===decodeURIComponent(href)&&item.path.endsWith('.pdf'));
+    assert.ok(manifestItem,`Missing ${lang} resume asset in the build manifest`);
+    const expectedHref=encodeURI(publishedAssetPath(manifestItem));
+    assert.ok(downloads.every(item=>item.href===expectedHref&&item.name===name),`Unexpected ${lang} resume destination`);
   }
 });
 
 test('local assets match recorded SHA-256 values and have valid formats',async()=>{
   const manifest=JSON.parse((await readFile(path.join(root,'asset-manifest.json'),'utf8')).replace(/^\uFEFF/,''));
   for(const item of manifest){
-    const response=await fetch(origin+encodeURI(item.path));
-    assert.equal(response.status,200,item.path);
+    const publicPath=publishedAssetPath(item);
+    const response=await fetch(origin+encodeURI(publicPath));
+    assert.equal(response.status,200,publicPath);
     const bytes=Buffer.from(await response.arrayBuffer());
-    assert.equal(createHash('sha256').update(bytes).digest('hex').toUpperCase(),item.sha256,item.path);
+    assert.equal(createHash('sha256').update(bytes).digest('hex').toUpperCase(),item.sha256,publicPath);
     if(item.path.endsWith('.pdf')){assert.match(response.headers.get('content-type'),/application\/pdf/);assert.equal(bytes.subarray(0,5).toString(),'%PDF-');}
     if(item.path.endsWith('.png')) {
       const jpeg=bytes.subarray(0,3).toString('hex')==='ffd8ff';
@@ -142,6 +154,24 @@ test('local assets match recorded SHA-256 values and have valid formats',async()
     }
     if(item.path.endsWith('.svg')) assert.match(bytes.toString(),/<svg[\s>]/);
   }
+});
+
+test('versioned assets use long-lived caching and HTML can revalidate',async()=>{
+  const page=await fetch(origin+'/');
+  assert.equal(page.headers.get('cache-control'),'no-cache');
+  assert.ok(page.headers.get('etag'));
+  const html=await page.text();
+  const style=html.match(/href="(\/styles\.[a-f0-9]{12}\.css)"/);
+  assert.ok(style,'Expected fingerprinted stylesheet URL');
+  const asset=await fetch(origin+style[1]);
+  assert.equal(asset.status,200);
+  assert.equal(asset.headers.get('cache-control'),'public, max-age=31536000, immutable');
+  const unchanged=await fetch(origin+style[1],{headers:{'If-None-Match':asset.headers.get('etag')}});
+  assert.equal(unchanged.status,304);
+  assert.equal((await fetch(origin+'/styles.css')).status,404);
+  const htaccess=await readFile(path.join(root,'dist','.htaccess'),'utf8');
+  assert.match(htaccess,/max-age=31536000, immutable/);
+  assert.ok(htaccess.includes('<FilesMatch "\\.html$">'));
 });
 
 test('motion preserves both home narratives and destinations',async()=>{
@@ -323,15 +353,15 @@ test('editorial copy keeps outcomes, targets, authorship and evidence bounded',a
     assert.equal(study.heroMedia,undefined);
     assert.equal(study.sections[0].id,'context');
     assert.equal(media.length,1);
-    assert.equal(media[0].src,'/assets/banner-bradesco-negociacao.svg');
+    assert.equal(media[0].src,'/assets/banner-bradesco-negociacao-1280.webp');
     assert.equal(media[0].span,6);
     const homeHtml=await (await fetch(origin+(lang==='en'?'/en':''))).text();
-    assert.match(homeHtml,/src="\/assets\/banner-bradesco-negociacao\.svg"/);
+    assert.match(homeHtml,/src="\/assets\/banner-bradesco-negociacao-1280\.[a-f0-9]{12}\.webp"/);
     const caseHtml=await (await fetch(origin+route)).text();
     assert.doesNotMatch(caseHtml,/study-hero-cover/);
     const contextStart=caseHtml.indexOf('id="context"');
     const contextEnd=caseHtml.indexOf('</section>',contextStart);
-    const bannerPosition=caseHtml.indexOf('/assets/banner-bradesco-negociacao.svg',contextStart);
+    const bannerPosition=caseHtml.indexOf('/assets/banner-bradesco-negociacao-1280.',contextStart);
     assert.ok(contextStart<bannerPosition&&bannerPosition<contextEnd,'Bradesco banner should render after the Context chapter copy');
     assert.ok(caseHtml.includes(`name="description" content="${study.seo.description}"`));
     const disclosureMarkup=caseHtml.split('<section class="study-section study-container" id="disclosure"')[1].split('</section>')[0];
@@ -383,7 +413,7 @@ test('metric semantics, empty-media chapters and public media boundaries',async(
       assert.equal(study.heroMedia,undefined);
       assert.equal(study.sections.at(-1).id,'disclosure');
       assert.equal(media.length,1);
-      assert.equal(media[0].src,'/assets/banner-bradesco-negociacao.svg');
+      assert.equal(media[0].src,'/assets/banner-bradesco-negociacao-1280.webp');
       assert.equal(study.sections.find(section=>section.id==='context').media[0].span,6);
     }
     if(study.slug==='conecta'){
@@ -417,11 +447,13 @@ test('case media stays in static figures without image enlargement controls',asy
   }
 });
 
-test('Conecta WebP images are registered and used on the home and case pages',async()=>{
+test('responsive WebP variants are registered and used on the home and case pages',async()=>{
   const studies=JSON.parse(await readFile(path.join(root,'case-studies.json'),'utf8'));
-  const thumbnail=await readFile(path.join(root,'assets','Thumbnail_Conecta.webp'));
+  const thumbnail=await readFile(path.join(root,'assets','Thumbnail_Conecta-1280.webp'));
+  const montageFile=await readFile(path.join(root,'assets','case-conecta','img-conecta-prints-atual-1280.webp'));
   assert.equal(thumbnail.subarray(0,4).toString(),'RIFF');
   assert.equal(thumbnail.subarray(8,12).toString(),'WEBP');
+  assert.equal(montageFile.subarray(8,12).toString(),'WEBP');
   const css=await readFile(path.join(root,'cases.css'),'utf8');
   const tokens=await readFile(path.join(root,'styles.css'),'utf8');
   assert.match(tokens,/--conecta-cover-surface: #68faff;/);
@@ -431,21 +463,25 @@ test('Conecta WebP images are registered and used on the home and case pages',as
   for(const route of ['/cases/conecta','/en/cases/conecta']){
     const study=studies[route];
     const context=study.sections.find(section=>section.id==='context').media[0];
-    const montage=study.sections.find(section=>section.id==='solution').media.find(media=>media.src.endsWith('img-conecta-prints-atual.webp'));
-    assert.equal(context.src,'/assets/Thumbnail_Conecta.webp');
+    const montage=study.sections.find(section=>section.id==='solution').media.find(media=>media.src.endsWith('img-conecta-prints-atual-1280.webp'));
+    assert.equal(context.src,'/assets/Thumbnail_Conecta-1280.webp');
     assert.deepEqual([context.width,context.height],[1919,1079]);
-    assert.equal(montage.src,'/assets/case-conecta/img-conecta-prints-atual.webp');
+    assert.equal(montage.src,'/assets/case-conecta/img-conecta-prints-atual-1280.webp');
+    assert.match(context.srcset,/Thumbnail_Conecta-640\.webp 640w/);
+    assert.match(montage.srcset,/img-conecta-prints-atual-640\.webp 640w/);
     assert.equal(context.surface,'conecta-cover');
     assert.equal(montage.surface,'conecta-prototype');
     const html=await (await fetch(origin+route)).text();
-    assert.match(html,/src="\/assets\/Thumbnail_Conecta\.webp"/);
-    assert.match(html,/src="\/assets\/case-conecta\/img-conecta-prints-atual\.webp"/);
+    assert.match(html,/src="\/assets\/Thumbnail_Conecta-1280\.[a-f0-9]{12}\.webp"/);
+    assert.match(html,/src="\/assets\/case-conecta\/img-conecta-prints-atual-1280\.[a-f0-9]{12}\.webp"/);
+    assert.match(html,/srcset="\/assets\/case-conecta\/img-conecta-prints-atual-640\.[a-f0-9]{12}\.webp 640w/);
     assert.match(html,/data-surface="conecta-prototype"/);
   }
   for(const route of ['/','/en']){
     const html=await (await fetch(origin+route)).text();
-    assert.match(html,/src="\/assets\/Thumbnail_Conecta\.webp"/);
-    assert.match(html,/src="\/assets\/foto_site_portfolio\.webp"/);
+    assert.match(html,/src="\/assets\/Thumbnail_Conecta-1280\.[a-f0-9]{12}\.webp"/);
+    assert.match(html,/src="\/assets\/foto_site_portfolio-1280\.[a-f0-9]{12}\.webp"/);
+    assert.match(html,/srcset="\/assets\/foto_site_portfolio-640\.[a-f0-9]{12}\.webp 640w/);
   }
 });
 
@@ -455,7 +491,7 @@ test('restricted aliases resolve only to the public case',async()=>{
     assert.equal(response.status,301);
     assert.equal(response.headers.get('location'),prefix+'/cases/bradesco-seguros');
   }
-  for(const route of ['/assets/case-bradesco-negociacao/img_fluxos_brds.png','/published-pages.json','/public-cases.json','/content.json','/build.mjs','/missing']){
+  for(const route of ['/assets/case-bradesco-negociacao/img_fluxos_brds.png','/assets/banner-bradesco-negociacao.svg','/styles.css','/script.js','/published-pages.json','/public-cases.json','/content.json','/build.mjs','/missing']){
     const response=await fetch(origin+route);assert.equal(response.status,404,route);
   }
 });

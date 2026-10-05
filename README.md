@@ -18,6 +18,6 @@ npm run check
 npm test
 ```
 
-O build cria a pasta `dist` com as rotas públicas em PT/EN, assets, sitemap, regras de redirecionamento e páginas 404. Publique o conteúdo de `dist` em um host estático que aceite `_redirects`.
+O build cria a pasta `dist` com as rotas públicas em PT/EN, imagens responsivas, arquivos versionados, sitemap, páginas 404 e regras de cache. Publique o conteúdo de `dist` na raiz pública do domínio. Em hospedagem Apache, como a Hostinger, o build inclui `.htaccess`; `_headers` e `_redirects` atendem plataformas estáticas que reconhecem esses arquivos.
 
 Rotas principais: `/`, `/en`, `/cases/bradesco-seguros`, `/cases/conecta`, `/cases/mobinft` e suas versões em `/en`. O case Bradesco publicado respeita os limites de confidencialidade.
